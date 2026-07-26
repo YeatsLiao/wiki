@@ -1,4 +1,4 @@
-# RXTX 中文文档
+﻿# RXTX 中文文档
 
 ## 项目简介
 
@@ -11,19 +11,19 @@
 ### 在线访问
 
 文档已部署到 GitHub Pages，您可以通过以下链接访问：
-- **在线文档**：[https://yeatsliao.github.io/rxtx-docs-cn/](https://yeatsliao.github.io/rxtx-docs-cn/)
+- **在线文档**：[https://yeatsliao.github.io/wiki/translations/rxtx/](https://yeatsliao.github.io/wiki/translations/rxtx/)
 
 ### 本地访问
 
 1. **克隆仓库**：
    ```bash
-   git clone https://github.com/YeatsLiao/rxtx-docs-cn.git
-   cd rxtx-docs-cn
+   git clone https://github.com/YeatsLiao/wiki.git
+   cd wiki
    ```
 
-2. **使用浏览器打开**：
-   - 直接在浏览器中打开 `index.md` 文件
-   - 或使用支持 Markdown 预览的编辑器查看
+2. **启动本地预览**：
+   - 安装依赖：`npm install`，启动预览：`npm run docs:dev`
+   - 本系列位于 `docs/translations/rxtx/` 目录
 
 ## 文档内容
 

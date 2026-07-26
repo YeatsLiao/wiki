@@ -1,4 +1,4 @@
-# RXTX 中文文档
+﻿# RXTX 中文文档
 
 ## 项目简介
 
@@ -8,8 +8,8 @@ RXTX 是一个为 Java 提供跨平台串行端口（Serial Port）和并行端�
 
 ## 如何访问
 
-- **在线文档**：[https://yeatsliao.github.io/rxtx-docs-cn/](https://yeatsliao.github.io/rxtx-docs-cn/)
-- **GitHub 仓库**：[https://github.com/YeatsLiao/rxtx-docs-cn](https://github.com/YeatsLiao/rxtx-docs-cn)
+- **在线文档**：[https://yeatsliao.github.io/wiki/translations/rxtx/](https://yeatsliao.github.io/wiki/translations/rxtx/)
+- **GitHub 仓库**：[https://github.com/YeatsLiao/wiki](https://github.com/YeatsLiao/wiki)
 
 ## 文档目录
 
