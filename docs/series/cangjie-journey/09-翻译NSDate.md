@@ -56,7 +56,7 @@ private static func parseIntRunes(runes: Array<Rune>, start: Int64, len: Int64):
 
 ## 三、格式化输出：手动拼接
 
-Java 版用 `sdf.format(date)` 一行搞定。仓颉版需要手动从 `DateTime` 取出各分量再拼接。这里有两个坑。
+Java 版用 `sdf.format(date)` 一行完成。仓颉版需要手动从 `DateTime` 取出各分量再拼接。这里有两个坑。
 
 ### 坑 1：`dt.month` 返回的是 Month 枚举，不是 Int64
 

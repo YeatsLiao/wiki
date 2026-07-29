@@ -78,7 +78,7 @@ error: the visibility of an 'abstract' function must be 'public' or 'protected'
 - `String` 有 `compare`、`contains`、`replace`、`toRuneArray`、`+` 拼接；
 - `Comparable<T>` 继承 `Equatable`，但**操作符有默认实现**——所以只要实现 `compare`，`==`/`<`/`>` 都免费得到。
 
-> 💡 这一步很值：**翻译前先确认目标语言的 API 是否存在、签名长啥样**，比写完一堆再被编译器逐条打回效率高得多。
+> 💡 这一步很值：**翻译前先确认目标语言的 API 是否存在、签名是什么样**，比写完一堆再被编译器逐条打回效率高得多。
 
 ### 一个跨语言差异：Java 反射 vs 仓颉
 
