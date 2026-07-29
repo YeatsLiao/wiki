@@ -6,15 +6,17 @@
 
 ## 内容目录
 
+### 原创系列
+
+| 系列 | 说明 | 入口 |
+|-----|------|------|
+| 仓颉共建之旅 | 从零把 Java 库 dd-plist 移植为仓颉库 plist4cj 的完整记录（31 篇），覆盖环境搭建、逐模块翻译、PR 审核整改、发布中心仓全流程 | [在线阅读](https://yeatsliao.github.io/wiki/series/cangjie-journey/) |
+
 ### 翻译系列
 
 | 系列 | 说明 | 入口 |
 |-----|------|------|
 | RXTX 中文文档 | Java 跨平台串口/并口通信库 RXTX 的完整中文翻译（14 篇） | [在线阅读](https://yeatsliao.github.io/wiki/translations/rxtx/) |
-
-### 原创系列
-
-筹备中，敬请期待。
 
 ## 目录结构
 
@@ -23,9 +25,10 @@ docs/
 ├── .vitepress/         # 站点配置（导航、侧边栏、搜索等）
 │   └── config.mts
 ├── index.md            # 门户首页
-├── translations/       # 翻译系列
-│   └── rxtx/           # RXTX 中文文档
-└── series/             # 原创系列（规划中）
+├── series/             # 原创系列
+│   └── cangjie-journey/ # 仓颉共建之旅
+└── translations/       # 翻译系列
+    └── rxtx/           # RXTX 中文文档
 ```
 
 新增一个系列：在对应目录下新建系列文件夹放入 Markdown 文件，并在 `docs/.vitepress/config.mts` 中添加 nav 入口和 sidebar 配置。
