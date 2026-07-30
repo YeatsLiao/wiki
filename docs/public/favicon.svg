@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 圣乔治·马焦雷教堂钟楼剪影：取自首页背景画作主体，深蓝夜色 + 暖月 -->
+  <rect width="64" height="64" rx="14" fill="#23364c"/>
+  <!-- 暖琥珀月亮 -->
+  <circle cx="20" cy="20" r="6" fill="#d9a967"/>
+  <!-- 钟楼塔身（米白） -->
+  <rect x="36" y="14" width="9" height="34" fill="#f2e8d5"/>
+  <!-- 塔顶（赭红尖顶） -->
+  <path d="M34 14 H47 L40.5 6 Z" fill="#c96f4a"/>
+  <!-- 水面反光两道 -->
+  <rect x="12" y="44" width="40" height="4" fill="#f2e8d5" opacity="0.55"/>
+  <rect x="8" y="52" width="48" height="2.5" fill="#f2e8d5" opacity="0.3"/>
+</svg>

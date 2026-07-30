@@ -1,4 +1,4 @@
-﻿# Yeats 的知识库
+﻿# Yeats' Wiki
 
 个人知识库，收录系列化的翻译文档与原创技术文章，基于 [VitePress](https://vitepress.dev/zh/) 构建，通过 GitHub Actions 自动部署到 GitHub Pages。
 
@@ -23,7 +23,13 @@
 ```
 docs/
 ├── .vitepress/         # 站点配置（导航、侧边栏、搜索等）
-│   └── config.mts
+│   ├── config.mts
+│   └── theme/          # 自定义主题（首页组件、全局样式）
+├── public/             # 静态资源（规范见 docs/public/README.md）
+│   ├── hero.jpg        # 首页 Hero 插画
+│   └── images/         # 文章图片，目录镜像文章路径
+│       ├── series/cangjie-journey/
+│       └── translations/rxtx/
 ├── index.md            # 门户首页
 ├── series/             # 原创系列
 │   └── cangjie-journey/ # 仓颉共建之旅
@@ -32,6 +38,8 @@ docs/
 ```
 
 新增一个系列：在对应目录下新建系列文件夹放入 Markdown 文件，并在 `docs/.vitepress/config.mts` 中添加 nav 入口和 sidebar 配置。
+
+文章配图：放入 `docs/public/images/` 下与文章路径对应的目录，Markdown 中以 `/images/...` 绝对路径引用（不带 `/wiki/` 前缀），详细规范见 [docs/public/README.md](docs/public/README.md)。
 
 ## 本地开发
 

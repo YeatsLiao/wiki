@@ -2,12 +2,18 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'Yeats 的知识库',
+  title: "Yeats' Wiki",
   description: '原创系列与翻译系列文档集',
   base: '/wiki/',
   lastUpdated: true,
 
+  head: [
+    // head 中的路径不会自动拼接 base，需手写 /wiki/ 前缀
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/wiki/favicon.svg' }]
+  ],
+
   themeConfig: {
+    logo: '/favicon.svg',
     nav: [
       { text: '首页', link: '/' },
       {
