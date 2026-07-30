@@ -1,0 +1,24 @@
+/* 全局自定义样式：编辑式（editorial）排版 × 油画配色
+   配色取自首页背景画作——特纳《威尼斯：海关署与圣乔治·马焦雷教堂》
+   排版参考 Shillington：左对齐、Regular 字重 + 巨大字号差、胶囊标签、留白分隔 */
+
+:root {
+  /* 主题色：赭褐（画中船帆与建筑的暖棕） */
+  --vp-c-brand-1: #8a5433;
+  --vp-c-brand-2: #a2683f;
+  --vp-c-brand-3: #8a5433;
+  --vp-c-brand-soft: rgba(138, 84, 51, 0.14);
+}
+
+.dark {
+  /* 暗色模式下提亮为暖琥珀，保证对比度 */
+  --vp-c-brand-1: #d9a967;
+  --vp-c-brand-2: #c99455;
+  --vp-c-brand-3: #b97e4e;
+  --vp-c-brand-soft: rgba(217, 169, 103, 0.16);
+}
+
+/* 首页使用 layout: page，去掉默认内边距，让 Hero 全宽贴住导航栏 */
+.home-page-wrapper .VPPage {
+  padding: 0;
+}
