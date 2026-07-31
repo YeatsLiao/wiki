@@ -21,6 +21,7 @@ export default defineConfig({
         items: [
           { text: '仓颉共建之旅', link: '/series/cangjie-journey/' },
           { text: '23 种设计模式实战', link: '/series/design-patterns/' },
+          { text: 'AI原生架构师笔记', link: '/series/ai-native-architect/' },
           { text: 'Java启动速度优化解读', link: '/series/java-startup-optimization/' },
           { text: 'Chris Newland JVM工具解读', link: '/series/jvm-tools/' },
           { text: '物联网平台SQL治理手记', link: '/series/iot-sql-governance/' },
@@ -262,6 +263,83 @@ export default defineConfig({
             { text: '21 策略模式 (Strategy)', link: '/series/design-patterns/21-策略模式' },
             { text: '22 模板方法模式 (Template Method)', link: '/series/design-patterns/22-模板方法模式' },
             { text: '23 访问者模式 (Visitor)', link: '/series/design-patterns/23-访问者模式' }
+          ]
+        }
+      ],
+
+      '/series/ai-native-architect/': [
+        { text: '系列首页', link: '/series/ai-native-architect/' },
+        {
+          text: '认知与决策',
+          collapsed: false,
+          items: [
+            { text: '01 范式转变：AI原生与不确定性编程', link: '/series/ai-native-architect/01-范式转变：AI原生应用与不确定性编程' },
+            { text: '02 Token经济学与模型路由', link: '/series/ai-native-architect/02-Token经济学与模型路由：成本、延迟、质量的三角决策' },
+            { text: '03 从Demo到生产', link: '/series/ai-native-architect/03-从Demo到生产：Prompt工程化、数据飞轮与隐私架构' }
+          ]
+        },
+        {
+          text: '提示工程进阶',
+          collapsed: true,
+          items: [
+            { text: '04 结构化输出', link: '/series/ai-native-architect/04-结构化输出：JSONMode与FunctionCalling重塑接口设计' },
+            { text: '05 思维链变体 ToT 与 GoT', link: '/series/ai-native-architect/05-思维链变体：ToT与GoT的工程实现' },
+            { text: '06 动态 Few-Shot', link: '/series/ai-native-architect/06-动态Few-Shot：基于语义相似度检索示例' },
+            { text: '07 元提示', link: '/series/ai-native-architect/07-元提示：让大模型自己优化Prompt' },
+            { text: '08 DSPy 框架', link: '/series/ai-native-architect/08-DSPy框架：用编程方式编译和优化LLM调用' },
+            { text: '09 防御性 Prompt 设计', link: '/series/ai-native-architect/09-防御性Prompt设计：对抗Injection与Jailbreak' },
+            { text: '10 角色设定卡', link: '/series/ai-native-architect/10-角色设定卡：提升模型的情商与专业度' },
+            { text: '11 长上下文陷阱', link: '/series/ai-native-architect/11-长上下文陷阱：LostintheMiddle及应对策略' },
+            { text: '12 Prompt 评估体系', link: '/series/ai-native-architect/12-Prompt评估体系：构建自动化测试集' },
+            { text: '13 多模态 Prompting', link: '/series/ai-native-architect/13-多模态Prompting：图文混合输入实践与调优' }
+          ]
+        },
+        {
+          text: 'RAG 架构演进',
+          collapsed: true,
+          items: [
+            { text: '14 长上下文会取代 RAG 吗', link: '/series/ai-native-architect/14-长上下文会取代RAG吗：辩证分析' },
+            { text: '15 高级分块策略', link: '/series/ai-native-architect/15-高级分块策略：语义分割、父子索引与多级检索' },
+            { text: '16 混合检索', link: '/series/ai-native-architect/16-混合检索：BM25与向量检索的加权融合' },
+            { text: '17 重排序 Cross-Encoder', link: '/series/ai-native-architect/17-重排序：Cross-Encoder作为RAG的精准过滤器' },
+            { text: '18 GraphRAG 实战', link: '/series/ai-native-architect/18-GraphRAG实战：知识图谱增强跨文档推理' },
+            { text: '19 查询重写 HyDE', link: '/series/ai-native-architect/19-查询重写：HyDE与多查询分解' },
+            { text: '20 Self-RAG 架构', link: '/series/ai-native-architect/20-Self-RAG架构：按需检索与自我修正' },
+            { text: '21 RAPTOR 索引', link: '/series/ai-native-architect/21-RAPTOR索引：递归树状索引提升长文档全局理解' },
+            { text: '22 多模态 RAG', link: '/series/ai-native-architect/22-多模态RAG：索引PDF中的表格、图表与图片' },
+            { text: '23 RAG 评测', link: '/series/ai-native-architect/23-RAG评测：Ragas与TruLens实践' }
+          ]
+        },
+        {
+          text: 'Agent 智能体',
+          collapsed: true,
+          items: [
+            { text: '24 Agent 架构通识', link: '/series/ai-native-architect/24-Agent架构通识：从ReAct到Plan-and-Solve' },
+            { text: '25 工具使用设计模式', link: '/series/ai-native-architect/25-工具使用设计模式：为LLM定义清晰鲁棒的API' },
+            { text: '26 多智能体协作', link: '/series/ai-native-architect/26-多智能体协作：AutoGen与CrewAI的角色分工' },
+            { text: '27 记忆系统', link: '/series/ai-native-architect/27-记忆系统：短期记忆、长期记忆与反射机制' },
+            { text: '28 规划能力', link: '/series/ai-native-architect/28-规划能力：任务拆解与依赖管理' },
+            { text: '29 自主编码 Agent', link: '/series/ai-native-architect/29-自主编码Agent：Devin与开源替代的技术原理' },
+            { text: '30 浏览器自动化 Agent', link: '/series/ai-native-architect/30-浏览器自动化Agent：基于Playwright的WebAgent' },
+            { text: '31 人机回环', link: '/series/ai-native-architect/31-人机回环：Agent关键操作的人工确认设计' },
+            { text: '32 Agent 调试与监控', link: '/series/ai-native-architect/32-Agent调试与监控：LangSmith追踪思考过程与调用链' },
+            { text: '33 具身智能', link: '/series/ai-native-architect/33-具身智能：将Agent接入物理世界' }
+          ]
+        },
+        {
+          text: 'LLMOps 与工程化基础设施',
+          collapsed: true,
+          items: [
+            { text: '34 LLM 网关设计', link: '/series/ai-native-architect/34-LLM网关设计：APIKey、限流、缓存与故障转移' },
+            { text: '35 向量数据库选型', link: '/series/ai-native-architect/35-向量数据库选型：Milvus、Pinecone、Weaviate与pgvector' },
+            { text: '36 评估驱动开发', link: '/series/ai-native-architect/36-评估驱动开发：以Evals为核心的开发流水线' },
+            { text: '37 合成数据工程', link: '/series/ai-native-architect/37-合成数据工程：用大模型生成训练与评测数据' },
+            { text: '38 微调 Ops', link: '/series/ai-native-architect/38-微调Ops：LoRA适配器的版本管理与快速切换' },
+            { text: '39 推理加速', link: '/series/ai-native-architect/39-推理加速：KVCache优化与投机采样' },
+            { text: '40 流式输出实践', link: '/series/ai-native-architect/40-流式输出实践：SSE协议与Markdown增量渲染' },
+            { text: '41 AI 应用安全防护', link: '/series/ai-native-architect/41-AI应用安全防护：PII过滤与内容审核' },
+            { text: '42 无服务器 AI', link: '/series/ai-native-architect/42-无服务器AI：VercelAISDK与CloudflareWorkers' },
+            { text: '43 私有化部署 ROI', link: '/series/ai-native-architect/43-私有化部署ROI：何时切换到自托管Llama3' }
           ]
         }
       ],

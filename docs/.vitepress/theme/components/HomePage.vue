@@ -20,6 +20,13 @@ const seriesList = [
   },
   {
     tag: '原创系列',
+    count: '43 篇',
+    title: 'AI原生架构师笔记',
+    desc: '从认知范式到 Prompt、RAG、Agent、LLMOps 的 AI 应用工程化速查，把大模型从能跑通的 Demo 做成可靠、便宜、快、安全的生产系统。',
+    link: '/series/ai-native-architect/'
+  },
+  {
+    tag: '原创系列',
     count: '6 篇',
     title: 'Java启动速度优化解读',
     desc: '从类加载、AppCDS、Heap Archive 到 JIT/AOT 与 Spring 懒加载实战，把 Java 启动慢的根因与加速方案一次讲透。',
@@ -79,7 +86,7 @@ const seriesList = [
 // 更多入口：跳转全部文集页
 const moreEntry = {
   tag: '目录',
-  count: '共 10 辑',
+  count: '共 11 辑',
   title: '更多系列',
   desc: '速查手册、手记、翻译与在线实验，完整目录按分类收录，陆续更新。',
   link: '/collections'
