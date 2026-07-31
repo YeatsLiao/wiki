@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340">
+  <!-- 左侧：JVM层优化 -->
+  <rect x="20" y="15" width="310" height="230" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+  <text x="175" y="42" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#185FA5">JVM 层优化</text>
+  <line x1="50" y1="52" x2="300" y2="52" stroke="#185FA5" stroke-width="1" opacity="0.3"/>
+
+  <!-- AppCDS -->
+  <rect x="40" y="64" width="85" height="30" rx="5" fill="#185FA5"/>
+  <text x="82" y="84" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">AppCDS</text>
+  <rect x="135" y="64" width="85" height="30" rx="5" fill="#185FA5"/>
+  <text x="177" y="84" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">Heap Archive</text>
+  <rect x="230" y="64" width="85" height="30" rx="5" fill="#185FA5"/>
+  <text x="272" y="84" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">AOT</text>
+
+  <text x="175" y="118" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">"同样的事更快"</text>
+  <text x="175" y="143" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">类仍要加载、初始化、编译</text>
+  <text x="175" y="163" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">只是用归档复用省掉重复计算</text>
+
+  <rect x="60" y="180" width="230" height="24" rx="4" fill="#1D9E75"/>
+  <text x="175" y="197" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFFFFF">不改变行为，可观测，排查有迹可循</text>
+
+  <!-- 右侧：业务层懒加载 -->
+  <rect x="350" y="15" width="310" height="230" rx="8" fill="#FDF2F0" stroke="#D85A30" stroke-width="1.5"/>
+  <text x="505" y="42" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#D85A30">业务层懒加载</text>
+  <line x1="380" y1="52" x2="630" y2="52" stroke="#D85A30" stroke-width="1" opacity="0.3"/>
+
+  <rect x="380" y="64" width="110" height="30" rx="5" fill="#D85A30"/>
+  <text x="435" y="84" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">@Lazy</text>
+  <rect x="505" y="64" width="140" height="30" rx="5" fill="#D85A30"/>
+  <text x="575" y="84" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFFFFF">lazy-initialization</text>
+
+  <text x="505" y="118" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#D85A30">"不做就不耗时"</text>
+  <text x="505" y="143" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">直接跳过整个Bean的创建</text>
+  <text x="505" y="163" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">有些Bean可能永远不被实例化</text>
+
+  <rect x="380" y="180" width="260" height="24" rx="4" fill="#E24B4A"/>
+  <text x="510" y="197" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFFFFF">改变行为，可能静默失效，排查难度大幅增加</text>
+
+  <!-- 中间VS -->
+  <circle cx="340" cy="130" r="18" fill="#888780"/>
+  <text x="340" y="136" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">VS</text>
+
+  <!-- 底部结论 -->
+  <rect x="120" y="268" width="440" height="55" rx="8" fill="#185FA5"/>
+  <text x="340" y="293" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">速度变了 vs 行为变了，排查难度完全不同</text>
+  <text x="340" y="312" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#E6F1FB">JVM层优化：该做的事都做了，做得更快 → 可观测 · 可回滚 · 可度量</text>
+</svg>

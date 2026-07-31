@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450">
+  <!-- 第一层：JVM层 -->
+  <rect x="25" y="10" width="630" height="120" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+  <rect x="25" y="10" width="630" height="30" rx="8" fill="#185FA5"/>
+  <rect x="25" y="22" width="630" height="18" fill="#185FA5"/>
+  <text x="340" y="32" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">Layer 1: JVM 层 — 透明加速，不改变行为</text>
+
+  <rect x="50" y="52" width="170" height="32" rx="5" fill="#185FA5"/>
+  <text x="135" y="72" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">AppCDS（必开）</text>
+
+  <rect x="240" y="52" width="180" height="32" rx="5" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+  <text x="330" y="72" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#185FA5">Heap Archive（视情况）</text>
+
+  <rect x="440" y="52" width="190" height="32" rx="5" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+  <text x="535" y="72" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#185FA5">AOT（Dragonwell）</text>
+
+  <text x="340" y="108" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2C2C2A">类加载越多收益越大 · 几乎无副作用 · 不改变应用行为</text>
+
+  <!-- 层间箭头1 -->
+  <line x1="340" y1="130" x2="340" y2="150" stroke="#888780" stroke-width="2"/>
+  <polygon points="334,148 340,158 346,148" fill="#888780"/>
+
+  <!-- 第二层：业务层 -->
+  <rect x="25" y="158" width="630" height="110" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="2"/>
+  <rect x="25" y="158" width="630" height="30" rx="8" fill="#1D9E75"/>
+  <rect x="25" y="170" width="630" height="18" fill="#1D9E75"/>
+  <text x="340" y="180" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">Layer 2: 业务层 — 精确控制，避免静默失效</text>
+
+  <rect x="50" y="200" width="290" height="28" rx="5" fill="#1D9E75"/>
+  <text x="195" y="219" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">精确 @Lazy 按需加，禁用全局懒加载</text>
+
+  <rect x="360" y="200" width="270" height="28" rx="5" fill="#1D9E75"/>
+  <text x="495" y="219" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">MQ/MQTT/连接池/定时任务保持 eager</text>
+
+  <text x="340" y="250" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">基础设施类 Bean 必须启动时就绪 · 避免"Bean存在于定义但从未实例化"</text>
+
+  <!-- 层间箭头2 -->
+  <line x1="340" y1="268" x2="340" y2="288" stroke="#888780" stroke-width="2"/>
+  <polygon points="334,286 340,296 346,286" fill="#888780"/>
+
+  <!-- 第三层：部署层 -->
+  <rect x="25" y="296" width="630" height="100" rx="8" fill="#FDF2F0" stroke="#D85A30" stroke-width="2"/>
+  <rect x="25" y="296" width="630" height="30" rx="8" fill="#D85A30"/>
+  <rect x="25" y="308" width="630" height="18" fill="#D85A30"/>
+  <text x="340" y="318" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">Layer 3: 部署层 — 共享复用，降低扩容成本</text>
+
+  <rect x="50" y="338" width="290" height="28" rx="5" fill="#D85A30"/>
+  <text x="195" y="357" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">归档文件打入容器镜像</text>
+
+  <rect x="360" y="338" width="270" height="28" rx="5" fill="#D85A30"/>
+  <text x="495" y="357" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">SAE NAS 跨实例共享归档</text>
+
+  <text x="340" y="388" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">保证 classpath 一致性 · 新实例零 trace 成本 · Serverless 扩容利器</text>
+
+  <!-- 底部效果 -->
+  <rect x="140" y="412" width="400" height="30" rx="6" fill="#185FA5"/>
+  <text x="340" y="433" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">5% ~ 45% 启动耗时降低，类加载越多收益越大</text>
+</svg>

@@ -1,0 +1,83 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-right" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#888780"/>
+    </marker>
+    <marker id="arrow-down-red" markerWidth="6" markerHeight="8" refX="3" refY="0" orient="auto">
+      <polygon points="0 8, 6 8, 3 0" fill="#E24B4A"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">AOT 兴衰时间线</text>
+
+  <!-- ==================== Timeline Axis ==================== -->
+  <line x1="55" y1="95" x2="625" y2="95" stroke="#888780" stroke-width="2"/>
+  <polygon points="625,91 631,95 625,99" fill="#888780"/>
+
+  <!-- ==================== Event 1: 2017 JDK 9 (Blue - Birth) ==================== -->
+  <circle cx="110" cy="95" r="6" fill="#185FA5" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="110" y1="89" x2="110" y2="55" stroke="#185FA5" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <rect x="25" y="24" width="170" height="52" rx="5" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.2"/>
+  <text x="110" y="42" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#185FA5" font-weight="500">2017 · JDK 9</text>
+  <text x="110" y="58" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#2C2C2A">JEP 295 引入 jaotc</text>
+  <text x="110" y="71" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5F5E5A">(实验特性)</text>
+
+  <!-- ==================== Event 2: 2018 JDK 10~11 (Orange - Setback) ==================== -->
+  <circle cx="260" cy="95" r="6" fill="#D85A30" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="260" y1="101" x2="260" y2="138" stroke="#D85A30" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <rect x="155" y="140" width="210" height="52" rx="5" fill="#FFF5EE" stroke="#D85A30" stroke-width="1.2"/>
+  <text x="260" y="158" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#D85A30" font-weight="500">2018 · JDK 10~11</text>
+  <text x="260" y="174" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#2C2C2A">多 ClassLoader static field</text>
+  <text x="260" y="188" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5F5E5A">共享 bug → 禁 Custom ClassLoader</text>
+
+  <!-- ==================== Event 3: 2018~2019 (Orange - Setback) ==================== -->
+  <circle cx="415" cy="95" r="6" fill="#D85A30" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="415" y1="89" x2="415" y2="55" stroke="#D85A30" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <rect x="315" y="24" width="200" height="52" rx="5" fill="#FFF5EE" stroke="#D85A30" stroke-width="1.2"/>
+  <text x="415" y="42" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#D85A30" font-weight="500">2018 ~ 2019</text>
+  <text x="415" y="58" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#2C2C2A">编译粒度过粗 · 退回实验特性</text>
+  <text x="415" y="71" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5F5E5A">(JDK-8227439)</text>
+
+  <!-- ==================== Event 4: 2021 JDK 16 (Red - Death) ==================== -->
+  <circle cx="560" cy="95" r="6" fill="#E24B4A" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="560" y1="101" x2="560" y2="138" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <rect x="465" y="140" width="190" height="52" rx="5" fill="#FFF0F0" stroke="#E24B4A" stroke-width="1.2"/>
+  <text x="560" y="158" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#E24B4A" font-weight="500">2021 · JDK 16</text>
+  <text x="560" y="174" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#2C2C2A">正式删除 jaotc</text>
+  <text x="560" y="188" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5F5E5A">(JDK-8255616)</text>
+
+  <!-- ==================== Downward arrow ==================== -->
+  <line x1="340" y1="200" x2="340" y2="222" stroke="#E24B4A" stroke-width="1.5" marker-end="url(#arrow-down-red)"/>
+  <text x="340" y="218" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#E24B4A">jaotc 被移除</text>
+
+  <!-- ==================== Divider Line ==================== -->
+  <line x1="55" y1="232" x2="625" y2="232" stroke="#E0E0DE" stroke-width="0.8" stroke-dasharray="6,3"/>
+  <text x="340" y="250" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5F5E5A" font-weight="500">后续两条技术路线</text>
+
+  <!-- ==================== Path 1: OpenJDK C2 AOT ==================== -->
+  <rect x="40" y="260" width="285" height="108" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.2"/>
+  <rect x="40" y="260" width="285" height="26" rx="6" fill="#185FA5"/>
+  <rect x="40" y="280" width="285" height="6" fill="#185FA5"/>
+  <text x="182" y="278" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#FFFFFF">路线一：OpenJDK C2 AOT</text>
+
+  <text x="60" y="304" font-family="sans-serif" font-size="11" fill="#2C2C2A">基于 C2 编译器直接生成 native 代码</text>
+  <text x="60" y="322" font-family="sans-serif" font-size="11" fill="#2C2C2A">与 HotSpot 完全兼容 · 共享 C2 所有优化</text>
+  <text x="60" y="340" font-family="sans-serif" font-size="11" fill="#2C2C2A">Dragonwell 的 AOT 方案属此路线</text>
+  <text x="60" y="358" font-family="sans-serif" font-size="10" fill="#5F5E5A">缺点：C2 按 JIT 设计 · 离线编译需大量适配</text>
+
+  <!-- ==================== Path 2: GraalVM native-image ==================== -->
+  <rect x="355" y="260" width="285" height="108" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.2"/>
+  <rect x="355" y="260" width="285" height="26" rx="6" fill="#1D9E75"/>
+  <rect x="355" y="280" width="285" height="6" fill="#1D9E75"/>
+  <text x="497" y="278" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#FFFFFF">路线二：GraalVM native-image</text>
+
+  <text x="375" y="304" font-family="sans-serif" font-size="11" fill="#2C2C2A">将 Java 代码编译为独立 native 可执行文件</text>
+  <text x="375" y="322" font-family="sans-serif" font-size="11" fill="#2C2C2A">启动极快 · 内存占用极低 · 无需 JVM</text>
+  <text x="375" y="340" font-family="sans-serif" font-size="11" fill="#2C2C2A">Spring Boot 已提供生产级支持</text>
+  <text x="375" y="358" font-family="sans-serif" font-size="10" fill="#5F5E5A">缺点：封闭世界假设 · 需配置反射 / 动态代理</text>
+</svg>

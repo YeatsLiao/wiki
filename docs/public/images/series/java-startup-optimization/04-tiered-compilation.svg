@@ -1,0 +1,84 @@
+<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-step" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888780"/>
+    </marker>
+    <marker id="arrow-perf" markerWidth="6" markerHeight="8" refX="3" refY="7" orient="auto">
+      <polygon points="0 8, 3 0, 6 8" fill="#D85A30"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">HotSpot 分层编译与 JIT 预热门槛</text>
+
+  <!-- Subtle horizontal guide lines -->
+  <line x1="30" y1="370" x2="650" y2="370" stroke="#E0E0DE" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- ==================== Performance Axis (left) ==================== -->
+  <line x1="28" y1="340" x2="28" y2="60" stroke="#D85A30" stroke-width="1.5" marker-end="url(#arrow-perf)"/>
+  <text x="20" y="50" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#D85A30" font-weight="500">性能</text>
+  <text x="20" y="65" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#D85A30" font-weight="500">提升</text>
+
+  <!-- Performance labels on axis -->
+  <line x1="23" y1="315" x2="33" y2="315" stroke="#D85A30" stroke-width="0.8"/>
+  <text x="38" y="319" font-family="sans-serif" font-size="10" fill="#D85A30">≈ 1x</text>
+
+  <line x1="23" y1="215" x2="33" y2="215" stroke="#D85A30" stroke-width="0.8"/>
+  <text x="38" y="219" font-family="sans-serif" font-size="10" fill="#D85A30">中等</text>
+
+  <line x1="23" y1="115" x2="33" y2="115" stroke="#D85A30" stroke-width="0.8"/>
+  <text x="38" y="119" font-family="sans-serif" font-size="10" fill="#D85A30">≈ 26x</text>
+
+  <!-- ==================== Tier 0: Interpreter ==================== -->
+  <rect x="60" y="270" width="180" height="90" rx="6" fill="#F5F5F4" stroke="#888780" stroke-width="1.5"/>
+  <!-- Top bar -->
+  <rect x="60" y="270" width="180" height="28" rx="6" fill="#888780"/>
+  <rect x="60" y="292" width="180" height="6" fill="#888780"/>
+  <text x="150" y="289" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#FFFFFF">Tier 0 · 解释器</text>
+  <!-- Content -->
+  <text x="150" y="318" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2C2C2A">所有方法的起点</text>
+  <text x="150" y="336" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5F5E5A">bytecode 逐条解释执行</text>
+  <text x="150" y="352" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888780">switch-case 分发循环</text>
+
+  <!-- ==================== Tier 0 → 3 Arrow ==================== -->
+  <path d="M 240,305 L 255,305 L 255,250" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="252,255 258,250 252,245" fill="#888780"/>
+
+  <!-- ==================== Tier 3: C1 Compilation ==================== -->
+  <rect x="255" y="180" width="180" height="90" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+  <!-- Top bar -->
+  <rect x="255" y="180" width="180" height="28" rx="6" fill="#185FA5"/>
+  <rect x="255" y="202" width="180" height="6" fill="#185FA5"/>
+  <text x="345" y="199" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#FFFFFF">Tier 3 · C1 编译</text>
+  <!-- Content -->
+  <text x="345" y="228" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2C2C2A">约 2 000 次调用触发</text>
+  <text x="345" y="246" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5F5E5A">快速编译 · 中等优化</text>
+  <text x="345" y="262" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#185FA5">计数 = 调用次数 + 回边数</text>
+
+  <!-- ==================== Tier 3 → 4 Arrow ==================== -->
+  <path d="M 435,215 L 455,215 L 455,155" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="452,160 458,155 452,150" fill="#888780"/>
+
+  <!-- ==================== Tier 4: C2 Compilation ==================== -->
+  <rect x="455" y="80" width="195" height="95" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5"/>
+  <!-- Top bar -->
+  <rect x="455" y="80" width="195" height="28" rx="6" fill="#1D9E75"/>
+  <rect x="455" y="102" width="195" height="6" fill="#1D9E75"/>
+  <text x="552" y="99" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#FFFFFF">Tier 4 · C2 编译</text>
+  <!-- Content -->
+  <text x="552" y="128" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2C2C2A">约 15 000 次调用触发</text>
+  <text x="552" y="146" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5F5E5A">激进优化 · 峰值性能</text>
+  <text x="552" y="166" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1D9E75" font-weight="500">吞吐 ≈ 26x</text>
+
+  <!-- ==================== Gap Marker ==================== -->
+  <!-- Dashed vertical line indicating the gap between T0→T3 and T3→T4 -->
+  <rect x="195" y="345" width="55" height="20" rx="3" fill="#F5F5F4" stroke="#888780" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="222" y="359" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888780">2000 次</text>
+
+  <rect x="395" y="240" width="60" height="20" rx="3" fill="#F5F5F4" stroke="#888780" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="425" y="254" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#888780">13000 次</text>
+
+  <!-- ==================== Bottom Annotation ==================== -->
+  <rect x="95" y="388" width="490" height="28" rx="14" fill="#FFF5EE" stroke="#D85A30" stroke-width="0.8"/>
+  <text x="340" y="407" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#D85A30" font-weight="500">启动阶段多数方法卡在解释执行——调用次数远低于 JIT 预热门槛</text>
+</svg>

@@ -1,0 +1,115 @@
+<svg viewBox="0 0 680 370" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#185FA5"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1D9E75"/>
+    </marker>
+    <marker id="arrow-down" markerWidth="7" markerHeight="9" refX="3.5" refY="8" orient="auto">
+      <polygon points="0 0, 7 0, 3.5 9" fill="#888780"/>
+    </marker>
+    <marker id="arrow-right" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888780"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">类初始化 + Heap Archive 的配合流程</text>
+
+  <!-- ==================== Panel 1: Dump 阶段 ==================== -->
+  <rect x="12" y="44" width="200" height="242" rx="6" fill="none" stroke="#185FA5" stroke-width="1.5"/>
+  <rect x="12" y="44" width="200" height="28" rx="6" fill="#185FA5"/>
+  <rect x="12" y="66" width="200" height="6" fill="#185FA5"/>
+  <text x="112" y="63" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#FFFFFF">Dump 阶段</text>
+
+  <rect x="27" y="82" width="170" height="28" rx="4" fill="#F5F5F4" stroke="#888780" stroke-width="0.8"/>
+  <text x="112" y="100" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2C2C2A">应用首次运行 + 预热</text>
+
+  <line x1="112" y1="110" x2="112" y2="124" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow-down)"/>
+
+  <rect x="27" y="127" width="170" height="32" rx="4" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="112" y="142" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#185FA5" font-weight="500">AppCDS 写入 InstanceKlass</text>
+  <text x="112" y="155" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5F5E5A">(Klass 区域)</text>
+
+  <line x1="112" y1="159" x2="112" y2="173" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow-down)"/>
+
+  <rect x="27" y="176" width="170" height="38" rx="4" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1"/>
+  <text x="112" y="192" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1D9E75" font-weight="500">Heap Archive 写入</text>
+  <text x="112" y="206" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1D9E75" font-weight="500">static field 对象</text>
+
+  <line x1="112" y1="214" x2="112" y2="228" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow-down)"/>
+
+  <rect x="27" y="231" width="170" height="32" rx="4" fill="#F5F5F4" stroke="#888780" stroke-width="0.8"/>
+  <text x="112" y="246" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2C2C2A">生成 .jsa 归档文件</text>
+  <text x="112" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5F5E5A">(Klass + Heap 合并)</text>
+
+  <!-- ==================== Arrow P1 → P2 ==================== -->
+  <line x1="215" y1="157" x2="230" y2="157" stroke="#185FA5" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+
+  <!-- ==================== Panel 2: 启动加载阶段 ==================== -->
+  <rect x="240" y="44" width="200" height="242" rx="6" fill="none" stroke="#185FA5" stroke-width="1.5"/>
+  <rect x="240" y="44" width="200" height="28" rx="6" fill="#185FA5"/>
+  <rect x="240" y="66" width="200" height="6" fill="#185FA5"/>
+  <text x="340" y="63" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#FFFFFF">启动加载阶段</text>
+
+  <rect x="255" y="82" width="170" height="28" rx="4" fill="#F5F5F4" stroke="#888780" stroke-width="0.8"/>
+  <text x="340" y="100" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2C2C2A">mmap 映射 .jsa 文件</text>
+
+  <line x1="340" y1="110" x2="340" y2="124" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow-down)"/>
+
+  <rect x="255" y="127" width="170" height="32" rx="4" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="340" y="142" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#185FA5" font-weight="500">读取 InstanceKlass</text>
+  <text x="340" y="155" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5F5E5A">(省去类解析开销)</text>
+
+  <line x1="340" y1="159" x2="340" y2="173" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow-down)"/>
+
+  <rect x="255" y="176" width="170" height="38" rx="4" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1"/>
+  <text x="340" y="192" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1D9E75" font-weight="500">读取 static field 对象</text>
+  <text x="340" y="206" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1D9E75" font-weight="500">(直接映射到堆)</text>
+
+  <line x1="340" y1="214" x2="340" y2="228" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow-down)"/>
+
+  <rect x="255" y="231" width="170" height="32" rx="4" fill="#F5F5F4" stroke="#888780" stroke-width="0.8"/>
+  <text x="340" y="246" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2C2C2A">填充 static field 指针</text>
+  <text x="340" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5F5E5A">(Klass 关联 Heap 对象)</text>
+
+  <!-- ==================== Arrow P2 → P3 ==================== -->
+  <line x1="443" y1="157" x2="458" y2="157" stroke="#1D9E75" stroke-width="1.8" marker-end="url(#arrow-green)"/>
+
+  <!-- ==================== Panel 3: 初始化完成 ==================== -->
+  <rect x="468" y="44" width="200" height="242" rx="6" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+  <rect x="468" y="44" width="200" height="28" rx="6" fill="#1D9E75"/>
+  <rect x="468" y="66" width="200" height="6" fill="#1D9E75"/>
+  <text x="568" y="63" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#FFFFFF">初始化完成</text>
+
+  <rect x="483" y="82" width="170" height="42" rx="4" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1"/>
+  <text x="568" y="100" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1D9E75" font-weight="500">static field</text>
+  <text x="568" y="116" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1D9E75" font-weight="500">指向归档对象</text>
+
+  <line x1="568" y1="124" x2="568" y2="146" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow-down)"/>
+
+  <rect x="483" y="149" width="170" height="42" rx="4" fill="#F5F5F4" stroke="#888780" stroke-width="0.8"/>
+  <text x="568" y="166" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2C2C2A">跳过 &lt;clinit&gt; 执行</text>
+  <text x="568" y="182" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5F5E5A">(不再执行静态块)</text>
+
+  <line x1="568" y1="191" x2="568" y2="205" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow-down)"/>
+
+  <circle cx="568" cy="224" r="16" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.8"/>
+  <polyline points="559,224 565,230 577,218" fill="none" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="568" y="255" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1D9E75" font-weight="500">类初始化完成</text>
+
+  <!-- ==================== Bottom Annotation ==================== -->
+  <rect x="155" y="298" width="370" height="30" rx="15" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.8"/>
+  <text x="340" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#185FA5" font-weight="500">一次 dump ，多次复用 — 首次运行生成 .jsa ，后续启动直接跳过类初始化</text>
+
+  <!-- ==================== Legend ==================== -->
+  <rect x="125" y="343" width="12" height="12" rx="2" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text x="141" y="354" font-family="sans-serif" font-size="10" fill="#5F5E5A">Klass 区域（蓝色）</text>
+
+  <rect x="290" y="343" width="12" height="12" rx="2" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.5"/>
+  <text x="306" y="354" font-family="sans-serif" font-size="10" fill="#5F5E5A">Heap 区域（绿色）</text>
+
+  <rect x="455" y="343" width="12" height="12" rx="2" fill="#F5F5F4" stroke="#888780" stroke-width="0.5"/>
+  <text x="471" y="354" font-family="sans-serif" font-size="10" fill="#5F5E5A">通用步骤（灰色）</text>
+</svg>

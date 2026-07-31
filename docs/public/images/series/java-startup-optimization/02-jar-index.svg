@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" font-family="sans-serif">
+  <!-- Title -->
+  <text x="340" y="25" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A">JAR Index 原理：把 O(N) 遍历变成 O(1) 查表</text>
+
+  <!-- INDEX.LIST example -->
+  <rect x="170" y="40" width="340" height="60" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1"/>
+  <text x="340" y="57" text-anchor="middle" font-size="11" font-weight="500" fill="#1D9E75">INDEX.LIST 示例</text>
+  <text x="185" y="74" font-size="11" fill="#5F5E5A">JarIndex-Version: 1.0</text>
+  <text x="185" y="90" font-size="11" fill="#5F5E5A">spring-core.jar → org/springframework</text>
+
+  <!-- Left column: 无索引 -->
+  <rect x="30" y="115" width="290" height="195" rx="8" fill="#E6F1FB" fill-opacity="0.3" stroke="#185FA5" stroke-width="1.5"/>
+  <text x="175" y="138" text-anchor="middle" font-size="14" font-weight="500" fill="#185FA5">无索引：逐个 JAR 遍历</text>
+  <text x="175" y="160" text-anchor="middle" font-size="13" fill="#5F5E5A">查找 org/example/Foo</text>
+  <text x="55" y="185" font-size="13" fill="#888780">jar-1.jar</text>
+  <text x="285" y="185" text-anchor="end" font-size="13" fill="#E24B4A">✗</text>
+  <text x="55" y="205" font-size="13" fill="#888780">jar-2.jar</text>
+  <text x="285" y="205" text-anchor="end" font-size="13" fill="#E24B4A">✗</text>
+  <text x="55" y="225" font-size="13" fill="#888780">... ...</text>
+  <text x="55" y="245" font-size="13" fill="#888780">jar-N.jar</text>
+  <text x="285" y="245" text-anchor="end" font-size="13" fill="#1D9E75">✓</text>
+  <rect x="50" y="260" width="250" height="34" rx="6" fill="none" stroke="#E24B4A" stroke-width="1"/>
+  <text x="175" y="276" text-anchor="middle" font-size="12" fill="#E24B4A">平均访问 N/2 个 zip</text>
+  <text x="175" y="290" text-anchor="middle" font-size="13" font-weight="500" fill="#E24B4A">O(N)</text>
+
+  <!-- Arrow between columns -->
+  <text x="340" y="215" text-anchor="middle" font-size="18" fill="#888780">→</text>
+
+  <!-- Right column: 有索引 -->
+  <rect x="360" y="115" width="290" height="195" rx="8" fill="#E1F5EE" fill-opacity="0.3" stroke="#1D9E75" stroke-width="1.5"/>
+  <text x="505" y="138" text-anchor="middle" font-size="14" font-weight="500" fill="#1D9E75">有 INDEX.LIST：直接定位</text>
+  <text x="505" y="160" text-anchor="middle" font-size="13" fill="#5F5E5A">查找 org/example/Foo</text>
+  <rect x="385" y="172" width="240" height="30" rx="6" fill="none" stroke="#1D9E75" stroke-width="1"/>
+  <text x="505" y="192" text-anchor="middle" font-size="12" fill="#1D9E75">HashMap 查表 → jar-7.jar</text>
+  <text x="505" y="228" text-anchor="middle" font-size="13" fill="#1D9E75">✓ 一次命中</text>
+  <rect x="380" y="260" width="250" height="34" rx="6" fill="none" stroke="#1D9E75" stroke-width="1"/>
+  <text x="505" y="276" text-anchor="middle" font-size="12" fill="#1D9E75">直接定位目标 jar</text>
+  <text x="505" y="290" text-anchor="middle" font-size="13" font-weight="500" fill="#1D9E75">O(1)</text>
+
+  <!-- Bottom note -->
+  <text x="340" y="340" text-anchor="middle" font-size="13" fill="#888780">古老但有效，只是原生限制太多</text>
+</svg>
