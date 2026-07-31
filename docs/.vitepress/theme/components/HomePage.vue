@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { withBase } from 'vitepress'
 
-// 系列条目数据
+// 系列条目数据（完整清单，首页每个分类只展示前两条）
 const seriesList = [
   {
     tag: '原创系列',
@@ -11,18 +12,88 @@ const seriesList = [
     link: '/series/cangjie-journey/'
   },
   {
+    tag: '原创系列',
+    count: '23 篇',
+    title: '23 种设计模式实战',
+    desc: '用大白话和 Java 实战代码讲透 GoF 的 23 种设计模式，配套 React 交互演示站，边读文章边动手玩。',
+    link: '/series/design-patterns/'
+  },
+  {
+    tag: '原创系列',
+    count: '6 篇',
+    title: 'Java启动速度优化解读',
+    desc: '从类加载、AppCDS、Heap Archive 到 JIT/AOT 与 Spring 懒加载实战，把 Java 启动慢的根因与加速方案一次讲透。',
+    link: '/series/java-startup-optimization/'
+  },
+  {
+    tag: '原创系列',
+    count: '5 篇',
+    title: '物联网平台SQL治理手记',
+    desc: '手写 MyBatis SQL 的隐患全景：从 SQL 注入、select * 到深分页与死代码，每篇都给出可落地的改造方案。',
+    link: '/series/iot-sql-governance/'
+  },
+  {
+    tag: '原创系列',
+    count: '4 篇',
+    title: '.NET构建机制剖析',
+    desc: '拆开 Visual Studio 构建黑盒：Debug/Release 本质差异、增量构建判定、Design-Time Build 与彻底清理的工程化方案。',
+    link: '/series/dotnet-build/'
+  },
+  {
+    tag: '原创系列',
+    count: '6 篇',
+    title: '开发者速查手册',
+    desc: 'Linux、Windows 命令行、Docker、Git、网络基础与编码自检：表格 + 命令 + 最小示例，打开就能抄。',
+    link: '/series/handbook/'
+  },
+  {
+    tag: '随笔',
+    count: '6 篇',
+    title: '随笔',
+    desc: '一个后端开发在技术之外的成长笔记：求职面试、读书、产品思维、认知方法与兴趣清单。',
+    link: '/essays/'
+  },
+  {
+    tag: '原创系列',
+    count: '3 篇',
+    title: '技术手记单篇',
+    desc: '不成系列的实战与排查记录：OutfitAnyone 部署实录与开源可复现性分析、Synaptics 宏病毒清除、Git 合并冲突实战。',
+    link: '/series/tech-notes/'
+  },
+  {
     tag: '翻译系列',
     count: '13 篇',
     title: 'RXTX 中文文档',
     desc: 'Java 跨平台串口、并口开源库 RXTX 的完整中文翻译，含安装指南、串口教程、移植指南与常见问题。',
     link: '/translations/rxtx/'
+  }
+]
+
+// 更多入口：跳转全部文集页
+const moreEntry = {
+  tag: '目录',
+  count: '共 9 辑',
+  title: '更多系列',
+  desc: '速查手册、手记、翻译与在线实验，完整目录按分类收录，陆续更新。',
+  link: '/collections'
+}
+
+// 首页展示：只取前两条，末尾跟「更多系列」跳转条
+const displayedSeries = computed(() => [...seriesList.slice(0, 2), moreEntry])
+
+// 在线实验条目数据（外链到独立部署的交互式站点）
+const labsList = [
+  {
+    tag: '交互演示',
+    title: '设计模式交互演示站',
+    desc: '23 种设计模式的可视化演示平台，每种模式都能亲手操作、观察运行逻辑，与「23 种设计模式实战」系列配套。',
+    link: 'https://yeatsliao.github.io/design-patterns-23/'
   },
   {
-    tag: '待续',
-    count: '',
-    title: '更多系列',
-    desc: '更多原创技术系列与开源项目文档翻译，陆续更新。',
-    link: ''
+    tag: '交互演示',
+    title: 'Java 可视化实验室',
+    desc: '把内存模型、垃圾回收、多线程竞争、集合扩容等抽象概念做成可操作的动画实验，直观理解 Java 运行机制。',
+    link: 'https://yeatsliao.github.io/java-handson-lab/'
   }
 ]
 </script>
@@ -45,7 +116,7 @@ const seriesList = [
         <p class="section-note">原创与翻译，按辑收录。</p>
       </div>
       <div class="series-list">
-        <template v-for="s in seriesList" :key="s.title">
+        <template v-for="s in displayedSeries" :key="s.title">
           <a v-if="s.link" class="series-entry" :href="withBase(s.link)">
             <div class="entry-main">
               <h3 class="entry-title">{{ s.title }}</h3>
@@ -71,6 +142,35 @@ const seriesList = [
             </div>
           </div>
         </template>
+      </div>
+    </section>
+
+    <!-- 在线实验：与系列文集同构的画廊索引，条目外链到独立部署的演示站 -->
+    <section class="series">
+      <div class="series-head">
+        <h2 class="section-title">在线实验。</h2>
+        <p class="section-note">可交互的学习平台，动手优于旁观。</p>
+      </div>
+      <div class="series-list">
+        <a
+          v-for="l in labsList"
+          :key="l.title"
+          class="series-entry"
+          :href="l.link"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="entry-main">
+            <h3 class="entry-title">{{ l.title }}</h3>
+            <p class="entry-desc">{{ l.desc }}</p>
+          </div>
+          <div class="entry-side">
+            <div class="entry-meta">
+              <span class="pill">{{ l.tag }}</span>
+            </div>
+            <span class="entry-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
       </div>
     </section>
 
