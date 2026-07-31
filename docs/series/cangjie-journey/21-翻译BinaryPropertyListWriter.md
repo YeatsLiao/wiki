@@ -2,8 +2,6 @@
 
 > 本系列第 21 篇。上一篇完成了 `ASCIIPropertyListWriter`。这一篇翻译 `BinaryPropertyListWriter`——二进制 plist 写出器，370 行。
 
----
-
 ## 一、BinaryPropertyListWriter 是什么
 
 这是最复杂的写出器。它将 NSObject 树序列化为 Apple 的二进制 plist 格式（bplist00）。流程：
@@ -62,7 +60,5 @@ Java 的 `self` 在仓颉里是 `this`。初稿中多处误用 `self`。
 [ PASSED ] testWriteToArrayContainsTrailer
 Summary: TOTAL: 140, PASSED: 140, FAILED: 0
 ```
-
----
 
 **下一篇**：评估跳过 `XMLLocationFilter`（SAX 相关）和 `XMLLocationInformation`（DOM 相关）。

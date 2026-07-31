@@ -2,8 +2,6 @@
 
 > 本文档为 RXTX GitHub Wiki Home 页面的中文翻译版本。
 
----
-
 ## 欢迎来到 RXTX Wiki！
 
 RXTX 是一个为 Java 提供跨平台串口和并口访问的开源项目。
@@ -49,8 +47,6 @@ RXTX 是一个为 Java 提供跨平台串口和并口访问的开源项目。
 | 关于 | [贡献者名单](../AUTHORS.md) |
 | 关于 | [许可证摘要](../LicenseSummary.md) |
 | 关于 | [完整许可证](../FullLicense.md) |
-
----
 
 *本页面翻译自 RXTX GitHub Wiki。*
 *编辑者：tuxedo0801（2012年11月22日）*

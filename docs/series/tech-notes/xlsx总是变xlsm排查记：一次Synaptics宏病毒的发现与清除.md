@@ -3,8 +3,6 @@
 > 技术栈：Windows + Office + PowerShell
 > 适用场景：Office 文件莫名从 xlsx 变成 xlsm、打开后一片空白，怀疑中了宏病毒
 
----
-
 ## 1. 问题背景
 
 现象很具体，也很容易被当成"Excel 的毛病"：
@@ -14,8 +12,6 @@
 - 反复设置默认保存格式也没用，过一阵又变回 xlsm。
 
 最初我以为是"文件带了宏所以 Excel 不让存 xlsx"这类设置问题。直到把文件拆开看，才发现根因是——**电脑感染了 Synaptics 宏蠕虫**。所有 xlsx 变 xlsm，都是病毒在你每次打开 Office 文件时自动注入宏、强制另存的结果。
-
----
 
 ## 2. 病毒真相：一个伪装成驱动的后门
 
@@ -62,8 +58,6 @@ xredline1@gmail.com ; xredline2@gmail.com ; xredline3@gmail.com
 
 > 关于泄露的判断：静态字符串只能证明它**具备**外发能力，无法证明历史上**真的发出去过**多少（需联网/邮件服务器日志才能确认）。稳妥起见应按"可能已泄露"处理——见第 7 节。
 
----
-
 ## 3. 如何辨别自己是否中招
 
 从"系统层面"和"文件层面"两头查：
@@ -84,8 +78,6 @@ $vba = $z.Entries | Where-Object { $_.FullName -eq 'xl/vbaProject.bin' }
 # 读取 $vba 内容按 ASCII 提取字符串，匹配 Synaptics / VBAWarnings 即感染
 $z.Dispose()
 ```
-
----
 
 ## 4. 清除病毒本体
 
@@ -110,8 +102,6 @@ Set-ItemProperty 'HKCU:\Software\Microsoft\Office\16.0\Excel\Security' -Name Acc
 
 **（3）排查其他持久化。** 确认没有名字或指向含 `Synaptics` 的计划任务、`HKLM\...\Run` 项、启动文件夹快捷方式，以及 `%TEMP%`、`%APPDATA%` 下的同名 exe。
 
----
-
 ## 5. 批量脱毒被感染的文档
 
 好消息是：正常被感染的文件**数据仍然完好**（只是被藏起来了），可以无损救回。原理是在 zip 层面做四件事，另存为干净的 xlsx：
@@ -132,8 +122,6 @@ $zip.Dispose()
 
 清理完务必逐个验证：**无 `vbaProject`、`[Content_Types].xml` 不含 `macroEnabled`、隐藏表数为 0**，三项都通过才算干净。
 
----
-
 ## 6. 现成的查杀 / 恢复工具
 
 如果不想手动处理，吾爱破解社区有大佬做了专门的全盘扫描恢复工具，可以批量恢复被感染的 exe 和 xlsx，参考出处：
@@ -142,8 +130,6 @@ $zip.Dispose()
 - 吾爱破解论坛《Synaptics 宏病毒感染排查》讨论帖，含"全盘 U 盘病毒 Synaptics 查杀 恢复 exe 和 xlsx 文件"工具：<https://www.52pojie.cn/thread-1066827-1-1.html>
 
 > 提示：来路不明的 exe 工具请在虚拟机或隔离环境先验证；对重要文件，手动 zip 脱毒法（第 5 节）更可控、可审计。
-
----
 
 ## 7. 注意事项
 
@@ -157,8 +143,6 @@ $zip.Dispose()
 
 **（5）收尾兜底。** 手动清除后，建议再用杀毒软件做一次全盘扫描，清理可能遗漏的变种或 `~$cache1.exe` 之类残留。
 
----
-
 ## 8. 总结
 
 | 环节 | 表象 | 真正原因 | 处理 |
@@ -170,8 +154,6 @@ $zip.Dispose()
 | 后台联网 | 以为无害 | 后门回传数据 + 按需下载二阶段 | 断自启断联网 + 按"可能已泄露"改密码 |
 
 一句话：**当"xlsx 总是变 xlsm、打开还是空白"同时出现，几乎可以断定不是 Office 出了问题，而是中了 Synaptics 宏蠕虫**。文件本质是 zip，看懂它的内部结构，无需任何专杀工具也能把数据完好救回。
-
----
 
 ## 附录：IOC 特征清单
 
@@ -210,7 +192,5 @@ HKCU\...\Office\<版本>\Excel(或 Word)\Security  VBAWarnings=1、AccessVBOM=1
 工作表被设为 state="hidden" / "veryHidden"，仅留一张空表可见
 文件类型被强制变为 macroEnabled（.xlsm/.docm）
 ```
-
----
 
 > 参考出处：路明笔记 <https://www.luming.cool/posts/2023/07/wp-187>、吾爱破解 <https://www.52pojie.cn/thread-1066827-1-1.html>。本文病毒行为描述综合上述资料与本人实测，清理脚本为本人在真实环境中验证通过的方法。

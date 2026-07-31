@@ -2,8 +2,6 @@
 
 > 本系列第 16 篇。上一篇完成了 `BinaryLocationInformation`，这一篇是它的"兄弟"——`ASCIILocationInformation`，同样简单，47 行。
 
----
-
 ## 一、ASCIILocationInformation 是什么
 
 与 `BinaryLocationInformation` 类似，但记录的是 **ASCII plist 文件**中的位置：偏移量（offset）、行号（lineNo）、列号（column）。
@@ -48,7 +46,5 @@ public class ASCIILocationInformation <: LocationInformation {
 [ PASSED ] testZeroValues
 Summary: TOTAL: 118, PASSED: 118, FAILED: 0
 ```
-
----
 
 **下一篇**：翻译 `ParsedObjectStack`——二进制解析器的循环引用检测栈。

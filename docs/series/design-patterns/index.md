@@ -6,8 +6,6 @@
 >
 > 🎮 **在线交互演示站：[yeatsliao.github.io/design-patterns-23](https://yeatsliao.github.io/design-patterns-23/)**
 
----
-
 ## 这个系列是关于什么的？
 
 设计模式的教程不少，但大多停留在教科书式的定义上，看完还是不知道该在什么时候用。这个系列换一种讲法：
@@ -71,8 +69,6 @@
 | 第 22 篇 | [模板方法模式 (Template Method)](./22-模板方法模式.md) | 照着流程办事 |
 | 第 23 篇 | [访问者模式 (Visitor)](./23-访问者模式.md) | 极其难懂但很强大 |
 
----
-
 ## 配套项目
 
 | 资源 | 地址 |
@@ -80,7 +76,5 @@
 | 在线交互演示站 | [yeatsliao.github.io/design-patterns-23](https://yeatsliao.github.io/design-patterns-23/) |
 | GitHub 仓库 | [YeatsLiao/design-patterns-23](https://github.com/YeatsLiao/design-patterns-23) |
 | 技术栈 | React 19 + TypeScript + Vite + Tailwind CSS + Framer Motion，支持中英双语 |
-
----
 
 *如果这个系列对你有帮助，欢迎给 [design-patterns-23](https://github.com/YeatsLiao/design-patterns-23) 点个 Star。*

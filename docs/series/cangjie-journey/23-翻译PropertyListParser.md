@@ -2,8 +2,6 @@
 
 > 本系列第 23 篇。上一篇完成了 `XMLLocationInformation`。这一篇翻译 `PropertyListParser` 的骨架——442 行的解析门面类，先实现可独立测试的 `determineType` 类型检测。
 
----
-
 ## 一、PropertyListParser 是什么
 
 解析器门面类，负责：
@@ -45,7 +43,5 @@
 [ PASSED ] testGetTypeName
 Summary: TOTAL: 155, PASSED: 155, FAILED: 0
 ```
-
----
 
 **下一篇**：翻译 `PropertyListConverter`。

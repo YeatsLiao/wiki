@@ -4,8 +4,6 @@
 > 原文更新于：2008年11月27日
 > 翻译整理：RXTX 中文社区
 
----
-
 ## 1. 其他语言的安装说明
 
 ### 日语
@@ -16,8 +14,6 @@
 - 邮箱：tencho@venus.kanazawa-it.ac.jp
 
 > 📌 **提示**：这些说明较为久远，但仍有参考价值。
-
----
 
 ## 2. 构建 CommAPI 支持
 
@@ -112,8 +108,6 @@ Fizzed 提供了 RXTX 的预编译二进制包，特别支持 64 位系统。这
   - Windows：2008, 2003, Vista SP1
   - Linux：CentOS 5.0, 5.2
 
----
-
 ### 2.2 卸载 Sun 的 comm.jar
 
 > 🔔 **重要提示**：Sun 的 comm.jar **不是必需的**。在某些平台上它是一个有效选项。
@@ -125,16 +119,12 @@ Fizzed 提供了 RXTX 的预编译二进制包，特别支持 64 位系统。这
 
 下载地址：http://java.sun.com/products/javacomm/index.html
 
----
-
 ### 2.3 安装 javax.comm.properties
 
 > ℹ️ **更新**：在 rxtx-2.1 中，`javax.comm.properties` 文件**不再是必需的**。
 
 > 📝 **什么是 javax.comm.properties？**  
 > 这是 Sun CommAPI 的配置文件，用于指定可用端口。在旧版 RXTX 中需要手动创建，新版本已不再需要。
-
----
 
 ### 2.4 添加 RXTXcomm.jar 到 CLASSPATH
 
@@ -154,8 +144,6 @@ $ export CLASSPATH=/usr/local/java/lib/RXTXcomm.jar:.
 
 无需额外配置（JDK 1.2+ 的扩展目录机制会自动加载 ext 目录下的 jar）。
 
----
-
 ### 2.5 构建和安装 JAR 包
 
 | 步骤 | 命令 | 说明 |
@@ -174,8 +162,6 @@ $ export JAVA_HOME=/usr/local/java
 
 > 📝 **什么是 JAVA_HOME？**  
 > JAVA_HOME 是指向 JDK 安装目录的环境变量。构建工具通过它找到 javac、jni.h 等编译所需的文件。
-
----
 
 ### 2.6 安装文件位置
 
@@ -200,8 +186,6 @@ $ export JAVA_HOME=/usr/local/java
 ```
 
 > 💡 库文件放在 `/usr/lib` 是为了避免修改 `LD_LIBRARY_PATH`（系统动态库搜索路径）。
-
----
 
 ### 2.7 Windows 平台编译
 
@@ -262,8 +246,6 @@ $ ../configure --target=i386-mingw32 --host=i386-redhat-linux
 $ make
 ```
 
----
-
 ## 3. 常见问题解答
 
 ### A. 加载 `gnu.io.RXTXCommDriver` 时出现 `java.lang.UnsatisfiedLinkError: nSetOwner`
@@ -277,8 +259,6 @@ java.lang.UnsatisfiedLinkError: nSetOwner while loading driver gnu.io.RXTXCommDr
 
 > 📝 **什么是 UnsatisfiedLinkError？**  
 > 这是 Java 尝试加载本地库（.so 或 .dll）失败时抛出的异常。通常是因为库文件路径不对、版本不匹配，或缺少依赖的库。
-
----
 
 ### B. 启动时提示 `java.lang.UnsatisfiedLinkError: no rxtxSerial in java.library.path`
 
@@ -312,8 +292,6 @@ $ java -Djava.library.path=/usr/local/lib/ 你的程序
 > 📝 **什么是 LD_LIBRARY_PATH？**  
 > Linux 系统加载动态库（.so）时搜索的路径。可以理解为系统级别的"库路径"。
 
----
-
 ### C. 无法打开端口
 
 **原因：** 当前用户可能没有访问设备的权限。
@@ -332,8 +310,6 @@ $ chmod 666 /dev/ttyS?
 
 同时确保用户有创建锁文件的权限（见下文 R 部分）。
 
----
-
 ### D. 提示 `java.lang.NoClassDefFoundError: gnu/io/CommPort`
 
 **原因：** `RXTXcomm.jar` 不在 classpath 中或位置不正确。
@@ -346,8 +322,6 @@ $ echo $CLASSPATH
 # 运行时指定 classpath
 $ java -cp /usr/local/java/jre/lib/ext/RXTXcomm.jar:. 你的程序
 ```
-
----
 
 ### E. 编译器找不到 Java 头文件
 
@@ -364,15 +338,11 @@ JAVANATINC = -I /usr/local/java/include/genunix
 > 📝 **什么是 jni.h？**  
 > jni.h 是 Java Native Interface 的头文件，定义了 JNI 编程所需的类型和函数。编译 RXTX 的本地代码需要这个文件。
 
----
-
 ### F. Configure 报 "unterminated sed command" 错误
 
 **原因：** `find` 命令产生了意外结果。
 
 **解决方案：** 移除所有 `comm.jar`，让 configure 重新生成。
-
----
 
 ### G. 找不到 `libstdc++-libc6.0-1.so.2`
 
@@ -385,8 +355,6 @@ $ ls -l /usr/lib/libstdc++-libc6.0-1.so.2
 # /usr/lib/libstdc++-libc6.0-1.so.2 -> libstdc++.so.2.8.0
 ```
 
----
-
 ### H. BlackBox 无法处理所有端口
 
 **原因：** BlackBox.java 中有硬编码的端口数量限制。
@@ -396,8 +364,6 @@ $ ls -l /usr/lib/libstdc++-libc6.0-1.so.2
 portDisp = new SerialPortDisplay[50];
 ```
 将 `50` 改为 `256`。
-
----
 
 ### I. 出现 "Illegal use of nonvirtual function call" 错误
 
@@ -409,16 +375,12 @@ portDisp = new SerialPortDisplay[50];
 2. 或启动 JVM 时加上 `-noverify` 参数
 3. 或使用全新构建目录重新编译和安装
 
----
-
 ### J. libc5 Linux 系统产生 SIGSEGV
 
 **建议：** 升级到 glibc 系统 + libpthread-0.7 或更新版本。旧版 libc5 库问题较多，SIGSEGV 是最常见的症状。
 
 > 📝 **什么是 SIGSEGV？**  
 > SIGSEGV（Segmentation Violation）是 Unix 系统的信号，表示程序访问了不该访问的内存地址，通常会导致程序崩溃。
-
----
 
 ### K. 提示 "AM_PROG_LIBTOOL not found in library"
 
@@ -428,8 +390,6 @@ portDisp = new SerialPortDisplay[50];
 $ ./autogen.sh
 ```
 
----
-
 ### L. RMISecurityManager 相关问题
 
 > ⚠️ **说明**：`RMISecurityManager.html` 原文件已从官方仓库移除，无法找到对应内容。
@@ -438,8 +398,6 @@ $ ./autogen.sh
 > - RXTX 邮件列表历史记录（Majordomo@hex.linuxgrrls.org）
 > - Oracle Java 官方文档中关于 SecurityManager 的通用说明
 > - 在 GitHub Issue 中提出你的使用场景
-
----
 
 ### M. 串口线如何连接？
 
@@ -454,8 +412,6 @@ $ ./autogen.sh
 > - TXD（Transmit Data）：发送数据
 > - RXD（Receive Data）：接收数据
 > - GND（Ground）：信号地
-
----
 
 ### N. 应该使用哪个设备文件？
 
@@ -473,8 +429,6 @@ $ ./autogen.sh
 > tty 是 "teletypewriter"（电传打字机）的缩写。在 Unix/Linux 中，tty 代表终端设备。现在也用于指代串口设备。
 
 > ℹ️ Linux 上据报道 specialx、cyclades 和 isdn4linux 也能工作，最多同时支持 64 个端口。
-
----
 
 ### O. 安装失败怎么办？
 
@@ -500,8 +454,6 @@ make --version
 
 > ⚠️ **注意**：较旧版本的 make 已知会导致问题。
 
----
-
 ### P. 应该使用哪个 JDK？
 
 理想情况下任何 JDK 都可以。以下是 RedHat 6.0 / kernel 2.2.17 / glibc 下的测试结果：
@@ -522,8 +474,6 @@ make --version
 > \*3 Java 无法启动，sem_init 符号问题
 
 **结论**：尽量避免 Sun 的 native threads，除非你能解决其问题。
-
----
 
 ### Q. RXTX 如何检测端口？可以覆盖吗？
 
@@ -546,8 +496,6 @@ $ java -Dgnu.io.rxtx.SerialPorts=/dev/cua/a:/dev/cua/b com.foo.MyApp
 > 发送和接收两端的波特率必须匹配。
 
 > ℹ️ **Linux 端口枚举说明**：由于设备数量可能达到数千，全部检查没有意义。RXTX 在 `RXTXCommDriver.java` 中限制了 Linux 的端口扫描范围。需要额外端口时请参考文件中的说明。
-
----
 
 ### R. 如何使用锁文件？
 
@@ -586,8 +534,6 @@ $ configure --enable-lockfile_server
 
 服务器以 `uucp` 或 `lock` 组身份运行，普通用户可以通过 localhost 连接来锁定和解锁端口。
 
----
-
 ### S. 如何查看 RXTX 版本？
 
 自 rxtx-1.5-4 和 rxtx-1.4-6 起，RXTX 提供了 `RXTXVersion` 类：
@@ -597,8 +543,6 @@ System.out.println(RXTXVersion.getVersion());
 ```
 
 输出格式为 `RXTX-MAJOR.MINOR-PATCH`，例如 `RXTX-1.5-4`。
-
----
 
 ### T. RXTX 的延迟是多少？
 
@@ -611,8 +555,6 @@ System.out.println(RXTXVersion.getVersion());
 
 > 📝 **什么是延迟（Latency）？**  
 > 延迟是数据从发送到接收之间的时间。对于实时性要求高的应用（如工业控制），延迟越低越好。
-
----
 
 ### U. 在新操作系统上无法从端口读取数据
 
@@ -640,8 +582,6 @@ Linux 使用 `/var/lock`，FreeBSD 使用 `/var/spool/uucp/`。
 > 📝 **什么是 select()？**  
 > select() 是 Unix 系统的系统调用，用于监视多个文件描述符（如串口），等待其中一个或多个变为"可读"或"可写"状态。RXTX 使用它实现事件驱动的数据读取。
 
----
-
 ### V. ThinkPad 串口不工作
 
 > 💡 **重要发现**：IBM ThinkPad 的外部串口**默认是禁用的**！
@@ -660,8 +600,6 @@ Linux 使用 `/var/lock`，FreeBSD 使用 `/var/spool/uucp/`。
 > 📝 **什么是 UART？**  
 > UART（Universal Asynchronous Receiver/Transmitter）是串口通信的硬件芯片，负责并行数据与串行信号的转换。
 
----
-
 ## 4. 小程序（Applets）
 
 ### 使用签名的小程序
@@ -679,8 +617,6 @@ Java 小程序在安全管理器的沙箱中运行。Applet 必须签名才能�
 user_pref("signed.applets.codebase_principal_support", true);
 ```
 
----
-
 ## 附录：环境变量提示
 
 **Redhat 7.1 用户：**
@@ -691,8 +627,6 @@ export LD_ASSUME_KERNEL=2.2.5
 
 > 📝 **什么是 LD_ASSUME_KERNEL？**  
 > 这是一个 glibc 环境变量，用于指定程序期望的 glibc 版本。某些旧程序在新的 glibc 版本上可能不兼容，设置这个变量可以"欺骗"程序使用兼容模式。
-
----
 
 *本指南翻译自 RXTX 官方 INSTALL 文档。*
 *原文地址：https://github.com/rxtx/rxtx*

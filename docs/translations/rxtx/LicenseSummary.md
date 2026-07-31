@@ -1,4 +1,4 @@
-﻿# RXTX 许可证
+# RXTX 许可证
 
 > 本文档为 RXTX 官方 COPYING 文件的中文翻译摘要版。
 >
@@ -8,16 +8,12 @@
 > - [GNU LGPL v2.1 英文全文](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html)
 > - [GNU LGPL v2.1 中文参考](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.cn.html)
 
----
-
 ## RXTX 许可证 v2.1
 
 **RXTX 许可证 v2.1 - LGPL v2.1 + 受控接口链接例外**
 
 - RXTX 是 Java 的跨平台原生串口接口
 - 版权所有：1997-2012 by Trent Jarvi tjarvi@qbang.org 及所有实际参与贡献的开发者
-
----
 
 ## 核心条款
 
@@ -55,8 +51,6 @@ RXTX 是一款**自由软件**：
 
 > 对 RXTX 进行修改的开发者，**没有义务**为其修改版本授予此例外。
 
----
-
 ## 关键区别：RXTX vs 普通 LGPL 库
 
 普通 LGPL 库要求：
@@ -67,8 +61,6 @@ RXTX 的例外：
 - ✅ 应用程序可以采用任何许可证
 - ✅ 只需要附带 RXTX 源代码
 
----
-
 ## 许可证摘要
 
 | 场景 | 许可证要求 |
@@ -78,13 +70,9 @@ RXTX 的例外：
 | 分发 RXTX 库 | 必须附带 LGPL 许可证 |
 | 分发使用 RXTX 的应用 | 必须附带 RXTX 源代码 |
 
----
-
 ## 第三方商标
 
 所有商标归其各自所有者所有。
-
----
 
 ## 联系方式
 
@@ -92,15 +80,11 @@ RXTX 的例外：
 - 项目主页：http://www.rxtx.org
 - GitHub：https://github.com/rxtx/rxtx
 
----
-
 ## 完整许可证
 
 GNU LGPL v2.1 完整英文版本可在以下网址找到：
 
 - https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
-
----
 
 *本摘要由 RXTX 中文社区翻译整理，仅供参考。*
 *以英文原版许可证为准。*

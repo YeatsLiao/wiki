@@ -2,8 +2,6 @@
 
 > 本系列第 9 篇。上一篇翻完了 `NSData` + Base64。这一篇轮到日期类型 `NSDate`——上游只有 224 行，看起来很简单，但 Java 的 `SimpleDateFormat` 在仓颉里不存在。最终我用 `std.time.DateTime` 替代 `java.util.Date`，并手动解析固定格式的日期字符串。过程中又踩了 `Month` 枚举、`padStart` 命名参数、`StringBuilder` 链式调用等坑。
 
----
-
 ## 一、NSDate 是什么
 
 `NSDate` 是日期的包装类，对齐 Apple Foundation 的同名概念。plist 里的 `<date>` 标签就是它——内容以固定格式的字符串存储。上游 `NSDate.java` 提供：
@@ -145,7 +143,5 @@ Summary: TOTAL: 42, PASSED: 42, FAILED: 0
 4. **`Int64.tryParse` 在 `std.convert` 包**：不导入就找不到。
 5. **`DateTime` 是 struct**：值类型，传参赋值自动拷贝，不需要手动 clone。
 6. **固定格式日期可以手动解析**：不需要通用解析器，按位置截取 + 转整数更简单可靠。
-
----
 
 **下一篇（待更新）**：翻译 `UID` 类型——看看这个只有几行的小类在仓颉里怎么处理。

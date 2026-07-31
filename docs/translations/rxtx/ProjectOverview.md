@@ -1,4 +1,4 @@
-﻿# RXTX 中文文档
+# RXTX 中文文档
 
 ## 项目简介
 
@@ -94,7 +94,5 @@ RXTX 拥有活跃的社区，欢迎用户和开发者参与：
 - 基于 RXTX 2.2（development 分支）
 - 许可证以英文原版为准
 - 欢迎提交 Issue 改进翻译
-
----
 
 *本项目由 [YeatsLiao](https://github.com/YeatsLiao) 维护。*

@@ -5,8 +5,6 @@
 
 在 .NET 项目开发中，Visual Studio 默认提供两套构建配置：Debug 和 Release。大多数开发者知道"调试用 Debug，发布用 Release"，但这两者在底层究竟有何区别？为什么 Release 模式下程序运行更快？Release 构建产物能否用于问题诊断？本文将从 MSBuild 配置、编译器行为、运行时特性三个维度进行深度解析。
 
----
-
 ## 1. 配置定义：从 .csproj 看本质差异
 
 打开任意 .NET 项目的 `.csproj` 文件，可以看到两套 `PropertyGroup` 配置：
@@ -38,8 +36,6 @@
 | `DebugType` | `full` | `pdbonly` | 调试符号生成方式 |
 | `DebugSymbols` | `true` | 未显式设置 | 是否生成 .pdb 文件 |
 | `DefineConstants` | `DEBUG;TRACE` | `TRACE` | 条件编译常量 |
-
----
 
 ## 2. 编译器优化：Optimize 的深层含义
 
@@ -97,8 +93,6 @@ int sum = 0 + 1 + 2;  // 编译期常量折叠
 2. **变量消失**：局部变量可能被优化掉，监视窗口无法查看
 3. **执行顺序变化**：指令重排可能导致单步调试行为异常
 
----
-
 ## 3. 调试符号：DebugType 的三种模式
 
 `<DebugType>` 控制程序数据库 (.pdb) 文件的生成方式：
@@ -129,8 +123,6 @@ at WpfApp.MainWindow.OnClick() in MainWindow.xaml.cs:line 89
 ```
 
 **建议**：生产环境部署时保留 .pdb 文件，用于异常定位和性能分析。
-
----
 
 ## 4. 条件编译：DEBUG 常量的实战应用
 
@@ -196,8 +188,6 @@ Console.WriteLine($"耗时: {stopwatch.ElapsedMilliseconds}ms");
 #endif
 ```
 
----
-
 ## 5. 运行时行为差异
 
 除了编译期差异，Debug 和 Release 在运行时也有微妙区别：
@@ -233,8 +223,6 @@ public void Process()
     DoSomething();
 }
 ```
-
----
 
 ## 6. 实践建议
 
@@ -273,8 +261,6 @@ obj.SetB(2);  // Release 优化可能重排顺序
 obj.Calculate();
 ```
 
----
-
 ## 7. 总结
 
 Debug 与 Release 的差异不仅是"是否优化"的二元选择，而是一系列编译器、运行时行为的组合：
@@ -284,8 +270,6 @@ Debug 与 Release 的差异不仅是"是否优化"的二元选择，而是一系
 3. **运行期**：JIT 根据 `DebuggableAttribute` 调整优化策略
 
 理解这些差异，有助于在开发中做出正确选择，在问题排查时快速定位根因。
-
----
 
 **延伸阅读（本系列后续篇目）：**
 - [配置文件增量构建原理](./02-配置文件增量构建原理.md)

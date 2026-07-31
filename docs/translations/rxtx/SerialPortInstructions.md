@@ -3,8 +3,6 @@
 > 本文档为 RXTX 官方 SerialPortInstructions.txt 的中文翻译版本。
 > 适用于 Linux 初学者学习使用 Java 读写串口的入门指南。
 
----
-
 ## 1. 简介
 
 RXTX 为 Java 程序提供了访问计算机串口的能力。本文档将帮助你：
@@ -19,8 +17,6 @@ RXTX 为 Java 程序提供了访问计算机串口的能力。本文档将帮助
 > - 工业设备通信（PLC、仪器仪表）
 > - GPS 模组、调制解调器
 > - 老式打印机、扫描枪
-
----
 
 ## 2. 查找串口
 
@@ -78,8 +74,6 @@ String portName = "/dev/ttyS0";    // Linux
 String portName = "/dev/ttyUSB0";  // Linux (USB 适配器)
 ```
 
----
-
 ## 3. 查看端口权限
 
 ### 查看当前权限
@@ -121,8 +115,6 @@ $ sudo usermod -a -G uucp 用户名
 
 > 📝 **为什么要用组权限而不是 chmod 777？**  
 > `chmod 666` 让所有人可读写，但不够安全。正确的做法是让用户加入设备所属的组（dialout/uucp），这样只有授权用户才能访问串口。
-
----
 
 ## 4. 简单的读写程序
 
@@ -304,8 +296,6 @@ public class SerialEventListener implements SerialPortEventListener {
 > 📝 **为什么用事件监听而不是轮询？**  
 > 轮询会浪费 CPU 资源（一直检查）。事件监听只在有数据时才通知，更高效、更省电。
 
----
-
 ## 5. 常用波特率
 
 | 波特率 | 适用场景 | 说明 |
@@ -322,8 +312,6 @@ public class SerialEventListener implements SerialPortEventListener {
 > - 短距离（<1米）：可用任意波特率
 > - 长距离或环境干扰大：用较低的波特率更稳定
 > - Arduino 通信：通常用 9600 或 115200
-
----
 
 ## 6. 故障排除
 
@@ -356,8 +344,6 @@ public class SerialEventListener implements SerialPortEventListener {
 > - A 设备 RX → B 设备 TX
 > - GND → GND
 
----
-
 ## 7. 相关资源
 
 - RXTX 官方文档：https://github.com/rxtx/rxtx
@@ -367,8 +353,6 @@ public class SerialEventListener implements SerialPortEventListener {
 - 常见问题：[FAQ](wiki/FAQ.md)
 - 开发指南：[Development](wiki/Development.md)
 - 下载资源：[Download](wiki/Download.md)
-
----
 
 ## 8. 高级封装示例
 
@@ -763,8 +747,6 @@ public class SerialPortUtilTest {
 
 }
 ```
-
----
 
 *本指南翻译自 RXTX 官方 SerialPortInstructions.txt。*
 *原文作者：Vaibhav Andleigh / Athena <andleigh@mit.edu>*

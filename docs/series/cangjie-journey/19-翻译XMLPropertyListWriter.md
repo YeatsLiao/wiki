@@ -2,8 +2,6 @@
 
 > 本系列第 19 篇。上一篇完成了 `ByteOrderMarkReader`。这一篇翻译 `XMLPropertyListWriter`——XML plist 写出器，38 行。
 
----
-
 ## 一、XMLPropertyListWriter 是什么
 
 上游的 `XMLPropertyListWriter` 提供三个重载：`write(NSObject, File)`、`write(NSObject, Path)`、`write(NSObject, OutputStream)`，将 NSObject 树序列化为 XML 格式写出。
@@ -46,7 +44,5 @@ File.writeTo(path, buf)
 [ PASSED ] testWriteToStringContainsXmlHeader
 Summary: TOTAL: 134, PASSED: 134, FAILED: 0
 ```
-
----
 
 **下一篇**：翻译 `ASCIIPropertyListWriter`——ASCII 格式写出器。

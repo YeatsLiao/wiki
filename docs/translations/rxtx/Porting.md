@@ -3,8 +3,6 @@
 > 本文档为 RXTX 官方 PORTING 文件的中文翻译版本。
 > 适用于开发者将 RXTX 移植到新平台。
 
----
-
 ## 1. 移植注意事项
 
 在尝试将 RXTX 移植到新平台时，请注意以下事项：
@@ -45,8 +43,6 @@ rxtx-native/
 | `ParallelImp.c` | 并口硬件访问 |
 | `Makefile.in` | 平台特定的构建配置 |
 
----
-
 ## 2. 已知支持的平台
 
 | 平台 | 设备文件 | 备注 |
@@ -67,8 +63,6 @@ rxtx-native/
 > - Linux 使用 `ttyS*`（teletypewriter Serial）
 > - FreeBSD 使用 `cua*`（Callout devices）
 > - Solaris 使用 `cua/*`
-
----
 
 ## 3. 端口检测机制
 
@@ -123,8 +117,6 @@ java -Dgnu.io.rxtx.SerialPorts=/dev/cua/a:/dev/cua/b MyApp
 > 📝 **什么是锁文件？**  
 > 锁文件（如 `/var/lock/LCK..ttyS0`）用于防止多个程序同时打开同一个串口。当程序打开端口时创建锁文件，关闭时删除。
 
----
-
 ## 4. 设备命名规则
 
 ### 4.1 常见设备文件
@@ -177,8 +169,6 @@ java -Dgnu.io.rxtx.SerialPorts=/dev/cua/a:/dev/cua/b MyApp
 > ls /dev/cu.* /dev/tty.*
 > ```
 
----
-
 ## 5. 串口引脚定义
 
 ### DB-9 引脚（最常用）
@@ -210,8 +200,6 @@ java -Dgnu.io.rxtx.SerialPorts=/dev/cua/a:/dev/cua/b MyApp
 
 > 📝 **最小接线**：只需 3 根线即可通信：TX、RX、GND
 
----
-
 ## 6. 波特率配置
 
 RXTX 支持标准和非标准波特率。标准波特率包括：
@@ -226,8 +214,6 @@ RXTX 支持标准和非标准波特率。标准波特率包括：
 > - 115200 bps：短距离（< 10 米）使用带屏蔽的线缆
 
 某些平台还支持自定义波特率（通过设置波特率除数实现）。
-
----
 
 ## 7. 编译标志
 
@@ -246,8 +232,6 @@ RXTX 支持标准和非标准波特率。标准波特率包括：
 > 1. 在 configure.ac 中添加平台检测
 > 2. 在 SerialImp.c 中添加 `#ifdef YOUR_PLATFORM` 分支
 > 3. 在 Makefile.in 中添加构建规则
-
----
 
 *本指南翻译自 RXTX 官方 PORTING 文档。*
 *如有问题，请联系 rxtx 邮件列表或在 GitHub 上提交 Issue。*

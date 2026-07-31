@@ -2,8 +2,6 @@
 
 > 本系列第 15 篇。9 种 NSObject 子类全部完成后，今天开始进入解析器/写出器模块。第一个是 `BinaryLocationInformation`——只有 38 行的位置信息数据类。
 
----
-
 ## 一、BinaryLocationInformation 是什么
 
 `BinaryLocationInformation` 是 `LocationInformation` 的子类，描述 NSObject 在**二进制 plist 文件**中的位置。上游只有 38 行，包含：
@@ -61,7 +59,5 @@ Summary: TOTAL: 114, PASSED: 114, FAILED: 0
 
 1. **LocationInformation 继承链很顺畅**：抽象基类已经翻译好，子类只需实现 `getDescription()`。
 2. **解析器基础设施开始搭建**：位置信息类是解析器的辅助类型，用于记录解析出的对象在源文件中的位置。
-
----
 
 **下一篇**：翻译 `ASCIILocationInformation`——ASCII plist 的位置信息。

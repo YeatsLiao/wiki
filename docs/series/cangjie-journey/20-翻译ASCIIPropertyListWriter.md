@@ -2,8 +2,6 @@
 
 > 本系列第 20 篇。上一篇完成了 `XMLPropertyListWriter`。这一篇翻译 `ASCIIPropertyListWriter`——ASCII plist 写出器，168 行。
 
----
-
 ## 一、ASCIIPropertyListWriter 是什么
 
 上游提供两组重载：
@@ -47,7 +45,5 @@ ASCIIPropertyListWriter.writeGnuStepToString(root)    // GnuStep 格式转字符
 [ PASSED ] testWriteGnuStepToString
 Summary: TOTAL: 137, PASSED: 137, FAILED: 0
 ```
-
----
 
 **下一篇**：翻译 `BinaryPropertyListWriter`——二进制格式写出器。

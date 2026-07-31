@@ -2,8 +2,6 @@
 
 > 本文档整合了 RXTX 的各种下载资源，包括源代码和预编译二进制包。
 
----
-
 ## 1. 源代码下载
 
 ### 1.1 GitHub 仓库
@@ -18,8 +16,6 @@
 
 - **官方网站**：http://www.rxtx.org
 - **原始网站**：http://users.frii.com/jarvi/rxtx/
-
----
 
 ## 2. 预编译二进制包
 
@@ -62,8 +58,6 @@ Fizzed 提供了 RXTX 的预编译二进制包，特别支持 64 位系统。这
   </dependency>
   ```
 
----
-
 ## 3. 版本历史
 
 ### 主要版本：
@@ -78,8 +72,6 @@ Fizzed 提供了 RXTX 的预编译二进制包，特别支持 64 位系统。这
 ### 版本号格式：
 
 RXTX 的版本号格式为 `RXTX-MAJOR.MINOR-PATCH`，例如 `RXTX-1.5-4`。
-
----
 
 ## 4. 下载说明
 
@@ -124,15 +116,11 @@ public class RXTXVersionCheck {
 }
 ```
 
----
-
 ## 5. 相关资源
 
 - [安装指南](../INSTALL.md)
 - [串口使用教程](../SerialPortInstructions.md)
 - [开发指南](./Development.md)
 - [RXTX 官方 Wiki](http://rxtx.qbang.org/wiki/)
-
----
 
 *本页面整合了 RXTX 的各种下载资源。*

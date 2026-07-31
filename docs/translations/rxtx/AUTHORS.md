@@ -1,9 +1,7 @@
-﻿# RXTX 项目贡献者
+# RXTX 项目贡献者
 
 > 本文档为 RXTX 官方 AUTHORS 文件的中文翻译版本。
 > 原文更新于：2007年11月18日
-
----
 
 RXTX 不是一个人短时间完成的杰作。以下是所有为 RXTX 做出贡献的开发者（按字母顺序排列）：
 
@@ -26,8 +24,6 @@ RXTX 不是一个人短时间完成的杰作。以下是所有为 RXTX 做出贡
 
 ### Dmitry Markman
 - Mac OS X 使用 Code Warrior 构建和大量修复
-
----
 
 ## 平台移植贡献者
 
@@ -53,8 +49,6 @@ RXTX 不是一个人短时间完成的杰作。以下是所有为 RXTX 做出贡
 | **Kevin Hester** | CommAPI 支持，Linux Comm 项目 |
 | **Karl Asha** | RXTX 网站托管（blackdown.org）；调试 autoconfig |
 
----
-
 ## 功能修复和改进贡献者
 
 | 贡献者 | 贡献内容 |
@@ -76,8 +70,6 @@ RXTX 不是一个人短时间完成的杰作。以下是所有为 RXTX 做出贡
 | **Karl Asha** | RXTX 网站托管（blackdown.org）；调试 autoconfig；提醒升级到 1.1.1 |
 | **Oliver Frommel** | IRIX 端口；修复 open() 调用使 4/5/6/8/20 引脚无需短接；协助追踪阻止包正常工作的线程问题；多次建议；使用 RS232 分析仪验证串口通信 |
 
----
-
 ## 测试贡献者
 
 | 贡献者 | 贡献内容 |
@@ -86,20 +78,14 @@ RXTX 不是一个人短时间完成的杰作。以下是所有为 RXTX 做出贡
 | **Jauhar Ismail** | QA 测试 |
 | **Scott Burleigh** | ThinkPad 串口行为文档和 "No serial ports found!" 问题说明 |
 
----
-
 ## 文档贡献
 
 感谢所有为 RXTX 文档做出贡献的朋友！
-
----
 
 ## 如何参与贡献
 
 如果你对 RXTX 进行了修改或发现了 bug，请将补丁反馈回来。
 
 贡献者会被给予荣誉，除非明确要求不署名。
-
----
 
 *完整的历史变更记录请参阅 [ChangeLog.md](ChangeLog.md)。*

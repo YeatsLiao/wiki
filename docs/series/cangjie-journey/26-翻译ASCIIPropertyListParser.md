@@ -2,8 +2,6 @@
 
 > 本系列第 26 篇。上一篇完成了 XML 解析器。这一篇翻译 1090 行的 `ASCIIPropertyListParser`——最后一个解析器，支持 Apple 和 GnuStep 两种 ASCII plist 格式。
 
----
-
 ## 一、ASCIIPropertyListParser 概览
 
 ASCII plist 是最"古老"的 plist 格式，形如：
@@ -116,7 +114,5 @@ ASCII 格式中布尔值输出为 `YES`/`NO`（无引号），默认走 `parsePl
 | testParseData | NSData 十六进制数据 |
 
 全部 **170/170** 测试通过。
-
----
 
 至此，三个解析器（Binary / XML / ASCII）全部翻译完成！下一步是反射胶水（`to/fromJavaObject`）和双版本验证。

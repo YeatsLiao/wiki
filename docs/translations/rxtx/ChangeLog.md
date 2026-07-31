@@ -1,10 +1,8 @@
-﻿# RXTX 版本变更日志
+# RXTX 版本变更日志
 
 > 本文档为 RXTX 官方 ChangeLog 的中文翻译版本。
 > 翻译整理：RXTX 中文社区
 > 基于版本：rxtx-2.2 (2012年6月6日)
-
----
 
 ## 版本 2.2
 
@@ -123,8 +121,6 @@
 
 - ✅ **改进**：JavaDoc 修复
 
----
-
 ## 版本 2.1-7
 
 ### 2006 年 1 月 29 日
@@ -137,8 +133,6 @@
 - Configure.java 消息修正
 - System.gc() 对 close() 性能影响过大
 
----
-
 ## 版本 2.1-6
 
 ### 2002 年 9 月 7 日
@@ -150,8 +144,6 @@
 - 超时和阈值修复
 - Debian 锁文件修复
 - HP-UX 端口枚举修复
-
----
 
 ## 版本 1.5 系列
 
@@ -215,8 +207,6 @@
 - Stallion 卡支持
 - CommAPI 实现的端口枚举
 
----
-
 ## 版本 1.4 系列
 
 ### 1.4-15 到 1.4-6
@@ -245,8 +235,6 @@
 - Suse 构建修复
 - JDK-1.3 构建修复
 
----
-
 ## 早期版本 (1.3 系列及以前)
 
 - Cyclades 和多端口卡支持
@@ -261,8 +249,6 @@
 - MINGW (Win32) 支持
 - 完整 CommAPI 开始
 
----
-
 ## 版本 0.x 早期历史
 
 | 版本 | 日期 | 说明 |
@@ -272,8 +258,6 @@
 | 0.21 | 1997年3月12日 | 移除硬编码变量，添加 autoconf 能力，IRIX 支持 |
 | 0.2 | 1997年3月11日 | 添加 autoconf 能力 |
 | 0.1 | 1997年3月10日 | 初始版本 |
-
----
 
 ## 早期贡献者致谢
 
@@ -285,8 +269,6 @@
 - Michael Forte (Michael.Forte@Corp.Sun.COM) - SunOS 端口
 - Gilles Paquet (Gilles.Paquet@ulb.ac.be) - SunOS 端口
 - Martin Pool (mbp@linuxcare.com) - 显式指定端口列表支持
-
----
 
 *本变更日志翻译自 RXTX 官方 ChangeLog 文件。*
 *原文地址：https://github.com/rxtx/rxtx/blob/development/ChangeLog*

@@ -2,8 +2,6 @@
 
 > 本系列第 13 篇。上一篇完成了 `NSArray`，这一篇轮到字典容器 `NSDictionary`。它带来了新的挑战：containsValue 的多类型重载，以及元组访问的语法差异。
 
----
-
 ## 一、NSDictionary 是什么
 
 `NSDictionary` 是以字符串为键、`NSObject` 为值的字典容器，对齐 Apple Foundation 的 NSDictionary。上游 `NSDictionary.java` 有 508 行，是到目前为止最大的类之一。
@@ -194,7 +192,5 @@ public func allKeys(): Array<String> {
 2. **containsValue 多类型重载**：用类型判断辅助函数 + `as` 转型代替 match 分派，避免 `{ }` lambda 陷阱。
 3. **XML CDATA 处理**：键名含特殊字符时需要 CDATA 包裹，`]]>` 本身也需要转义。
 4. **put 的 Option 语义**：传入 None 时不修改字典，只返回旧值——这和 Java 版行为一致。
-
----
 
 **下一篇**：翻译 `NSSet`——无法使用 HashSet 的集合，以及 NSObject 相等判断的终极方案。

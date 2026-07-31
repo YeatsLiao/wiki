@@ -2,8 +2,6 @@
 
 > 本系列第 22 篇。上一篇完成了 `BinaryPropertyListWriter`。这一篇翻译 `XMLLocationInformation`——XML 节点位置信息，97 行。同时评估跳过了 `XMLLocationFilter`（依赖 Java SAX API）。
 
----
-
 ## 一、XMLLocationInformation 是什么
 
 记录 NSObject 在 XML plist 文件中的位置：XPath 路径、行号、列号。上游的构造器接受 `org.w3c.dom.Node`，从 DOM 属性中提取 SAX 过滤器写入的行列信息。
@@ -34,7 +32,5 @@ public init(xpath: String)  // 无行列信息
 [ PASSED ] testToString
 Summary: TOTAL: 144, PASSED: 144, FAILED: 0
 ```
-
----
 
 **下一篇**：翻译 `ByteOrderMarkFilterInputStream`。

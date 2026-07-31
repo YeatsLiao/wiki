@@ -2,8 +2,6 @@
 
 > 本系列第 25 篇。上一篇完成了 `BinaryPropertyListParser`。这一篇翻译 `XMLPropertyListParser`，由于仓颉标准库没有 XML DOM API，我们手写了一个 XML 递归下降解析器，过程中踩了不少坑。
 
----
-
 ## 一、为什么不能直接翻译
 
 上游 Java 版 `XMLPropertyListParser` 基于 `javax.xml.parsers.DocumentBuilderFactory` 构建 DOM 树，然后遍历 `Node` 节点递归解析。核心代码大约 545 行，严重依赖 Java DOM API：
@@ -166,7 +164,5 @@ if (codeUnit >= 0xD800 && codeUnit <= 0xDBFF && i + 1 < data.size) {
 | testParseBooleans | true/false 布尔值 |
 
 全部 **165/165** 测试通过。
-
----
 
 下一篇翻译最后一个解析器 `ASCIIPropertyListParser`。

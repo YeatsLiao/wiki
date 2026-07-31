@@ -2,8 +2,6 @@
 
 > 本系列第 10 篇。上一篇翻完了 `NSDate`。这一篇轮到 `UID`——上游只有 190 行，是 plist 里最小的叶子类型之一。但它依赖 Java 的 `BigInteger` 来存储最多 128 位的无符号整数，而仓颉标准库没有 BigInteger。最终我用 `Array<Byte>` 手动实现了大端无符号字节数组的比较、十六进制转换和填充逻辑。
 
----
-
 ## 一、UID 是什么
 
 `UID` 是唯一标识符类，**仅在二进制 plist 的 keyed archive 中出现**。Apple 用它来引用归档中的对象。上游 `UID.java` 提供：
@@ -214,7 +212,5 @@ Summary: TOTAL: 56, PASSED: 56, FAILED: 0
 4. **Int64 乘法溢出会抛异常**：不像 Java int 自动回绕，仓颉 Int64 溢出是运行时错误。
 5. **Option 用 `getOrThrow()` 取值**：不是 `unwrap()`。
 6. **没有 BigInteger 也能处理大数**：128 位以内的整数用 `Array<Byte>` 手动实现就够了。
-
----
 
 **下一篇（待更新）**：翻译 `NSNull`——最简单的类型，只有几行代码。

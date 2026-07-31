@@ -2,8 +2,6 @@
 
 > 本文档为 RXTX 官方 Wiki 中 FAQ 页面的中文翻译版本。
 
----
-
 ## 1. 安装问题
 
 ### 1.1 如何安装 RXTX？
@@ -28,8 +26,6 @@
 - 确保本地库文件（.dll 或 .so）放在正确的目录
 - 32 位 Java 必须使用 32 位本地库，64 位 Java 必须使用 64 位本地库
 - 检查 `java.library.path` 是否包含本地库所在目录
-
----
 
 ## 2. 运行时问题
 
@@ -62,8 +58,6 @@
 - 确保使用事件监听或适当的读取方式
 - 检查设备是否正常发送数据
 
----
-
 ## 3. 硬件问题
 
 ### 3.1 串口线如何连接？
@@ -85,8 +79,6 @@
 - Linux：`/dev/ttyS*` 或 `/dev/ttyUSB*`
 - Windows：`COM1`, `COM2`, 等
 - Mac OS：`/dev/cu.*` 或 `/dev/tty.*`
-
----
 
 ## 4. 开发问题
 
@@ -126,8 +118,6 @@ serialPort.setSerialPortParams(
 - 设置系统属性：`-Dgnu.io.rxtx.SerialPorts=/dev/cua/a:/dev/cua/b`
 - 这样 RXTX 不会扫描目录，只使用指定的端口
 
----
-
 ## 5. 其他问题
 
 ### 5.1 RXTX 的许可证是什么？
@@ -154,15 +144,11 @@ System.out.println(RXTXVersion.getVersion());
 - HP-UX
 - 等其他 POSIX 兼容系统
 
----
-
 ## 参考资源
 
 - [RXTX 官方 Wiki](http://rxtx.qbang.org/wiki/)
 - [安装指南](../INSTALL.md)
 - [串口使用教程](../SerialPortInstructions.md)
 - [移植指南](../Porting.md)
-
----
 
 *本页面翻译自 RXTX 官方 Wiki。*

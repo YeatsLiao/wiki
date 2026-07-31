@@ -2,8 +2,6 @@
 
 > 本系列第 24 篇。上一篇完成了 `PropertyListParser` 骨架。这一篇翻译 405 行的 `BinaryPropertyListParser`，并在调试过程中发现了仓颉 `for (i in 0..n)` 循环的一个重大 bug。
 
----
-
 ## 一、BinaryPropertyListParser 概览
 
 二进制 plist 解析器，核心职责：
@@ -106,7 +104,5 @@ while (ci < w.count) {
 | testParseUnsignedInt | 无符号整数解析工具 |
 
 全部 160 个测试通过。
-
----
 
 下一篇继续翻译 `XMLPropertyListParser` 或 `ASCIIPropertyListParser`。

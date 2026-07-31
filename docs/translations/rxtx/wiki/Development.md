@@ -2,8 +2,6 @@
 
 > 本文档为 RXTX 官方 Wiki 中开发相关页面的中文翻译版本。
 
----
-
 ## 1. 开发环境搭建
 
 ### 1.1 必要工具
@@ -53,8 +51,6 @@ mkdir build && cd build
 make
 ```
 
----
-
 ## 2. 代码结构
 
 ### 2.1 主要目录
@@ -83,8 +79,6 @@ rxtx/
 - `native/RXTXCommDriver.c` - 驱动实现
 - `native/termios.c` - POSIX 串口通信
 
----
-
 ## 3. 贡献流程
 
 ### 3.1 提交代码
@@ -110,8 +104,6 @@ rxtx/
 - 提供详细的错误信息和复现步骤
 - 包括操作系统、Java 版本、RXTX 版本等信息
 
----
-
 ## 4. 开发指南
 
 ### 4.1 如何添加新平台支持
@@ -135,8 +127,6 @@ rxtx/
 - **平台差异**：注意不同平台的 API 差异
 - **权限问题**：确保测试环境有正确的设备访问权限
 - **锁文件问题**：理解不同平台的锁文件机制
-
----
 
 ## 5. 调试技巧
 
@@ -171,15 +161,11 @@ java -Dgnu.io.rxtx.debug=true YourApplication
 - 验证本地库与 Java 版本匹配（32位/64位）
 - 检查依赖库是否存在
 
----
-
 ## 6. 资源
 
 - [RXTX 官方 GitHub 仓库](https://github.com/rxtx/rxtx)
 - [Java Communications API 文档](https://docs.oracle.com/cd/E17802_01/products/products/javacomm/reference/api/)
 - [JNI 编程指南](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/)
 - [POSIX 串口编程](http://www.cmrr.umn.edu/~strupp/serial.html)
-
----
 
 *本页面翻译自 RXTX 官方 Wiki。*

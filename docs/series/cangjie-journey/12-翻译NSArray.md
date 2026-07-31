@@ -2,8 +2,6 @@
 
 > 本系列第 12 篇。叶子类型全部完成，从今天开始进入容器类型。`NSArray` 是第一个——它不像叶子类型那样"翻译就行"，而是带来了三个全新的仓颉语言挑战。
 
----
-
 ## 一、NSArray 是什么
 
 `NSArray` 是 `NSObject` 元素的有序数组，对齐 Apple Foundation 的 NSArray。上游 `NSArray.java` 有 375 行，提供：
@@ -197,7 +195,5 @@ Summary: TOTAL: 110, PASSED: 110, FAILED: 0
 2. **NSObject 没有 hashCode**：容器类型需要 hashCode 时，用 `NSObjectHash` 辅助类做类型分派。
 3. **`sort()` 是全局函数**：仓颉的排序用全局 `sort(arr)` 而不是 `arr.sort()`。
 4. **`lastIndexOf` 返回 Option**：需要 match 解包。
-
----
 
 **下一篇**：翻译 `NSDictionary`——键值对容器，以及更多类型分派技巧。

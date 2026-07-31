@@ -2,8 +2,6 @@
 
 > 本系列第 18 篇。上一篇完成了 `ParsedObjectStack`。这一篇翻译 `ByteOrderMarkReader`——Unicode 字节序标记检测器，116 行。
 
----
-
 ## 一、ByteOrderMarkReader 是什么
 
 plist 文件可能以多种 Unicode 编码存储（UTF-8、UTF-16BE/LE、UTF-32BE/LE）。解析器需要先检测文件开头的 BOM（Byte Order Mark）来确定编码。`ByteOrderMarkReader` 就是这个检测工具。
@@ -72,7 +70,5 @@ boolean match = this.offset < bom.length && bom[this.offset] == b;
 [ PASSED ] testReadByteUtf16Be
 Summary: TOTAL: 131, PASSED: 131, FAILED: 0
 ```
-
----
 
 **下一篇**：翻译 `XMLPropertyListWriter`——最简单的写出器。

@@ -7,8 +7,6 @@
 
 本文将从 MSBuild 与 Visual Studio 项目系统（Project System）的交互机制出发，解析 **Design-Time Build（设计时构建）** 的工作原理及其对文件系统的影响。
 
----
-
 ## 1. 核心机制：Design-Time Build
 
 我们在点击“生成（Build）”按钮时触发的构建过程称为 **Real Build（真实构建）**，其产物是最终的可执行文件或程序集。
@@ -29,8 +27,6 @@ Design-Time Build 复用了 MSBuild 的执行引擎，但它执行的是一组�
 
 因此，只要 Visual Studio 加载了项目，后台进程就会不断尝试访问或重建这些关键的中间文件，从而导致 `obj` 目录被“重建”。
 
----
-
 ## 2. “清理后重建”的技术复盘
 
 当执行“清理解决方案”时，IDE 内部发生了以下交互序列：
@@ -49,8 +45,6 @@ Design-Time Build 复用了 MSBuild 的执行引擎，但它执行的是一组�
 
 这一过程通常在毫秒级内完成，因此在用户视角看来，文件夹似乎从未被真正删除。
 
----
-
 ## 3. 工程影响与应对
 
 ### 3.1 正常现象 vs 异常残留
@@ -60,8 +54,6 @@ Design-Time Build 复用了 MSBuild 的执行引擎，但它执行的是一组�
 
 ### 3.2 潜在的锁文件冲突
 Design-Time Build 生成的某些文件可能会被 VS 进程长时间锁定。这可能导致在命令行执行 `git clean` 或手动 `rm -rf` 时出现 "Access Denied" 错误。通常的解决方案是关闭 Visual Studio 后再进行外部文件操作。
-
----
 
 ## 4. 总结
 

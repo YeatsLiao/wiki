@@ -2,8 +2,6 @@
 
 > 本系列第 17 篇。上一篇完成了 `ASCIILocationInformation`。这一篇翻译 `ParsedObjectStack`——二进制 plist 解析器用来检测循环引用的辅助类，70 行。
 
----
-
 ## 一、ParsedObjectStack 是什么
 
 二进制 plist 中的对象可以相互引用，形成引用图。如果出现循环引用（A 引用 B，B 又引用 A），解析器需要检测并报错。`ParsedObjectStack` 就是这个检测工具——一个**不可变链表栈**。
@@ -86,7 +84,5 @@ private static func checkAndRecurse(self_: ParsedObjectStack, p: ParsedObjectSta
 [ PASSED ] testPushSameIdTwice
 Summary: TOTAL: 123, PASSED: 123, FAILED: 0
 ```
-
----
 
 **下一篇**：翻译 `ByteOrderMarkReader`——Unicode BOM 检测器。

@@ -2,8 +2,6 @@
 
 > 本系列第 14 篇。容器类型三连的最后一篇。`NSSet` 看起来最简单，但它带来了一个根本性问题：NSObject 不能用 HashSet。
 
----
-
 ## 一、NSSet 是什么
 
 `NSSet` 是 `NSObject` 的集合容器，支持无序和有序两种模式，对齐 Apple Foundation 的 NSSet。上游 `NSSet.java` 有 328 行。
@@ -201,8 +199,6 @@ Summary: TOTAL: 110, PASSED: 110, FAILED: 0
 2. **typeId 分派模式**：嵌套 match 不可行时，用类型 ID 函数先判断类型是否一致，再调用 compare。简洁且避免了 lambda 陷阱。
 3. **不支持默认参数值**：用多个 init 重载代替。
 4. **序列化委托**：NSSet 没有独立的 plist 表示，输出全部委托给 NSArray。
-
----
 
 **容器类型三连完成！** 至此，9 种 NSObject 子类全部翻译完毕：
 

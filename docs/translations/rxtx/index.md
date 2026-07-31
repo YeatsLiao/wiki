@@ -1,4 +1,4 @@
-﻿# RXTX 中文文档
+# RXTX 中文文档
 
 ## 项目简介
 
@@ -60,7 +60,5 @@ RXTX 是一个为 Java 提供跨平台串行端口（Serial Port）和并行端�
 - 基于 RXTX 2.2（development 分支）
 - 许可证以英文原版为准
 - 欢迎提交 Issue 改进翻译
-
----
 
 *本项目由 [YeatsLiao](https://github.com/YeatsLiao) 维护。*

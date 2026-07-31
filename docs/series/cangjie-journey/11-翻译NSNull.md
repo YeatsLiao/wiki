@@ -2,8 +2,6 @@
 
 > 本系列第 11 篇。上一篇翻完了 `UID`。这一篇轮到 `NSNull`——整个 dd-plist 里最简单的类，只有 102 行。但即便这么简单，也踩了两个坑：仓颉没有 `final class`，也没有 `NullPointerException`。
 
----
-
 ## 一、NSNull 是什么
 
 `NSNull` 是 null 值的内部表示，**用于在 NSDictionary / NSSet 等容器中存储 null**。因为仓颉的 `Option<T>` 已经能表示"有值/无值"，但 plist 的容器类型需要一个具体的对象来占位。
@@ -119,7 +117,5 @@ Summary: TOTAL: 66, PASSED: 66, FAILED: 0
 2. **仓颉没有 `NullPointerException`**：用 `IllegalArgumentException` 替代，语义上也合理。
 3. **`NSObject` 基类没有 `equals` / `hashCode`**：这些方法由各子类自行实现，测试时需要先转型到具体类型。
 4. **`unwrap` 用类型匹配比 `equals` 更直接**：`match (o) { case _: NSNull => ... }` 不需要依赖 equals 方法。
-
----
 
 **下一篇（待更新）**：叶子类型全部完成！接下来进入容器类型——`NSArray`。
