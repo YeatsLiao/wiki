@@ -22,6 +22,7 @@ export default defineConfig({
           { text: '仓颉共建之旅', link: '/series/cangjie-journey/' },
           { text: '23 种设计模式实战', link: '/series/design-patterns/' },
           { text: 'Java启动速度优化解读', link: '/series/java-startup-optimization/' },
+          { text: 'Chris Newland JVM工具解读', link: '/series/jvm-tools/' },
           { text: '物联网平台SQL治理手记', link: '/series/iot-sql-governance/' },
           { text: '.NET构建机制剖析', link: '/series/dotnet-build/' },
           { text: '开发者速查手册', link: '/series/handbook/' },
@@ -56,6 +57,25 @@ export default defineConfig({
             { text: '四 JIT 预热与 AOT 编译的兴衰', link: '/series/java-startup-optimization/04-JIT预热与AOT编译的兴衰' },
             { text: '五 Spring 懒加载实战：MQTT 静默失效', link: '/series/java-startup-optimization/05-Spring懒加载实战：MQTT静默失效' },
             { text: '六 启动加速最佳实践与展望', link: '/series/java-startup-optimization/06-启动加速最佳实践与展望' }
+          ]
+        }
+      ],
+
+      '/series/jvm-tools/': [
+        { text: '系列首页', link: '/series/jvm-tools/' },
+        {
+          text: 'Chris Newland JVM工具解读',
+          items: [
+            { text: '一 总览：一个人与一套 JVM 工具矩阵', link: '/series/jvm-tools/01-总览：一个人与一套JVM工具矩阵' },
+            { text: '二 VM Options Explorer', link: '/series/jvm-tools/02-VMOptionsExplorer：把HotSpot参数黑盒拆开' },
+            { text: '三 hsdis：让 JIT 说出机器语言', link: '/series/jvm-tools/03-hsdis：让JIT说出机器语言' },
+            { text: '四 JITWatch', link: '/series/jvm-tools/04-JITWatch：看懂HotSpot在你的代码上做了什么' },
+            { text: '五 JaCoLine', link: '/series/jvm-tools/05-JaCoLine：给你的启动脚本做个体检' },
+            { text: '六 Byte-Me', link: '/series/jvm-tools/06-ByteMe：在浏览器里看Java怎么变成字节码' },
+            { text: '七 JEP 三件套', link: '/series/jvm-tools/07-JEP三件套：摸透Java的演进路线图' },
+            { text: '八 VM Intrinsics Explorer', link: '/series/jvm-tools/08-VMIntrinsicsExplorer：被HotSpot偷偷换掉的魔法方法' },
+            { text: '九 GC Explorer', link: '/series/jvm-tools/09-GCExplorer：把垃圾回收器摊开给你看' },
+            { text: '十 Optimizing Java', link: '/series/jvm-tools/10-OptimizingJava：把性能调优写成一本书' }
           ]
         }
       ],

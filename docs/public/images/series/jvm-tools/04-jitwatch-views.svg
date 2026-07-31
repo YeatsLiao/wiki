@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360">
+  <rect width="680" height="360" fill="#f7f9fc"/>
+  <text x="340" y="34" font-size="19" font-weight="bold" fill="#1f2937" text-anchor="middle" font-family="sans-serif">JITWatch：把 JIT 日志变成能看懂的图</text>
+
+  <g font-family="sans-serif" font-size="13">
+    <rect x="40" y="64" width="280" height="80" rx="10" fill="#e0e7ff"/>
+    <text x="180" y="92" fill="#3730a3" text-anchor="middle" font-weight="bold">TriView 三栏对照</text>
+    <text x="180" y="114" fill="#3730a3" text-anchor="middle" font-size="11">源码 | 字节码 | 汇编</text>
+    <text x="180" y="132" fill="#3730a3" text-anchor="middle" font-size="11">标注内联 / 分支命中</text>
+
+    <rect x="360" y="64" width="280" height="80" rx="10" fill="#d1fae5"/>
+    <text x="500" y="92" fill="#065f46" text-anchor="middle" font-weight="bold">Compile Chain</text>
+    <text x="500" y="114" fill="#065f46" text-anchor="middle" font-size="11">调用 / 内联关系图</text>
+    <text x="500" y="132" fill="#065f46" text-anchor="middle" font-size="11">谁调谁、被内联了谁</text>
+
+    <rect x="40" y="160" width="280" height="80" rx="10" fill="#fef3c7"/>
+    <text x="180" y="188" fill="#92400e" text-anchor="middle" font-weight="bold">Suggestion 建议</text>
+    <text x="180" y="210" fill="#92400e" text-anchor="middle" font-size="11">高亮内联失败热点</text>
+    <text x="180" y="228" fill="#92400e" text-anchor="middle" font-size="11">不可预测分支</text>
+
+    <rect x="360" y="160" width="280" height="80" rx="10" fill="#e9d5ff"/>
+    <text x="500" y="188" fill="#6b21a8" text-anchor="middle" font-weight="bold">时间线 / 直方图</text>
+    <text x="500" y="210" fill="#6b21a8" text-anchor="middle" font-size="11">编译次数 / 代码缓存</text>
+    <text x="500" y="228" fill="#6b21a8" text-anchor="middle" font-size="11">Top 榜 / 编译耗时</text>
+
+    <rect x="40" y="260" width="600" height="50" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="56" y="284" fill="#1f2937" font-size="12">输入：LogCompilation XML + PrintAssembly 日志 + 源码树 / class / jar</text>
+    <text x="56" y="302" fill="#1f2937" font-size="12">输出：上述四类可视化视图，桌面 JavaFX 应用（需 hsdis 才能看汇编栏）</text>
+  </g>
+</svg>

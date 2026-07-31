@@ -27,6 +27,13 @@ const seriesList = [
   },
   {
     tag: '原创系列',
+    count: '10 篇',
+    title: 'Chris Newland JVM工具解读',
+    desc: '把 HotSpot 黑盒拆开看：JVM 参数、JIT 汇编、内建函数、GC 选型与 JEP 路线图，一个人维护的免费工具矩阵逐个解读。',
+    link: '/series/jvm-tools/'
+  },
+  {
+    tag: '原创系列',
     count: '5 篇',
     title: '物联网平台SQL治理手记',
     desc: '手写 MyBatis SQL 的隐患全景：从 SQL 注入、select * 到深分页与死代码，每篇都给出可落地的改造方案。',
@@ -72,7 +79,7 @@ const seriesList = [
 // 更多入口：跳转全部文集页
 const moreEntry = {
   tag: '目录',
-  count: '共 9 辑',
+  count: '共 10 辑',
   title: '更多系列',
   desc: '速查手册、手记、翻译与在线实验，完整目录按分类收录，陆续更新。',
   link: '/collections'
