@@ -8,8 +8,6 @@
 > Chris 个人站 Java 分类（他的实际 Java 写作）：https://www.chrisnewland.com/tagged/java
 > 适用场景：把这些工具串成体系，从「会用单个工具」走向「懂 JVM 性能方法论」
 
-## 0 写在前面
-
 前面九篇，我们逛完了 Chris Newland 的整套工具：字节码（Byte-Me）、JIT（JITWatch + hsdis）、参数（VM Options Explorer + JaCoLine）、内建函数（Intrinsics Explorer）、GC（GC Explorer）、路线图（JEP 三件套）。工具很多，但你可能会问：它们之间到底怎么连成一条调优思路？答案的另一半，在他合著的那本书里——《Optimizing Java》。
 
 先说一个**真实情况**：byte-me.dev 顶部那排按钮里第 11 个「Optimizing Java」，目前点击会跳到 https://www.chrisnewland.com/optimizing-java——但**这个页面已经不存在了**，显示「Page not found, Oops, the page you asked for does not exist」。Chris 的个人站是 JS 渲染的 SPA，似乎经过了一次重构，对应路径迁移了。书本身的官方归宿是 **O'Reilly** 平台（O'Reilly 的反爬较严，直接抓取会被 Access Denied 挡住）。

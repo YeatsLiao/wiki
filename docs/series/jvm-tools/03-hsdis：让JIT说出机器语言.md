@@ -6,8 +6,6 @@
 > 真实地址：https://chriswhocodes.com/hsdis/
 > 适用场景：想把 JIT 编译出的真实汇编代码打印出来，验证内联/向量化/内建函数替换是否生效
 
-## 0 写在前面
-
 你开了 `-XX:+PrintAssembly`，满心期待想看 JIT 生成了什么机器码（CPU 能直接执行的 0/1 指令，你写的 Java 最终要变成它才能跑），结果 JVM 报了一句：`Could not load hsdis-amd64.dll; library not loadable; PrintAssembly is disabled`。怎么回事？因为 HotSpot 自己不带反汇编器——所谓反汇编，就是把机器码翻译成人类能读的汇编文本（`mov`、`add` 这种助记符，和机器码一一对应）；这活儿 HotSpot 不干，它需要一个叫 **hsdis** 的插件，而这个插件得你自己去找、去匹配 JDK 版本与架构。Chris 的 hsdis 下载页（https://chriswhocodes.com/hsdis/），就是帮你把这块拼图补齐的地方。
 
 ![hsdis 下载页（各平台二进制 + 校验和 + 法律声明）](/images/series/jvm-tools/03-hsdis.png)

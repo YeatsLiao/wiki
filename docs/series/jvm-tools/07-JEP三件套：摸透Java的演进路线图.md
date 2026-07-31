@@ -9,8 +9,6 @@
 > - FullJEP（全文搜索）：https://chriswhocodes.com/fulljep.html
 > 适用场景：按项目/版本/关键字追踪 Java 增强提案，评估某个特性的成熟度
 
-## 0 写在前面
-
 你想搞懂「虚拟线程到底落地到哪一步了」，去 https://openjdk.org/jeps 翻——好家伙，几百条 JEP 平铺在一页，按编号排，根本看不出「Loom 项目有哪些、各自什么状态」。JEP 是 Java 每次加新功能（虚拟线程、record、switch 表达式……）要先提的一份提案，是 Java 演进的基本单元；而 OpenJDK 把相关的 JEP 归到「项目」里——比如 Loom 管并发（虚拟线程），Valhalla 管值类型，ZGC 是那个超低延迟 GC，Panama 管原生互操作，Amber 管语言小特性。Chris 的 JEP 三件套（JEPMap / JEPSearch / FullJEP）就是给这份路线图做了三种不同视角的索引——共享同一份数据源（自动从 openjdk.java.net 解析），但提供不同入口。
 
 

@@ -7,8 +7,6 @@
 > 数据源：OpenJDK 源码 `src/hotspot/share/classfile/vmIntrinsics.hpp`
 > 适用场景：理解「为什么某些 Java 方法能这么快」，或排查 intrinsic 替换导致的诡异行为
 
-## 0 写在前面
-
 `Math.addExact`、`Arrays.equals`、`StringLatin1.indexOf`、`AES.encrypt`、`Unsafe.allocateInstance`——这些方法看着平平无奇，跑起来却快得不像 Java。秘密是：HotSpot 在运行时**根本没执行你看到的字节码**（你写的 Java 编译后产生的中间代码，JVM 能懂但不直接跑在 CPU 上），而是把它们替换成了手写汇编（或特殊编译器 IR）——这种「被偷偷换掉」的标准库方法，在 HotSpot 里有个专有名词叫 intrinsic（内建函数）。VM Intrinsics Explorer 就是把这份「被偷偷换掉的方法清单」摊开给你看。
 
 打开真实页面 https://chriswhocodes.com/vm-intrinsics-explorer.html：

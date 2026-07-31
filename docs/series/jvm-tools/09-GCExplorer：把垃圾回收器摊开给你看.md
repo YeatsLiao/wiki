@@ -6,8 +6,6 @@
 > 真实地址：https://chriswhocodes.com/gc-explorer.html
 > 适用场景：升级 JDK 或选发行版前，确认目标 GC 是否可用、各版本差异
 
-## 0 写在前面
-
 「我这个 JDK 版本能用 ZGC 吗？」「从 JDK 8 升到 17，CMS 是不是没了？」「Corretto 和 Zulu 在 GC 支持上一样吗？」这些问题的答案散落在各发行版文档里，记不住也搜不全。GC 是 JVM 自动回收不用的内存、不用你手动释放的机制；而 G1、ZGC、Shenandoah、CMS、Parallel、Serial、Epsilon 是几种不同的垃圾回收器，各有取舍——有的吞吐高、有的延迟低、有的干脆只分配不回收。GC Explorer 直接把它们的可用性做成一张矩阵：行是 JDK 版本 / 发行版，列是各种 GC，单元格是「支持 / 不支持」。**一眼就能判断该用哪个、不能用哪个**。
 
 打开真实页面 https://chriswhocodes.com/gc-explorer.html：
