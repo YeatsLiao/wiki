@@ -51,12 +51,12 @@ export default defineConfig({
         {
           text: 'Java启动速度优化解读',
           items: [
-            { text: '一 Java为什么启动慢', link: '/series/java-startup-optimization/01-Java为什么启动慢' },
-            { text: '二 类加载与 AppCDS 优化', link: '/series/java-startup-optimization/02-类加载与AppCDS优化' },
-            { text: '三 类提前初始化与 Heap Archive', link: '/series/java-startup-optimization/03-类提前初始化与HeapArchive' },
-            { text: '四 JIT 预热与 AOT 编译的兴衰', link: '/series/java-startup-optimization/04-JIT预热与AOT编译的兴衰' },
-            { text: '五 Spring 懒加载实战：MQTT 静默失效', link: '/series/java-startup-optimization/05-Spring懒加载实战：MQTT静默失效' },
-            { text: '六 启动加速最佳实践与展望', link: '/series/java-startup-optimization/06-启动加速最佳实践与展望' }
+            { text: '01 Java 为什么启动慢', link: '/series/java-startup-optimization/01-Java为什么启动慢' },
+            { text: '02 类加载与 AppCDS 优化', link: '/series/java-startup-optimization/02-类加载与AppCDS优化' },
+            { text: '03 类提前初始化与 Heap Archive', link: '/series/java-startup-optimization/03-类提前初始化与HeapArchive' },
+            { text: '04 JIT 预热与 AOT 编译的兴衰', link: '/series/java-startup-optimization/04-JIT预热与AOT编译的兴衰' },
+            { text: '05 Spring 懒加载实战：MQTT 静默失效', link: '/series/java-startup-optimization/05-Spring懒加载实战：MQTT静默失效' },
+            { text: '06 启动加速最佳实践与展望', link: '/series/java-startup-optimization/06-启动加速最佳实践与展望' }
           ]
         }
       ],
@@ -66,16 +66,16 @@ export default defineConfig({
         {
           text: 'Chris Newland JVM工具解读',
           items: [
-            { text: '一 总览：一个人与一套 JVM 工具矩阵', link: '/series/jvm-tools/01-总览：一个人与一套JVM工具矩阵' },
-            { text: '二 VM Options Explorer', link: '/series/jvm-tools/02-VMOptionsExplorer：把HotSpot参数黑盒拆开' },
-            { text: '三 hsdis：让 JIT 说出机器语言', link: '/series/jvm-tools/03-hsdis：让JIT说出机器语言' },
-            { text: '四 JITWatch', link: '/series/jvm-tools/04-JITWatch：看懂HotSpot在你的代码上做了什么' },
-            { text: '五 JaCoLine', link: '/series/jvm-tools/05-JaCoLine：给你的启动脚本做个体检' },
-            { text: '六 Byte-Me', link: '/series/jvm-tools/06-ByteMe：在浏览器里看Java怎么变成字节码' },
-            { text: '七 JEP 三件套', link: '/series/jvm-tools/07-JEP三件套：摸透Java的演进路线图' },
-            { text: '八 VM Intrinsics Explorer', link: '/series/jvm-tools/08-VMIntrinsicsExplorer：被HotSpot偷偷换掉的魔法方法' },
-            { text: '九 GC Explorer', link: '/series/jvm-tools/09-GCExplorer：把垃圾回收器摊开给你看' },
-            { text: '十 Optimizing Java', link: '/series/jvm-tools/10-OptimizingJava：把性能调优写成一本书' }
+            { text: '01 总览：一个人与一套 JVM 工具矩阵', link: '/series/jvm-tools/01-总览：一个人与一套JVM工具矩阵' },
+            { text: '02 VM Options Explorer', link: '/series/jvm-tools/02-VMOptionsExplorer：把HotSpot参数黑盒拆开' },
+            { text: '03 hsdis：让 JIT 说出机器语言', link: '/series/jvm-tools/03-hsdis：让JIT说出机器语言' },
+            { text: '04 JITWatch', link: '/series/jvm-tools/04-JITWatch：看懂HotSpot在你的代码上做了什么' },
+            { text: '05 JaCoLine', link: '/series/jvm-tools/05-JaCoLine：给你的启动脚本做个体检' },
+            { text: '06 Byte-Me', link: '/series/jvm-tools/06-ByteMe：在浏览器里看Java怎么变成字节码' },
+            { text: '07 JEP 三件套', link: '/series/jvm-tools/07-JEP三件套：摸透Java的演进路线图' },
+            { text: '08 VM Intrinsics Explorer', link: '/series/jvm-tools/08-VMIntrinsicsExplorer：被HotSpot偷偷换掉的魔法方法' },
+            { text: '09 GC Explorer', link: '/series/jvm-tools/09-GCExplorer：把垃圾回收器摊开给你看' },
+            { text: '10 Optimizing Java', link: '/series/jvm-tools/10-OptimizingJava：把性能调优写成一本书' }
           ]
         }
       ],
@@ -85,12 +85,12 @@ export default defineConfig({
         {
           text: '物联网平台SQL治理手记',
           items: [
-            { text: '一 开篇——手写 SQL 的隐患全景', link: '/series/iot-sql-governance/01-开篇-手写SQL的隐患全景' },
-            { text: '二 SQL 注入——拼接与白名单改造', link: '/series/iot-sql-governance/02-SQL注入-拼接与白名单改造' },
-            { text: '三 SELECT 反模式——显式列替代', link: '/series/iot-sql-governance/03-SELECT反模式-显式列替代' },
-            { text: '四 性能反模式——前导通配与深分页', link: '/series/iot-sql-governance/04-性能反模式-前导通配与深分页' },
-            { text: '五 死代码与接口一致性——清理与校验', link: '/series/iot-sql-governance/05-死代码与接口一致性-清理与校验' },
-            { text: '附录 SqlWhitelistValidator 完整代码', link: '/series/iot-sql-governance/06-附录-SqlWhitelistValidator完整代码' }
+            { text: '01 开篇——手写 SQL 的隐患全景', link: '/series/iot-sql-governance/01-开篇-手写SQL的隐患全景' },
+            { text: '02 SQL 注入——拼接与白名单改造', link: '/series/iot-sql-governance/02-SQL注入-拼接与白名单改造' },
+            { text: '03 SELECT 反模式——显式列替代', link: '/series/iot-sql-governance/03-SELECT反模式-显式列替代' },
+            { text: '04 性能反模式——前导通配与深分页', link: '/series/iot-sql-governance/04-性能反模式-前导通配与深分页' },
+            { text: '05 死代码与接口一致性——清理与校验', link: '/series/iot-sql-governance/05-死代码与接口一致性-清理与校验' },
+            { text: '06 附录：SqlWhitelistValidator 完整代码', link: '/series/iot-sql-governance/06-附录-SqlWhitelistValidator完整代码' }
           ]
         }
       ],
@@ -100,10 +100,10 @@ export default defineConfig({
         {
           text: '.NET构建机制剖析',
           items: [
-            { text: '一 Debug 与 Release 的本质差异', link: '/series/dotnet-build/01-Debug与Release的本质差异' },
-            { text: '二 配置文件增量构建原理', link: '/series/dotnet-build/02-配置文件增量构建原理' },
-            { text: '三 Design-Time Build 解析', link: '/series/dotnet-build/03-DesignTimeBuild解析' },
-            { text: '四 构建产物与清理机制', link: '/series/dotnet-build/04-构建产物与清理机制' }
+            { text: '01 Debug 与 Release 的本质差异', link: '/series/dotnet-build/01-Debug与Release的本质差异' },
+            { text: '02 配置文件增量构建原理', link: '/series/dotnet-build/02-配置文件增量构建原理' },
+            { text: '03 Design-Time Build 解析', link: '/series/dotnet-build/03-DesignTimeBuild解析' },
+            { text: '04 构建产物与清理机制', link: '/series/dotnet-build/04-构建产物与清理机制' }
           ]
         }
       ],

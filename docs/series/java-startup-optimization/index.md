@@ -11,12 +11,12 @@ Java 的高性能令人印象深刻，但启动慢同样令人印象深刻——
 
 | 序号 | 文章 | 核心问题 |
 |:---|:---|:---|
-| 一 | [Java为什么启动慢](./01-Java为什么启动慢.md) | 高性能与快启动的矛盾，三大根因是什么？ |
-| 二 | [类加载与AppCDS优化](./02-类加载与AppCDS优化.md) | 类加载为什么慢？AppCDS 怎么加速？Custom ClassLoader 场景怎么办？ |
-| 三 | [类提前初始化与Heap Archive](./03-类提前初始化与HeapArchive.md) | 静态块执行开销多大？Heap Archive 如何持久化堆对象？ |
-| 四 | [JIT预热与AOT编译的兴衰](./04-JIT预热与AOT编译的兴衰.md) | 解释执行慢多少？AOT 为什么命途多舛？Dragonwell 怎么接续？ |
-| 五 | [Spring懒加载实战：MQTT静默失效](./05-Spring懒加载实战：MQTT静默失效.md) | 懒加载真的加速了吗？为什么 MQTT 连不上？什么时候不该用？ |
-| 六 | [启动加速最佳实践与展望](./06-启动加速最佳实践与展望.md) | Dragonwell + SAE 如何落地？trace-dump-replay 是什么？未来方向在哪？ |
+| 01 | [Java为什么启动慢](./01-Java为什么启动慢.md) | 高性能与快启动的矛盾，三大根因是什么？ |
+| 02 | [类加载与AppCDS优化](./02-类加载与AppCDS优化.md) | 类加载为什么慢？AppCDS 怎么加速？Custom ClassLoader 场景怎么办？ |
+| 03 | [类提前初始化与Heap Archive](./03-类提前初始化与HeapArchive.md) | 静态块执行开销多大？Heap Archive 如何持久化堆对象？ |
+| 04 | [JIT预热与AOT编译的兴衰](./04-JIT预热与AOT编译的兴衰.md) | 解释执行慢多少？AOT 为什么命途多舛？Dragonwell 怎么接续？ |
+| 05 | [Spring懒加载实战：MQTT静默失效](./05-Spring懒加载实战：MQTT静默失效.md) | 懒加载真的加速了吗？为什么 MQTT 连不上？什么时候不该用？ |
+| 06 | [启动加速最佳实践与展望](./06-启动加速最佳实践与展望.md) | Dragonwell + SAE 如何落地？trace-dump-replay 是什么？未来方向在哪？ |
 
 ## 参考链接
 

@@ -1,4 +1,4 @@
-# 物联网平台 SQL 治理手记（一）：开篇——为什么手写 SQL 值得专门写一篇系列
+# 开篇——为什么手写 SQL 值得专门写一篇系列
 
 > 技术栈：Spring Boot + MyBatis + MyBatis-Plus + MySQL
 > 适合谁读：想系统搞懂手写 Mapper SQL 常见隐患，并建立一套可复用优化思路的开发者

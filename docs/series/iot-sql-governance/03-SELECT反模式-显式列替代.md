@@ -1,4 +1,4 @@
-# 物联网平台 SQL 治理手记（三）：SELECT * 反模式——用 Base_Column_List 与显式列替代
+# SELECT * 反模式——用 Base_Column_List 与显式列替代
 
 > 技术栈：MyBatis + MySQL
 > 适合谁读：需要消除手写 Mapper 中 `select *` 与 `t.*` 的开发者
