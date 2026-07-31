@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380">
+  <rect width="680" height="380" fill="#f7f9fc"/>
+  <text x="340" y="34" font-size="19" font-weight="bold" fill="#1f2937" text-anchor="middle" font-family="sans-serif">VM Intrinsics：你写的方法被偷偷换了</text>
+
+  <g font-family="sans-serif" font-size="13">
+    <rect x="40" y="80" width="200" height="80" rx="10" fill="#e0e7ff"/>
+    <text x="140" y="108" fill="#3730a3" text-anchor="middle" font-weight="bold">Java 代码</text>
+    <text x="140" y="130" fill="#3730a3" text-anchor="middle" font-size="12">Math.sin(x)</text>
+    <text x="140" y="148" fill="#3730a3" text-anchor="middle" font-size="12">Arrays.equals(a,b)</text>
+
+    <path d="M240 120 L300 120" stroke="#9ca3af" stroke-width="2" marker-end="url(#e)"/>
+    <defs>
+      <marker id="e" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#9ca3af"/>
+      </marker>
+    </defs>
+
+    <rect x="305" y="80" width="150" height="80" rx="10" fill="#fef3c7"/>
+    <text x="380" y="110" fill="#92400e" text-anchor="middle" font-weight="bold">HotSpot JIT</text>
+    <text x="380" y="132" fill="#92400e" text-anchor="middle" font-size="11">识别 intrinsic</text>
+    <text x="380" y="150" fill="#92400e" text-anchor="middle" font-size="11">决定是否替换</text>
+
+    <path d="M455 120 L515 120" stroke="#9ca3af" stroke-width="2" marker-end="url(#e)"/>
+
+    <rect x="520" y="80" width="120" height="80" rx="10" fill="#111827"/>
+    <text x="580" y="108" fill="#34d399" text-anchor="middle" font-weight="bold">实际执行</text>
+    <text x="580" y="130" fill="#34d399" text-anchor="middle" font-size="11">fsin 指令</text>
+    <text x="580" y="148" fill="#34d399" text-anchor="middle" font-size="11">手写汇编</text>
+
+    <!-- contrast -->
+    <rect x="40" y="200" width="290" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="56" y="226" fill="#334155" font-weight="bold">你以为执行的</text>
+    <text x="56" y="254" fill="#1f2937" font-size="12">invokestatic Math.sin</text>
+    <text x="56" y="278" fill="#1f2937" font-size="12">普通方法调用字节码</text>
+    <text x="56" y="302" fill="#6b7280" font-size="11">（按语言规范实现）</text>
+
+    <rect x="350" y="200" width="290" height="120" rx="10" fill="#ffffff" stroke="#86efac"/>
+    <text x="366" y="226" fill="#065f46" font-weight="bold">实际执行的</text>
+    <text x="366" y="254" fill="#1f2937" font-size="12">直接 fsin / vectorized</text>
+    <text x="366" y="278" fill="#1f2937" font-size="12">手写汇编，语义可能微差</text>
+    <text x="366" y="302" fill="#6b7280" font-size="11">（这就是它这么快的原因）</text>
+  </g>
+</svg>

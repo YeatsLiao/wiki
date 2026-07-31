@@ -12,6 +12,8 @@
 
 JaCoLine（Java Command Line Inspector）就是专门给启动脚本「体检」的工具。它和 VM Options Explorer 是**同源数据、正反两个方向**：Explorer 是「正向查一个参数」，JaCoLine 是「反向校验一整条命令行」。
 
+![JaCoLine 体检流程：命令行 → 对照各 JDK 参数定义 → 分类报告](/images/series/jvm-tools/05-jacoline-flow.svg)
+
 ## 1. 真实界面长什么样
 
 打开 https://jacoline.dev/inspect，页面顶部是熟悉的 byte-me.dev 导航条，主区域标题「JaCoLine - Java Command Line Inspector」。

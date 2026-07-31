@@ -35,6 +35,8 @@ javap -c -p Foo.class
 
 ## 2. 设计理念：浏览器里的「源码 → 字节码」实时映射
 
+![Byte-Me 工作模型：左侧写 Java 源码，右侧实时出字节码，顶部切 JDK 版本](/images/series/jvm-tools/06-byteme-model.svg)
+
 Byte-Me 把编译搬到了服务端（或 WASM），你在网页里写源码，它返回对应的字节码，左右两栏并列。核心能力：
 
 - **目标 JDK 切换**：顶部 Source / Target 下拉（JDK 8 到最新，支持 preview），同一段代码、不同版本编译结果并排看。

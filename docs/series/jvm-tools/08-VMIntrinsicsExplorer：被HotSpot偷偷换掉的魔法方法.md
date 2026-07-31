@@ -36,6 +36,8 @@
 
 ## 1. 两种 intrinsic 的本质区别
 
+![VM Intrinsics 替换机制：你以为执行的字节码 vs 实际执行的手写汇编](/images/series/jvm-tools/08-intrinsic-replace.svg)
+
 | 类型 | 替换方式 | 语义差异风险 |
 |---|---|---|
 | **Library intrinsic** | 整段替换成手写汇编 / C2 IR / 两者结合 | **可能与原方法语义不一致**（注释明说） |

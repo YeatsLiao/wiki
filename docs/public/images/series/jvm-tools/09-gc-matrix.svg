@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400">
+  <rect width="680" height="400" fill="#f7f9fc"/>
+  <text x="340" y="34" font-size="19" font-weight="bold" fill="#1f2937" text-anchor="middle" font-family="sans-serif">GC Explorer：各 JDK / 发行版的 GC 可用性矩阵</text>
+
+  <g font-family="sans-serif" font-size="12">
+    <!-- header row -->
+    <rect x="40" y="60" width="160" height="34" rx="6" fill="#334155"/>
+    <text x="120" y="82" fill="#ffffff" text-anchor="middle">JDK / 发行版</text>
+    <rect x="210" y="60" width="90" height="34" rx="6" fill="#374151"/>
+    <text x="255" y="82" fill="#ffffff" text-anchor="middle">G1</text>
+    <rect x="306" y="60" width="90" height="34" rx="6" fill="#374151"/>
+    <text x="351" y="82" fill="#ffffff" text-anchor="middle">ZGC</text>
+    <rect x="402" y="60" width="100" height="34" rx="6" fill="#374151"/>
+    <text x="452" y="82" fill="#ffffff" text-anchor="middle">Shenandoah</text>
+    <rect x="508" y="60" width="90" height="34" rx="6" fill="#374151"/>
+    <text x="553" y="82" fill="#ffffff" text-anchor="middle">CMS</text>
+
+    <!-- row OpenJDK 8 -->
+    <rect x="40" y="100" width="160" height="34" rx="6" fill="#e5e7eb"/>
+    <text x="120" y="122" fill="#1f2937" text-anchor="middle">OpenJDK 8</text>
+    <rect x="210" y="100" width="90" height="34" rx="6" fill="#d1fae5"/><text x="255" y="122" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="306" y="100" width="90" height="34" rx="6" fill="#fee2e2"/><text x="351" y="122" fill="#991b1b" text-anchor="middle">-</text>
+    <rect x="402" y="100" width="100" height="34" rx="6" fill="#fee2e2"/><text x="452" y="122" fill="#991b1b" text-anchor="middle">-</text>
+    <rect x="508" y="100" width="90" height="34" rx="6" fill="#d1fae5"/><text x="553" y="122" fill="#065f46" text-anchor="middle">Y</text>
+
+    <!-- row OpenJDK 11 -->
+    <rect x="40" y="140" width="160" height="34" rx="6" fill="#e5e7eb"/>
+    <text x="120" y="162" fill="#1f2937" text-anchor="middle">OpenJDK 11</text>
+    <rect x="210" y="140" width="90" height="34" rx="6" fill="#d1fae5"/><text x="255" y="162" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="306" y="140" width="90" height="34" rx="6" fill="#d1fae5"/><text x="351" y="162" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="402" y="140" width="100" height="34" rx="6" fill="#d1fae5"/><text x="452" y="162" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="508" y="140" width="90" height="34" rx="6" fill="#d1fae5"/><text x="553" y="162" fill="#065f46" text-anchor="middle">Y</text>
+
+    <!-- row OpenJDK 14 -->
+    <rect x="40" y="180" width="160" height="34" rx="6" fill="#e5e7eb"/>
+    <text x="120" y="202" fill="#1f2937" text-anchor="middle">OpenJDK 14</text>
+    <rect x="210" y="180" width="90" height="34" rx="6" fill="#d1fae5"/><text x="255" y="202" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="306" y="180" width="90" height="34" rx="6" fill="#d1fae5"/><text x="351" y="202" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="402" y="180" width="100" height="34" rx="6" fill="#d1fae5"/><text x="452" y="202" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="508" y="180" width="90" height="34" rx="6" fill="#fee2e2"/><text x="553" y="202" fill="#991b1b" text-anchor="middle">移除</text>
+
+    <!-- row OpenJDK 17 -->
+    <rect x="40" y="220" width="160" height="34" rx="6" fill="#e5e7eb"/>
+    <text x="120" y="242" fill="#1f2937" text-anchor="middle">OpenJDK 17</text>
+    <rect x="210" y="220" width="90" height="34" rx="6" fill="#d1fae5"/><text x="255" y="242" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="306" y="220" width="90" height="34" rx="6" fill="#d1fae5"/><text x="351" y="242" fill="#065f46" text-anchor="middle">Y*</text>
+    <rect x="402" y="220" width="100" height="34" rx="6" fill="#d1fae5"/><text x="452" y="242" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="508" y="220" width="90" height="34" rx="6" fill="#fee2e2"/><text x="553" y="242" fill="#991b1b" text-anchor="middle">-</text>
+
+    <!-- row Corretto 17 -->
+    <rect x="40" y="260" width="160" height="34" rx="6" fill="#e5e7eb"/>
+    <text x="120" y="282" fill="#1f2937" text-anchor="middle">Corretto 17</text>
+    <rect x="210" y="260" width="90" height="34" rx="6" fill="#d1fae5"/><text x="255" y="282" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="306" y="260" width="90" height="34" rx="6" fill="#d1fae5"/><text x="351" y="282" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="402" y="260" width="100" height="34" rx="6" fill="#d1fae5"/><text x="452" y="282" fill="#065f46" text-anchor="middle">Y</text>
+    <rect x="508" y="260" width="90" height="34" rx="6" fill="#fee2e2"/><text x="553" y="282" fill="#991b1b" text-anchor="middle">-</text>
+
+    <rect x="40" y="316" width="600" height="56" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="56" y="340" fill="#1f2937" font-size="12">Y = 支持；- = 不支持；CMS 自 JDK 14 起被移除（整列消失）。</text>
+    <text x="56" y="362" fill="#1f2937" font-size="12">矩阵只表示「能否开」，默认 GC 另查（JDK 9+ 默认 G1，ZGC 在低延迟场景更优但吃内存）。</text>
+  </g>
+</svg>

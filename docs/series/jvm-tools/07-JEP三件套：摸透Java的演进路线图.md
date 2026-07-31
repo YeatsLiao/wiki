@@ -34,6 +34,8 @@ Integrated → Completed
 
 ## 2. 三件套的真实长相
 
+![JEP 三件套：同一数据源，三种视角（JEPMap 导航 / JEPSearch 检索 / FullJEP 深挖）](/images/series/jvm-tools/07-jep-trio.svg)
+
 ### 2.1 JEPMap：按项目 / 版本导航
 
 打开 https://chriswhocodes.com/jepmap.html，页面顶部说明数据自动生成算法：

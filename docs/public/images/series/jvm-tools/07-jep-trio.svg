@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380">
+  <rect width="680" height="380" fill="#f7f9fc"/>
+  <text x="340" y="34" font-size="19" font-weight="bold" fill="#1f2937" text-anchor="middle" font-family="sans-serif">JEP 三件套：同一数据源，三种视角</text>
+
+  <g font-family="sans-serif" font-size="13">
+    <rect x="270" y="150" width="140" height="80" rx="10" fill="#cffafe"/>
+    <text x="340" y="180" fill="#155e75" text-anchor="middle" font-weight="bold">JEP 数据源</text>
+    <text x="340" y="202" fill="#155e75" text-anchor="middle" font-size="11">官方 JEP 页</text>
+    <text x="340" y="220" fill="#155e75" text-anchor="middle" font-size="11">+ 各 Project 页</text>
+
+    <rect x="40" y="70" width="180" height="70" rx="10" fill="#e0e7ff"/>
+    <text x="130" y="100" fill="#3730a3" text-anchor="middle" font-weight="bold">JEPMap</text>
+    <text x="130" y="122" fill="#3730a3" text-anchor="middle" font-size="11">按项目 / 版本导航</text>
+
+    <rect x="250" y="60" width="180" height="70" rx="10" fill="#d1fae5"/>
+    <text x="340" y="90" fill="#065f46" text-anchor="middle" font-weight="bold">JEPSearch</text>
+    <text x="340" y="112" fill="#065f46" text-anchor="middle" font-size="11">全文检索</text>
+
+    <rect x="460" y="70" width="180" height="70" rx="10" fill="#e9d5ff"/>
+    <text x="550" y="100" fill="#6b21a8" text-anchor="middle" font-weight="bold">FullJEP</text>
+    <text x="550" y="122" fill="#6b21a8" text-anchor="middle" font-size="11">单 JEP 深挖</text>
+
+    <path d="M130 140 L300 170" stroke="#9ca3af" stroke-width="2"/>
+    <path d="M340 130 L340 150" stroke="#9ca3af" stroke-width="2"/>
+    <path d="M550 140 L380 170" stroke="#9ca3af" stroke-width="2"/>
+
+    <rect x="40" y="260" width="600" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="56" y="286" fill="#1f2937" font-size="12">典型用法：</text>
+    <text x="56" y="312" fill="#1f2937" font-size="12">• 点 JEPMap 里 Loom → 看虚拟线程(JEP 444)状态与归属</text>
+    <text x="56" y="336" fill="#1f2937" font-size="12">• 用 JEPSearch 搜 virtual thread → 列出所有相关 JEP 及进度</text>
+  </g>
+</svg>

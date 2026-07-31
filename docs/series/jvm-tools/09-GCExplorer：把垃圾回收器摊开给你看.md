@@ -28,6 +28,8 @@
 
 ## 2. 矩阵的列：七大主流 GC
 
+![GC 可用性矩阵示意：行是 JDK / 发行版，列是各 GC，CMS 自 JDK 14 起整列消失](/images/series/jvm-tools/09-gc-matrix.svg)
+
 截图里能看到这些列：
 
 | 列 | GC | 定位 | 关键 JEP / 时间点 |
