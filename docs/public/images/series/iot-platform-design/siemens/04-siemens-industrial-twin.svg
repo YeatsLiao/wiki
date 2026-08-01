@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="440" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">物模型与数字孪生：Asset Type / Instance 与 Aspect</text>
+
+  <!-- 层级资产树 -->
+  <rect x="40" y="60" width="170" height="46" rx="8" fill="#eef4ff" stroke="#3f6fd1" stroke-width="2"/>
+  <text x="125" y="88" font-size="14" font-weight="700" fill="#27496d" text-anchor="middle">工厂</text>
+
+  <rect x="40" y="140" width="170" height="44" rx="8" fill="#eef4ff" stroke="#5b8def" stroke-width="1.5"/>
+  <text x="125" y="167" font-size="13" fill="#27496d" text-anchor="middle">产线 A</text>
+  <line x1="125" y1="106" x2="125" y2="140" stroke="#9bb4dd" stroke-width="2"/>
+
+  <rect x="40" y="225" width="170" height="44" rx="8" fill="#ffffff" stroke="#5b8def" stroke-width="1.5"/>
+  <text x="125" y="252" font-size="13" fill="#27496d" text-anchor="middle">设备（机床 / 泵）</text>
+  <line x1="125" y1="184" x2="125" y2="225" stroke="#9bb4dd" stroke-width="2"/>
+
+  <rect x="40" y="310" width="170" height="44" rx="8" fill="#ffffff" stroke="#5b8def" stroke-width="1.5"/>
+  <text x="125" y="337" font-size="13" fill="#27496d" text-anchor="middle">部件（电机 / 轴承）</text>
+  <line x1="125" y1="269" x2="125" y2="310" stroke="#9bb4dd" stroke-width="2"/>
+
+  <text x="125" y="385" font-size="11" fill="#5a6b85" text-anchor="middle">层级资产模型（Asset 关系）</text>
+
+  <!-- Asset Management -->
+  <rect x="255" y="140" width="160" height="56" rx="8" fill="#fff4ec" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="335" y="165" font-size="13" font-weight="700" fill="#b9702a" text-anchor="middle">Asset Management</text>
+  <text x="335" y="186" font-size="11" fill="#5a6b85" text-anchor="middle">Asset Type / Instance</text>
+
+  <rect x="255" y="210" width="160" height="44" rx="8" fill="#fff4ec" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="335" y="237" font-size="12" fill="#b9702a" text-anchor="middle">Aspect（变量集合）</text>
+
+  <rect x="255" y="266" width="160" height="40" rx="8" fill="#fff4ec" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="335" y="291" font-size="12" fill="#b9702a" text-anchor="middle">Aspect Model</text>
+
+  <!-- 数字孪生 -->
+  <rect x="455" y="70" width="190" height="70" rx="10" fill="#f0ecfb" stroke="#8a6fd0" stroke-width="2"/>
+  <text x="550" y="98" font-size="14" font-weight="700" fill="#5a4a8a" text-anchor="middle">数字孪生</text>
+  <text x="550" y="118" font-size="11" fill="#5a6b85" text-anchor="middle">虚拟映射 · 状态同步</text>
+
+  <!-- SCADA -->
+  <rect x="455" y="175" width="190" height="60" rx="10" fill="#eef7ee" stroke="#5aa86a" stroke-width="1.5"/>
+  <text x="550" y="200" font-size="13" font-weight="700" fill="#3a7a4a" text-anchor="middle">SCADA（实时）</text>
+  <text x="550" y="220" font-size="11" fill="#5a6b85" text-anchor="middle">采集 / 监控</text>
+
+  <!-- MES / ERP -->
+  <rect x="455" y="270" width="190" height="60" rx="10" fill="#eef7ee" stroke="#5aa86a" stroke-width="1.5"/>
+  <text x="550" y="295" font-size="13" font-weight="700" fill="#3a7a4a" text-anchor="middle">MES / ERP</text>
+  <text x="550" y="315" font-size="11" fill="#5a6b85" text-anchor="middle">工单 / 排产</text>
+
+  <!-- 连线 -->
+  <line x1="210" y1="180" x2="255" y2="180" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="415" y1="180" x2="455" y2="105" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="415" y1="180" x2="455" y2="205" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="415" y1="180" x2="455" y2="300" stroke="#9bb4dd" stroke-width="2"/>
+  <text x="438" y="150" font-size="10" fill="#8a97ad" text-anchor="middle">状态同步</text>
+
+  <text x="340" y="428" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用官方版权图；精确服务边界以 MindSphere 官方文档为准。</text>
+</svg>

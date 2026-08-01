@@ -22,6 +22,7 @@ export default defineConfig({
           { text: '仓颉共建之旅', link: '/series/cangjie-journey/' },
           { text: '23 种设计模式实战', link: '/series/design-patterns/' },
           { text: 'AI原生架构师笔记', link: '/series/ai-native-architect/' },
+          { text: '物联网平台设计解读', link: '/series/iot-platform-design/' },
           { text: 'Java启动速度优化解读', link: '/series/java-startup-optimization/' },
           { text: 'Chris Newland JVM工具解读', link: '/series/jvm-tools/' },
           { text: '物联网平台SQL治理手记', link: '/series/iot-sql-governance/' },
@@ -92,6 +93,107 @@ export default defineConfig({
             { text: '04 性能反模式——前导通配与深分页', link: '/series/iot-sql-governance/04-性能反模式-前导通配与深分页' },
             { text: '05 死代码与接口一致性——清理与校验', link: '/series/iot-sql-governance/05-死代码与接口一致性-清理与校验' },
             { text: '06 附录：SqlWhitelistValidator 完整代码', link: '/series/iot-sql-governance/06-附录-SqlWhitelistValidator完整代码' }
+          ]
+        }
+      ],
+
+      '/series/iot-platform-design/': [
+        { text: '系列首页', link: '/series/iot-platform-design/' },
+        {
+          text: 'AWS',
+          items: [
+            { text: '01 为什么需要物联网平台', link: '/series/iot-platform-design/aws/01-为什么需要物联网平台' },
+            { text: '02 稳定连接', link: '/series/iot-platform-design/aws/02-稳定连接' },
+            { text: '03 消息与规则引擎', link: '/series/iot-platform-design/aws/03-消息与规则引擎' },
+            { text: '04 物模型与数字孪生', link: '/series/iot-platform-design/aws/04-物模型与数字孪生' },
+            { text: '05 海量设备管理', link: '/series/iot-platform-design/aws/05-海量设备管理' },
+            { text: '06 智能运维与高可用', link: '/series/iot-platform-design/aws/06-智能运维与高可用' }
+          ]
+        },
+        {
+          text: '微软 Azure',
+          collapsed: true,
+          items: [
+            { text: '01 为什么需要物联网平台', link: '/series/iot-platform-design/azure/01-为什么需要物联网平台' },
+            { text: '02 稳定连接', link: '/series/iot-platform-design/azure/02-稳定连接' },
+            { text: '03 消息与规则引擎', link: '/series/iot-platform-design/azure/03-消息与规则引擎' },
+            { text: '04 物模型与数字孪生', link: '/series/iot-platform-design/azure/04-物模型与数字孪生' },
+            { text: '05 海量设备管理', link: '/series/iot-platform-design/azure/05-海量设备管理' },
+            { text: '06 智能运维与高可用', link: '/series/iot-platform-design/azure/06-智能运维与高可用' }
+          ]
+        },
+        {
+          text: '华为云',
+          collapsed: true,
+          items: [
+            { text: '01 为什么需要物联网平台', link: '/series/iot-platform-design/huawei/01-为什么需要物联网平台' },
+            { text: '02 稳定连接', link: '/series/iot-platform-design/huawei/02-稳定连接' },
+            { text: '03 消息与规则引擎', link: '/series/iot-platform-design/huawei/03-消息与规则引擎' },
+            { text: '04 物模型与数字孪生', link: '/series/iot-platform-design/huawei/04-物模型与数字孪生' },
+            { text: '05 海量设备管理', link: '/series/iot-platform-design/huawei/05-海量设备管理' },
+            { text: '06 智能运维与高可用', link: '/series/iot-platform-design/huawei/06-智能运维与高可用' }
+          ]
+        },
+        {
+          text: '腾讯云',
+          collapsed: true,
+          items: [
+            { text: '01 为什么需要物联网平台', link: '/series/iot-platform-design/tencent/01-为什么需要物联网平台' },
+            { text: '02 稳定连接', link: '/series/iot-platform-design/tencent/02-稳定连接' },
+            { text: '03 消息与规则引擎', link: '/series/iot-platform-design/tencent/03-消息与规则引擎' },
+            { text: '04 物模型与数字孪生', link: '/series/iot-platform-design/tencent/04-物模型与数字孪生' },
+            { text: '05 海量设备管理', link: '/series/iot-platform-design/tencent/05-海量设备管理' },
+            { text: '06 智能运维与高可用', link: '/series/iot-platform-design/tencent/06-智能运维与高可用' }
+          ]
+        },
+        {
+          text: '阿里云',
+          collapsed: true,
+          items: [
+            { text: '01 为什么需要物联网平台', link: '/series/iot-platform-design/aliyun/01-为什么需要物联网平台' },
+            { text: '02 稳定连接', link: '/series/iot-platform-design/aliyun/02-稳定连接' },
+            { text: '03 消息与规则引擎', link: '/series/iot-platform-design/aliyun/03-消息与规则引擎' },
+            { text: '04 物模型与数字孪生', link: '/series/iot-platform-design/aliyun/04-物模型与数字孪生' },
+            { text: '05 海量设备管理', link: '/series/iot-platform-design/aliyun/05-海量设备管理' },
+            { text: '06 智能运维与高可用', link: '/series/iot-platform-design/aliyun/06-智能运维与高可用' }
+          ]
+        },
+        {
+          text: '西门子工业',
+          collapsed: true,
+          items: [
+            { text: '01 为什么工业需要专门的 IoT 架构', link: '/series/iot-platform-design/siemens/01-为什么工业需要专门的IoT架构' },
+            { text: '02 稳定连接：工业协议与边缘网关', link: '/series/iot-platform-design/siemens/02-稳定连接：工业协议与边缘网关' },
+            { text: '03 消息与规则引擎：海量时序数据的高吞吐', link: '/series/iot-platform-design/siemens/03-消息与规则引擎：海量时序数据的高吞吐' },
+            { text: '04 物模型与数字孪生：产线与设备的虚拟映射', link: '/series/iot-platform-design/siemens/04-物模型与数字孪生：产线与设备的虚拟映射' },
+            { text: '05 海量设备管理：跨厂区跨协议的统一纳管', link: '/series/iot-platform-design/siemens/05-海量设备管理：跨厂区跨协议的统一纳管' },
+            { text: '06 智能运维与高可用：预测性维护与功能安全', link: '/series/iot-platform-design/siemens/06-智能运维与高可用：预测性维护与功能安全' }
+          ]
+        },
+        {
+          text: '小米米家（消费级）',
+          collapsed: true,
+          items: [
+            { text: '01 为什么消费级 IoT 需要不同的设计', link: '/series/iot-platform-design/mijia/01-为什么消费级IoT需要不同的设计' },
+            { text: '02 稳定连接：配网激活与弱网自适应', link: '/series/iot-platform-design/mijia/02-稳定连接：配网激活与弱网自适应' },
+            { text: '03 消息与规则引擎：事件驱动与 App 联动', link: '/series/iot-platform-design/mijia/03-消息与规则引擎：事件驱动与App联动' },
+            { text: '04 物模型与孪生：设备状态与家庭场景', link: '/series/iot-platform-design/mijia/04-物模型与孪生：设备状态与家庭场景' },
+            { text: '05 海量设备管理：OTA 与批量运营', link: '/series/iot-platform-design/mijia/05-海量设备管理：OTA与批量运营' },
+            { text: '06 智能运维与高可用：隐私安全与 SLA', link: '/series/iot-platform-design/mijia/06-智能运维与高可用：隐私安全与SLA' }
+          ]
+        },
+        {
+          text: '火山引擎',
+          collapsed: true,
+          items: [
+            { text: '01 为什么要平台化', link: '/series/iot-platform-design/volcengine/01-为什么要平台化' },
+            { text: '02 产品与设备', link: '/series/iot-platform-design/volcengine/02-产品与设备' },
+            { text: '03 物模型', link: '/series/iot-platform-design/volcengine/03-物模型' },
+            { text: '04 网关与子设备', link: '/series/iot-platform-design/volcengine/04-网关与子设备' },
+            { text: '05 设备影子与通信', link: '/series/iot-platform-design/volcengine/05-设备影子与通信' },
+            { text: '06 规则引擎', link: '/series/iot-platform-design/volcengine/06-规则引擎' },
+            { text: '07 实战：智慧农业闭环', link: '/series/iot-platform-design/volcengine/07-实战：智慧农业闭环' },
+            { text: '08 数据分析与可视化', link: '/series/iot-platform-design/volcengine/08-数据分析与可视化' }
           ]
         }
       ],

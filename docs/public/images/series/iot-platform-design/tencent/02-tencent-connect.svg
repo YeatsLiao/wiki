@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="420" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">腾讯云 IoT 连接层：多协议终结 + 设备级认证</text>
+
+  <!-- 设备类型 -->
+  <g font-size="11" fill="#27496d">
+    <rect x="30" y="60" width="150" height="32" rx="6" fill="#ffffff" stroke="#0052d9" stroke-width="1.5"/>
+    <text x="105" y="80" text-anchor="middle">家电 → MQTT</text>
+    <rect x="30" y="102" width="150" height="32" rx="6" fill="#ffffff" stroke="#0052d9" stroke-width="1.5"/>
+    <text x="105" y="122" text-anchor="middle">抄表 → CoAP</text>
+    <rect x="30" y="144" width="150" height="32" rx="6" fill="#ffffff" stroke="#0052d9" stroke-width="1.5"/>
+    <text x="105" y="164" text-anchor="middle">小程序 → WebSocket</text>
+    <rect x="30" y="186" width="150" height="32" rx="6" fill="#ffffff" stroke="#0052d9" stroke-width="1.5"/>
+    <text x="105" y="206" text-anchor="middle">调试 → HTTPS</text>
+  </g>
+
+  <!-- 接入层 -->
+  <rect x="230" y="90" width="200" height="160" rx="10" fill="#ffffff" stroke="#0a4fbf" stroke-width="2.5"/>
+  <text x="330" y="118" font-size="15" font-weight="700" fill="#1f3a5f" text-anchor="middle">IoT Explorer 接入层</text>
+  <text x="330" y="142" font-size="11" fill="#5a6b85" text-anchor="middle">· 协议终结 / 转换</text>
+  <text x="330" y="160" font-size="11" fill="#5a6b85" text-anchor="middle">· X.509 / 密钥认证</text>
+  <text x="330" y="178" font-size="11" fill="#5a6b85" text-anchor="middle">· 一机一密/一型一密</text>
+  <text x="330" y="196" font-size="11" fill="#5a6b85" text-anchor="middle">· 会话保活 / 离线缓存</text>
+  <text x="330" y="214" font-size="11" fill="#5a6b85" text-anchor="middle">· 在线/离线状态托管</text>
+  <text x="330" y="232" font-size="11" fill="#5a6b85" text-anchor="middle">· 冻结/踢除异常设备</text>
+
+  <!-- 设备 -> 接入层 -->
+  <line x1="180" y1="76" x2="230" y2="130" stroke="#9bb8e8" stroke-width="2"/>
+  <line x1="180" y1="118" x2="230" y2="155" stroke="#9bb8e8" stroke-width="2"/>
+  <line x1="180" y1="160" x2="230" y2="180" stroke="#9bb8e8" stroke-width="2"/>
+  <line x1="180" y1="202" x2="230" y2="205" stroke="#9bb8e8" stroke-width="2"/>
+
+  <!-- 安全条 -->
+  <rect x="230" y="270" width="320" height="34" rx="6" fill="#fff4ec" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="390" y="291" font-size="11" fill="#7d4a1a" text-anchor="middle">TLS 加密 · 证书/密钥 · 一机一密 · 密钥轮换</text>
+
+  <!-- 上层 -->
+  <rect x="470" y="90" width="170" height="80" rx="8" fill="#e7f0ff" stroke="#0052d9" stroke-width="2"/>
+  <text x="555" y="118" font-size="13" font-weight="700" fill="#07387a" text-anchor="middle">上层（干净）</text>
+  <text x="555" y="138" font-size="11" fill="#5a6b85" text-anchor="middle">统一消息 / 影子</text>
+  <text x="555" y="156" font-size="11" fill="#5a6b85" text-anchor="middle">/ 数据模板 / 管理</text>
+
+  <!-- 接入层 -> 上层 -->
+  <line x1="430" y1="150" x2="470" y2="130" stroke="#9bb8e8" stroke-width="2"/>
+
+  <!-- 会话状态 -->
+  <rect x="470" y="200" width="170" height="50" rx="8" fill="#eef7ee" stroke="#5aa86a" stroke-width="1.5"/>
+  <text x="555" y="222" font-size="11" fill="#3a4a63" text-anchor="middle">会话状态</text>
+  <text x="555" y="240" font-size="11" fill="#3a4a63" text-anchor="middle">在线/离线/补发</text>
+
+  <!-- 接入层 -> 会话 -->
+  <line x1="430" y1="200" x2="470" y2="215" stroke="#5aa86a" stroke-width="2"/>
+
+  <text x="340" y="400" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用腾讯云官方版权图；精确产品边界以官方文档为准。</text>
+</svg>

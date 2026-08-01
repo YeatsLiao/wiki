@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="420" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">腾讯云 IoT 消息与规则引擎</text>
+
+  <!-- 设备 -->
+  <rect x="30" y="170" width="120" height="60" rx="8" fill="#ffffff" stroke="#0052d9" stroke-width="2"/>
+  <text x="90" y="195" font-size="12" font-weight="700" fill="#07387a" text-anchor="middle">设备上报</text>
+  <text x="90" y="213" font-size="11" fill="#5a6b85" text-anchor="middle">Topic 发布</text>
+
+  <!-- 消息代理 -->
+  <rect x="190" y="150" width="150" height="100" rx="10" fill="#ffffff" stroke="#0a4fbf" stroke-width="2.5"/>
+  <text x="265" y="178" font-size="14" font-weight="700" fill="#1f3a5f" text-anchor="middle">消息代理</text>
+  <text x="265" y="200" font-size="11" fill="#5a6b85" text-anchor="middle">· 发布/订阅</text>
+  <text x="265" y="218" font-size="11" fill="#5a6b85" text-anchor="middle">· 设备影子</text>
+  <text x="265" y="236" font-size="11" fill="#5a6b85" text-anchor="middle">· 可靠收发</text>
+
+  <!-- 数据模板 -->
+  <rect x="190" y="280" width="150" height="60" rx="10" fill="#fff4ec" stroke="#e0913f" stroke-width="2.5"/>
+  <text x="265" y="304" font-size="13" font-weight="700" fill="#7d4a1a" text-anchor="middle">数据模板归一</text>
+  <text x="265" y="322" font-size="10" fill="#5a6b85" text-anchor="middle">属性/事件/行为</text>
+
+  <!-- 设备->代理 -->
+  <line x1="150" y1="200" x2="190" y2="200" stroke="#9bb8e8" stroke-width="2"/>
+  <!-- 代理->模板 -->
+  <line x1="265" y1="250" x2="265" y2="280" stroke="#e0913f" stroke-width="2"/>
+
+  <!-- 规则引擎 -->
+  <rect x="190" y="356" width="150" height="44" rx="8" fill="#eef7ee" stroke="#5aa86a" stroke-width="2"/>
+  <text x="265" y="378" font-size="12" font-weight="700" fill="#3a4a63" text-anchor="middle">规则引擎 SQL</text>
+  <text x="265" y="394" font-size="10" fill="#5a6b85" text-anchor="middle">过滤/投影/转发</text>
+
+  <!-- 模板->规则 -->
+  <line x1="265" y1="340" x2="265" y2="356" stroke="#5aa86a" stroke-width="2"/>
+
+  <!-- 下游 -->
+  <g font-size="11" fill="#27496d">
+    <rect x="400" y="60" width="150" height="34" rx="6" fill="#ffffff" stroke="#8a6fd0" stroke-width="1.5"/>
+    <text x="475" y="81" text-anchor="middle">云函数 SCF（告警）</text>
+
+    <rect x="400" y="110" width="150" height="34" rx="6" fill="#ffffff" stroke="#5a8fe0" stroke-width="1.5"/>
+    <text x="475" y="131" text-anchor="middle">云数据库（存储）</text>
+
+    <rect x="400" y="160" width="150" height="34" rx="6" fill="#ffffff" stroke="#5a8fe0" stroke-width="1.5"/>
+    <text x="475" y="181" text-anchor="middle">CKafka（流）</text>
+
+    <rect x="400" y="210" width="150" height="34" rx="6" fill="#ffffff" stroke="#5a8fe0" stroke-width="1.5"/>
+    <text x="475" y="231" text-anchor="middle">OBS / COS</text>
+  </g>
+
+  <!-- 规则 -> 下游 -->
+  <line x1="340" y1="368" x2="400" y2="77" stroke="#9bb8e8" stroke-width="2"/>
+  <line x1="340" y1="378" x2="400" y2="127" stroke="#9bb8e8" stroke-width="2"/>
+  <line x1="340" y1="388" x2="400" y2="177" stroke="#9bb8e8" stroke-width="2"/>
+  <line x1="340" y1="396" x2="400" y2="227" stroke="#9bb8e8" stroke-width="2"/>
+
+  <!-- 业务 -->
+  <rect x="400" y="300" width="150" height="44" rx="8" fill="#e7f0ff" stroke="#0052d9" stroke-width="2"/>
+  <text x="475" y="322" font-size="12" font-weight="700" fill="#07387a" text-anchor="middle">应用 / 小程序</text>
+  <text x="475" y="340" font-size="10" fill="#5a6b85" text-anchor="middle">消费下游即可</text>
+
+  <text x="340" y="412" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用腾讯云官方版权图；精确产品边界以官方文档为准。</text>
+</svg>

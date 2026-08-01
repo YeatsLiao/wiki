@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="380" fill="#f7f8fa"/>
+  <text x="340" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">网关拓扑：哑设备经网关代理上云（s → g → 云）</text>
+
+  <!-- 平台 -->
+  <rect x="240" y="48" width="200" height="46" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+  <text x="340" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">物联网平台</text>
+
+  <!-- 网关 -->
+  <rect x="265" y="160" width="180" height="48" rx="10" fill="#fff3e0" stroke="#f9ab00" stroke-width="2"/>
+  <text x="355" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2328">网关 GW</text>
+  <text x="355" y="198" text-anchor="middle" font-size="10" fill="#5f6368">4G / 以太网，直连平台</text>
+
+  <!-- 子设备 -->
+  <g font-size="11" fill="#1f2328">
+    <rect x="60" y="290" width="120" height="44" rx="8" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="120" y="310" text-anchor="middle">子设备 S1</text>
+    <text x="120" y="326" text-anchor="middle" font-size="9" fill="#5f6368">LoRa / 不直连</text>
+
+    <rect x="210" y="290" width="120" height="44" rx="8" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="270" y="310" text-anchor="middle">子设备 S2</text>
+    <text x="270" y="326" text-anchor="middle" font-size="9" fill="#5f6368">Zigbee / 不直连</text>
+
+    <rect x="360" y="290" width="120" height="44" rx="8" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="420" y="310" text-anchor="middle">子设备 S3</text>
+    <text x="420" y="326" text-anchor="middle" font-size="9" fill="#5f6368">串口 / 不直连</text>
+
+    <rect x="510" y="290" width="110" height="44" rx="8" fill="#f1f3f4" stroke="#b0b8c0" stroke-dasharray="5 4"/>
+    <text x="565" y="310" text-anchor="middle">… S_n</text>
+    <text x="565" y="326" text-anchor="middle" font-size="9" fill="#5f6368">最多到上限</text>
+  </g>
+
+  <!-- 连线 -->
+  <g stroke="#34a853" stroke-width="1.8" fill="none">
+    <path d="M355 94 C 355 120, 355 130, 355 160" marker-end="url(#g)"/>
+  </g>
+  <text x="430" y="130" font-size="10" fill="#5f6368">直连（MQTT）</text>
+
+  <g stroke="#f9ab00" stroke-width="1.6" fill="none">
+    <path d="M300 208 C 220 240, 150 260, 120 290" marker-end="url(#o)"/>
+    <path d="M340 208 C 300 250, 280 270, 270 290" marker-end="url(#o)"/>
+    <path d="M380 208 C 400 250, 410 270, 420 290" marker-end="url(#o)"/>
+    <path d="M420 208 C 480 245, 540 265, 565 290" marker-end="url(#o)"/>
+  </g>
+  <text x="170" y="255" font-size="10" fill="#5f6368">代理转发（非 IP 网络）</text>
+
+  <text x="340" y="362" text-anchor="middle" font-size="11" fill="#5f6368">子网设备各属自己的产品；网关只负责把数据收上来转发给平台</text>
+
+  <defs>
+    <marker id="g" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#34a853"/></marker>
+    <marker id="o" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f9ab00"/></marker>
+  </defs>
+</svg>

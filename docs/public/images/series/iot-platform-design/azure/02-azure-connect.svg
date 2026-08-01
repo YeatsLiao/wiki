@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="420" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">Azure IoT 连接层：多协议 + 认证 + DPS 零接触预配</text>
+
+  <!-- 设备类型 -->
+  <g font-size="11" fill="#27496d">
+    <rect x="30" y="60" width="150" height="32" rx="6" fill="#ffffff" stroke="#0078d4" stroke-width="1.5"/>
+    <text x="105" y="80" text-anchor="middle">设备 → MQTT</text>
+    <rect x="30" y="102" width="150" height="32" rx="6" fill="#ffffff" stroke="#0078d4" stroke-width="1.5"/>
+    <text x="105" y="122" text-anchor="middle">网关 → AMQP</text>
+    <rect x="30" y="144" width="150" height="32" rx="6" fill="#ffffff" stroke="#0078d4" stroke-width="1.5"/>
+    <text x="105" y="164" text-anchor="middle">调试 → HTTPS</text>
+  </g>
+
+  <!-- DPS -->
+  <rect x="30" y="210" width="150" height="60" rx="8" fill="#fff4ec" stroke="#e0913f" stroke-width="2"/>
+  <text x="105" y="234" font-size="12" font-weight="700" fill="#7d4a1a" text-anchor="middle">DPS 预配</text>
+  <text x="105" y="252" font-size="10" fill="#5a6b85" text-anchor="middle">注册ID+证明</text>
+  <text x="105" y="266" font-size="10" fill="#5a6b85" text-anchor="middle">→ 自动分配 Hub</text>
+
+  <!-- IoT Hub -->
+  <rect x="230" y="100" width="200" height="150" rx="10" fill="#ffffff" stroke="#0066b4" stroke-width="2.5"/>
+  <text x="330" y="128" font-size="15" font-weight="700" fill="#1f3a5f" text-anchor="middle">Azure IoT Hub</text>
+  <text x="330" y="152" font-size="11" fill="#5a6b85" text-anchor="middle">· 协议终结 MQTT/AMQP/HTTPS</text>
+  <text x="330" y="170" font-size="11" fill="#5a6b85" text-anchor="middle">· X.509 / SAS 认证</text>
+  <text x="330" y="188" font-size="11" fill="#5a6b85" text-anchor="middle">· 会话保活 / 离线缓存</text>
+  <text x="330" y="206" font-size="11" fill="#5a6b85" text-anchor="middle">· 在线/离线状态托管</text>
+  <text x="330" y="224" font-size="11" fill="#5a6b85" text-anchor="middle">· 设备孪生</text>
+
+  <!-- 设备 -> Hub -->
+  <line x1="180" y1="76" x2="230" y2="140" stroke="#9cc3e6" stroke-width="2"/>
+  <line x1="180" y1="118" x2="230" y2="165" stroke="#9cc3e6" stroke-width="2"/>
+  <line x1="180" y1="160" x2="230" y2="190" stroke="#9cc3e6" stroke-width="2"/>
+
+  <!-- DPS -> Hub -->
+  <line x1="180" y1="240" x2="230" y2="200" stroke="#e0913f" stroke-width="2"/>
+
+  <!-- 安全条 -->
+  <rect x="230" y="270" width="320" height="34" rx="6" fill="#fff4ec" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="390" y="291" font-size="11" fill="#7d4a1a" text-anchor="middle">TLS 加密 · X.509/SAS · 证书吊销 · 密钥轮换</text>
+
+  <!-- 上层 -->
+  <rect x="470" y="120" width="170" height="80" rx="8" fill="#e8f2fb" stroke="#0078d4" stroke-width="2"/>
+  <text x="555" y="148" font-size="13" font-weight="700" fill="#0a4a7a" text-anchor="middle">上层（干净）</text>
+  <text x="555" y="168" font-size="11" fill="#5a6b85" text-anchor="middle">统一消息 / 孪生</text>
+  <text x="555" y="186" font-size="11" fill="#5a6b85" text-anchor="middle">/ 路由 / 管理</text>
+
+  <!-- Hub -> 上层 -->
+  <line x1="430" y1="160" x2="470" y2="150" stroke="#9cc3e6" stroke-width="2"/>
+
+  <text x="340" y="400" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用微软官方版权图；精确产品边界以官方文档为准。</text>
+</svg>

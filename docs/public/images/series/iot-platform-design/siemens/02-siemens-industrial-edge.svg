@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="430" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">稳定连接：MindConnect 家族终结现场协议</text>
+
+  <!-- 现场设备 -->
+  <rect x="30" y="55" width="175" height="305" rx="10" fill="#fff4ec" stroke="#e0913f" stroke-width="2"/>
+  <text x="117" y="78" font-size="14" font-weight="700" fill="#b9702a" text-anchor="middle">现场设备 / PLC</text>
+  <rect x="48" y="95" width="140" height="44" rx="6" fill="#ffffff" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="118" y="114" font-size="12" fill="#5a6b85" text-anchor="middle">传感器</text>
+  <text x="118" y="130" font-size="10" fill="#b9702a" text-anchor="middle">Modbus RTU</text>
+  <rect x="48" y="150" width="140" height="44" rx="6" fill="#ffffff" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="118" y="169" font-size="12" fill="#5a6b85" text-anchor="middle">PLC</text>
+  <text x="118" y="185" font-size="10" fill="#b9702a" text-anchor="middle">S7</text>
+  <rect x="48" y="205" width="140" height="44" rx="6" fill="#ffffff" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="118" y="224" font-size="12" fill="#5a6b85" text-anchor="middle">数控 / DCS</text>
+  <text x="118" y="240" font-size="10" fill="#b9702a" text-anchor="middle">OPC UA</text>
+  <rect x="48" y="260" width="140" height="44" rx="6" fill="#ffffff" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="118" y="279" font-size="12" fill="#5a6b85" text-anchor="middle">老旧专机</text>
+  <text x="118" y="295" font-size="10" fill="#b9702a" text-anchor="middle">私有协议</text>
+  <text x="118" y="340" font-size="11" fill="#b9702a" text-anchor="middle">↑ 时间同步 NTP / PTP</text>
+
+  <!-- MindConnect 边缘 -->
+  <rect x="245" y="55" width="190" height="305" rx="10" fill="#eef4ff" stroke="#3f6fd1" stroke-width="2.5"/>
+  <text x="340" y="78" font-size="14" font-weight="700" fill="#27496d" text-anchor="middle">MindConnect 边缘</text>
+  <rect x="265" y="95" width="150" height="44" rx="6" fill="#ffffff" stroke="#5b8def" stroke-width="1.5"/>
+  <text x="340" y="122" font-size="12" fill="#5a6b85" text-anchor="middle">MindConnect Nano</text>
+  <rect x="265" y="150" width="150" height="44" rx="6" fill="#ffffff" stroke="#5b8def" stroke-width="1.5"/>
+  <text x="340" y="177" font-size="12" fill="#5a6b85" text-anchor="middle">MindConnect IoT2040</text>
+  <rect x="265" y="205" width="150" height="44" rx="6" fill="#ffffff" stroke="#5b8def" stroke-width="1.5"/>
+  <text x="340" y="232" font-size="12" fill="#5a6b85" text-anchor="middle">MindConnect Lib</text>
+  <rect x="265" y="260" width="150" height="44" rx="6" fill="#fff4ec" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="340" y="287" font-size="12" fill="#5a6b85" text-anchor="middle">Software Agent</text>
+  <text x="340" y="332" font-size="11" fill="#27496d" text-anchor="middle">协议归一 · 断网续传</text>
+
+  <!-- MindSphere 云端 -->
+  <rect x="460" y="55" width="190" height="305" rx="10" fill="#eef7ee" stroke="#5aa86a" stroke-width="2"/>
+  <text x="555" y="78" font-size="14" font-weight="700" fill="#3a7a4a" text-anchor="middle">MindSphere 云端</text>
+  <rect x="480" y="95" width="150" height="44" rx="6" fill="#ffffff" stroke="#5aa86a" stroke-width="1.5"/>
+  <text x="555" y="122" font-size="12" fill="#5a6b85" text-anchor="middle">Ingestion Service</text>
+  <rect x="480" y="150" width="150" height="44" rx="6" fill="#ffffff" stroke="#5aa86a" stroke-width="1.5"/>
+  <text x="555" y="177" font-size="12" fill="#5a6b85" text-anchor="middle">Time Series Service</text>
+  <rect x="480" y="205" width="150" height="44" rx="6" fill="#ffffff" stroke="#5aa86a" stroke-width="1.5"/>
+  <text x="555" y="232" font-size="12" fill="#5a6b85" text-anchor="middle">Asset Management</text>
+  <rect x="480" y="260" width="150" height="44" rx="6" fill="#f0ecfb" stroke="#8a6fd0" stroke-width="1.5"/>
+  <text x="555" y="287" font-size="12" fill="#5a6b85" text-anchor="middle">安全隧道 / 证书</text>
+  <text x="555" y="332" font-size="11" fill="#3a7a4a" text-anchor="middle">统一接入 · 加密上云</text>
+
+  <!-- 连线 -->
+  <line x1="205" y1="117" x2="245" y2="117" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="205" y1="172" x2="245" y2="172" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="205" y1="227" x2="245" y2="227" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="435" y1="117" x2="460" y2="117" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="435" y1="172" x2="460" y2="172" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="435" y1="227" x2="460" y2="227" stroke="#9bb4dd" stroke-width="2"/>
+  <text x="225" y="107" font-size="10" fill="#8a97ad" text-anchor="middle">终结</text>
+  <text x="447" y="155" font-size="10" fill="#8a97ad" text-anchor="middle">上云</text>
+
+  <text x="340" y="412" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用官方版权图；精确服务边界以 MindSphere 官方文档为准。</text>
+</svg>

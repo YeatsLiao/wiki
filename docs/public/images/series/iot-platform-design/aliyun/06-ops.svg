@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <rect width="720" height="400" fill="#ffffff"/>
+  <text x="24" y="30" font-size="18" font-weight="700" fill="#1f2937">智能运维与高可用：看得见、查得清、扛得住</text>
+
+  <rect x="20" y="60" width="340" height="86" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+  <text x="36" y="88" font-size="14" font-weight="700" fill="#1f2937">自定义监控大盘</text>
+  <text x="36" y="112" font-size="11" fill="#334155">业务指标自定义 · 阈值告警 · 实时大屏</text>
+
+  <rect x="20" y="166" width="340" height="86" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+  <text x="36" y="194" font-size="14" font-weight="700" fill="#1f2937">消息轨迹 / TraceID</text>
+  <text x="36" y="218" font-size="11" fill="#334155">一条消息从设备到业务 全链路可追踪</text>
+
+  <rect x="20" y="272" width="340" height="86" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+  <text x="36" y="300" font-size="14" font-weight="700" fill="#1f2937">单元化高可用</text>
+  <text x="36" y="324" font-size="11" fill="#334155">单元隔离 · 故障转移 · Region 多活</text>
+
+  <rect x="400" y="60" width="300" height="298" rx="12" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="550" y="86" font-size="14" font-weight="700" fill="#4c1d95" text-anchor="middle">单元化架构</text>
+
+  <rect x="420" y="104" width="120" height="70" rx="8" fill="#ffffff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="480" y="132" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">单元 A</text>
+  <text x="480" y="152" font-size="10" fill="#64748b" text-anchor="middle">主 · 承载流量</text>
+
+  <rect x="560" y="104" width="120" height="70" rx="8" fill="#ffffff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="620" y="132" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">单元 B</text>
+  <text x="620" y="152" font-size="10" fill="#64748b" text-anchor="middle">备 · 随时接管</text>
+
+  <line x1="540" y1="139" x2="558" y2="139" stroke="#64748b" stroke-width="2"/>
+  <polygon points="558,133 558,145 568,139" fill="#64748b"/>
+  <line x1="560" y1="139" x2="542" y2="139" stroke="#64748b" stroke-width="2"/>
+  <polygon points="542,133 542,145 532,139" fill="#64748b"/>
+  <text x="550" y="160" font-size="9" fill="#64748b" text-anchor="middle">数据同步</text>
+
+  <line x1="480" y1="174" x2="480" y2="206" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="474,206 486,206 480,216" fill="#ef4444"/>
+  <line x1="620" y1="174" x2="620" y2="206" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="614,206 626,206 620,216" fill="#ef4444"/>
+  <text x="550" y="200" font-size="10" fill="#991b1b" text-anchor="middle">FailOver 故障转移</text>
+
+  <rect x="420" y="226" width="260" height="40" rx="8" fill="#ffffff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="550" y="250" font-size="11" fill="#334155" text-anchor="middle">Region 多活 · 异地容灾</text>
+
+  <rect x="420" y="276" width="260" height="40" rx="8" fill="#ffffff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="550" y="300" font-size="11" fill="#334155" text-anchor="middle">单单元故障 不影响全局</text>
+
+  <text x="550" y="338" font-size="10" fill="#64748b" text-anchor="middle">单元化：把爆炸半径关在一个单元里</text>
+</svg>

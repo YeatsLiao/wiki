@@ -3,7 +3,7 @@
 > 技术栈：HotSpot JIT（C1/C2）+ JEP 295 AOT + GraalVM Native Image + Dragonwell
 > 适用场景：解释执行成为启动性能瓶颈，想了解 JIT 预热机制、AOT 的历史轨迹，以及 Dragonwell 如何将 AOT 缝合进现有优化链路
 
-## 0 写在前面
+## 0. 类加载之后，JIT 预热这道坎
 
 前面三篇，我们分别拆了类加载的查找、解析、初始化三个环节，用 AppCDS 省了解析，用 JAR Index 省了查找，用 Heap Archive 省了初始化。至此，类加载这条链路理论上已经打通：一个类从磁盘到可用，大部分步骤都能跳过或加速。
 

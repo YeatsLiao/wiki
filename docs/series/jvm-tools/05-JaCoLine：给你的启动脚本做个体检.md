@@ -6,6 +6,8 @@
 > 真实地址：https://jacoline.dev/inspect
 > 适用场景：启动脚本升级 JDK 前，自动检查 `-XX`/`-X` 参数是否拼写错误、已废弃、已过期、相互冲突、版本不兼容
 
+## 0. 多打一个字母，JVM 不报错
+
 你有没有试过在启动脚本里多打一个字母，比如 `-XX:+UseG1GCX`？JVM **不会报错**，默认行为是悄悄忽略这个不认识的参数（你跑 Java 时敲的那一长串 `java -Xms2g -XX:+UseG1GC ...` 就是启动命令行，里面 `-X`/`-XX` 开头的都是 JVM 的调优开关，成千上万）。然后你的服务跑在「以为开了 G1、其实没开」的状态下，平稳地慢，谁也不知道为什么。更隐蔽的是 `-XX:+AggressiveOpts`——JDK 11 起已废弃、JDK 13 移除，你升级后它直接失效，但脚本还在；或者反过来，新 JDK 上的新参数（比如 `-Xlog:gc*` 统一日志语法）被你拷到了还在用 JDK 8 的环境——直接报 `Unrecognized VM option`（JVM 不认识这个参数时的报错，通常是因为它在新 JDK 被删了或你拼错了）。
 
 JaCoLine（Java Command Line Inspector）就是专门给启动脚本「体检」的工具。它和 VM Options Explorer 是**同源数据、正反两个方向**：Explorer 是「正向查一个参数」，JaCoLine 是「反向校验一整条命令行」。

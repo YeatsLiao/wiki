@@ -27,6 +27,13 @@ const seriesList = [
   },
   {
     tag: '原创系列',
+    count: '50 篇',
+    title: '物联网平台设计解读',
+    desc: '横看 AWS、Azure、华为云、腾讯云、阿里云、西门子、小米米家、火山引擎八家物联网平台，以「同名异构对照」看清公有云、工业、消费级三类玩家的设计差异。',
+    link: '/series/iot-platform-design/'
+  },
+  {
+    tag: '原创系列',
     count: '6 篇',
     title: 'Java启动速度优化解读',
     desc: '从类加载、AppCDS、Heap Archive 到 JIT/AOT 与 Spring 懒加载实战，把 Java 启动慢的根因与加速方案一次讲透。',
@@ -86,7 +93,7 @@ const seriesList = [
 // 更多入口：跳转全部文集页
 const moreEntry = {
   tag: '目录',
-  count: '共 11 辑',
+  count: '共 12 辑',
   title: '更多系列',
   desc: '速查手册、手记、翻译与在线实验，完整目录按分类收录，陆续更新。',
   link: '/collections'

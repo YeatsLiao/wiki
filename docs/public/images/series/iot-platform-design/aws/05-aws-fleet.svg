@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="400" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">AWS 海量设备管理</text>
+
+  <!-- 出厂 -->
+  <rect x="30" y="70" width="130" height="60" rx="8" fill="#ffffff" stroke="#5b8def" stroke-width="2"/>
+  <text x="95" y="98" font-size="12" font-weight="700" fill="#27496d" text-anchor="middle">出厂设备</text>
+  <text x="95" y="116" font-size="10" fill="#5a6b85" text-anchor="middle">烧录 CA 证书</text>
+
+  <!-- 预置双路 -->
+  <rect x="200" y="50" width="130" height="45" rx="8" fill="#eef7ee" stroke="#5aa86a" stroke-width="2"/>
+  <text x="265" y="76" font-size="11" font-weight="700" fill="#27496d" text-anchor="middle">JITP 自动注册</text>
+  <rect x="200" y="105" width="130" height="45" rx="8" fill="#eef7ee" stroke="#5aa86a" stroke-width="2"/>
+  <text x="265" y="131" font-size="11" font-weight="700" fill="#27496d" text-anchor="middle">Fleet Provisioning</text>
+
+  <!-- 批量导入 -->
+  <rect x="200" y="170" width="130" height="45" rx="8" fill="#fff4ec" stroke="#e0913f" stroke-width="2"/>
+  <text x="265" y="196" font-size="11" font-weight="700" fill="#27496d" text-anchor="middle">CSV/JSON 批量</text>
+
+  <!-- 注册表 -->
+  <rect x="380" y="100" width="130" height="70" rx="10" fill="#ffffff" stroke="#3f6fd1" stroke-width="2.5"/>
+  <text x="445" y="128" font-size="12" font-weight="700" fill="#1f3a5f" text-anchor="middle">设备注册表</text>
+  <text x="445" y="148" font-size="10" fill="#5a6b85" text-anchor="middle">Thing / Group</text>
+  <text x="445" y="164" font-size="10" fill="#5a6b85" text-anchor="middle">证书 / 影子</text>
+
+  <!-- Job -->
+  <rect x="380" y="200" width="130" height="55" rx="8" fill="#f0ecfb" stroke="#8a6fd0" stroke-width="2"/>
+  <text x="445" y="224" font-size="12" font-weight="700" fill="#3a4a63" text-anchor="middle">Job</text>
+  <text x="445" y="242" font-size="10" fill="#5a6b85" text-anchor="middle">OTA / 配置</text>
+
+  <!-- 全球 Region -->
+  <g font-size="10" fill="#27496d">
+    <rect x="560" y="60" width="100" height="34" rx="6" fill="#ffffff" stroke="#7aa0e0" stroke-width="1.5"/>
+    <text x="610" y="81" text-anchor="middle">us-east-1</text>
+    <rect x="560" y="110" width="100" height="34" rx="6" fill="#ffffff" stroke="#7aa0e0" stroke-width="1.5"/>
+    <text x="610" y="131" text-anchor="middle">eu-west-1</text>
+    <rect x="560" y="160" width="100" height="34" rx="6" fill="#ffffff" stroke="#7aa0e0" stroke-width="1.5"/>
+    <text x="610" y="181" text-anchor="middle">ap-northeast-1</text>
+  </g>
+
+  <!-- 海量设备 -->
+  <rect x="380" y="290" width="200" height="50" rx="10" fill="#eef4ff" stroke="#3f6fd1" stroke-width="2"/>
+  <text x="480" y="312" font-size="12" font-weight="700" fill="#1f3a5f" text-anchor="middle">海量设备舰队</text>
+  <text x="480" y="330" font-size="10" fill="#5a6b85" text-anchor="middle">就近接入 · 分批升级 · 合规驻留</text>
+
+  <!-- 连线 -->
+  <line x1="160" y1="95" x2="200" y2="72" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="160" y1="100" x2="200" y2="127" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="160" y1="100" x2="200" y2="192" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="330" y1="85" x2="380" y2="120" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="330" y1="127" x2="380" y2="135" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="330" y1="192" x2="380" y2="150" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="510" y1="135" x2="560" y2="77" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="510" y1="140" x2="560" y2="127" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="510" y1="145" x2="560" y2="177" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="445" y1="255" x2="480" y2="290" stroke="#b9a6e0" stroke-width="2"/>
+
+  <text x="340" y="385" font-size="11" fill="#8a97ad" text-anchor="middle">说明：手绘示意，未使用 AWS 官方版权图；精确机制以官方文档为准。</text>
+</svg>

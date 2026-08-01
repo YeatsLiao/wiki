@@ -7,6 +7,8 @@
 > 示例库：https://byte-me.dev/load/{ExampleName}
 > 适用场景：学习字节码、验证某个语法特性（record、switch 表达式、密封类、字符串模板…）编译后长什么样、对比不同 JDK 版本差异
 
+## 0. 三步才能看到字节码，现在一步
+
 想知道 `switch` 表达式（这是 Java 的一个新语法特性，背后对应一份叫 JEP 的提案，JEP 361 就是它在 JDK 14 落地的编号）在 JDK 14 编译成什么字节码（Java 编译后的中间代码，存在 `.class` 文件里，JVM 能懂但不是 CPU 直接跑的机器码）？传统做法是：写 `.java` → 用 `javac` 编译成 `.class` → 再用 `javap -c` 把字节码反编译成可读文本。三步走还得分环境、换 JDK。Byte-Me 把这些塞进一个网页：左边写 Java，右边实时出字节码，顶端能切目标 JDK（21/22/23，还能开关 preview 等级——preview 是还没正式定稿、需要显式开启的新语法，每个版本可能改）。学字节码的人做梦都想要这种东西。
 
 我打开 `https://byte-me.dev/load/SwitchExpressions` 抓的真实截图——左边源码区加载了 SwitchExpressions 类的 Java 源（包含 `lookupSwitch`、`tableSwitch`、`switchExpression` 三个方法演示），Source / Target 都设为 14，右边是 Examples 示例库导航表，点别的示例可秒切：

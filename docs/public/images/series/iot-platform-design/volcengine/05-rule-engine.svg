@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 390" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="390" fill="#f7f8fa"/>
+  <text x="340" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">规则引擎：让数据"流"向该去的地方</text>
+
+  <!-- 设备群 -->
+  <g font-size="11" fill="#1f2328">
+    <rect x="30" y="110" width="110" height="34" rx="8" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="85" y="131" text-anchor="middle">设备 / 网关</text>
+    <rect x="30" y="170" width="110" height="34" rx="8" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="85" y="191" text-anchor="middle">（南向采集）</text>
+  </g>
+  <text x="85" y="240" text-anchor="middle" font-size="11" fill="#5f6368">设备上报属性/事件</text>
+
+  <!-- 规则引擎 -->
+  <rect x="230" y="140" width="170" height="80" rx="12" fill="#fff3e0" stroke="#f9ab00" stroke-width="2"/>
+  <text x="315" y="170" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">规则引擎</text>
+  <text x="315" y="192" text-anchor="middle" font-size="10" fill="#5f6368">IF 温度 &gt; 30</text>
+  <text x="315" y="208" text-anchor="middle" font-size="10" fill="#5f6368">THEN 转发 / 联动</text>
+
+  <!-- 三个目标 -->
+  <g font-size="11" fill="#1f2328">
+    <rect x="470" y="70" width="180" height="56" rx="10" fill="#e6f4ea" stroke="#34a853"/>
+    <text x="560" y="92" text-anchor="middle" font-weight="700">订阅转发</text>
+    <text x="560" y="110" text-anchor="middle" font-size="10" fill="#5f6368">推送到第三方 HTTP 地址</text>
+
+    <rect x="470" y="167" width="180" height="56" rx="10" fill="#e6f4ea" stroke="#34a853"/>
+    <text x="560" y="189" text-anchor="middle" font-weight="700">场景联动</text>
+    <text x="560" y="207" text-anchor="middle" font-size="10" fill="#5f6368">触发其他设备动作</text>
+
+    <rect x="470" y="264" width="180" height="56" rx="10" fill="#e6f4ea" stroke="#34a853"/>
+    <text x="560" y="286" text-anchor="middle" font-weight="700">数据转发</text>
+    <text x="560" y="304" text-anchor="middle" font-size="10" fill="#5f6368">→ Kafka / 其他 Topic</text>
+  </g>
+
+  <!-- 连线 -->
+  <g stroke="#4285f4" stroke-width="1.8" fill="none">
+    <path d="M140 150 C 190 160, 210 165, 230 175" marker-end="url(#b)"/>
+  </g>
+  <g stroke="#34a853" stroke-width="1.6" fill="none">
+    <path d="M400 165 C 440 140, 455 110, 470 98" marker-end="url(#g)"/>
+    <path d="M400 185 C 440 185, 455 190, 470 195" marker-end="url(#g)"/>
+    <path d="M400 200 C 440 230, 455 280, 470 292" marker-end="url(#g)"/>
+  </g>
+
+  <text x="315" y="350" text-anchor="middle" font-size="11" fill="#5f6368">南向采集、北向开放：数据进来后"往哪走"由规则决定，而非写死在应用里</text>
+  <text x="315" y="370" text-anchor="middle" font-size="11" fill="#5f6368">规则解耦 = 业务变化只改规则配置，不改代码</text>
+
+  <defs>
+    <marker id="b" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4285f4"/></marker>
+    <marker id="g" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#34a853"/></marker>
+  </defs>
+</svg>

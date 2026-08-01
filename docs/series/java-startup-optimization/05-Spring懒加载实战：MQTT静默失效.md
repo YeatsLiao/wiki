@@ -3,7 +3,7 @@
 > 技术栈：Spring Boot + MQTT + lazy-initialization
 > 适用场景：开启全局懒加载加速启动后，基础设施类 Bean 静默失效的排查与规避
 
-## 0 写在前面
+## 0. 换个思路：不做的就不耗时
 
 前面四篇，我们一直在 JVM 层面打转——AppCDS 优化类解析、JAR Index 加速类查找、Heap Archive 冻结类初始化、AOT 绕过解释执行。这些方案的共同特点是：做的事情和原来一样，只是做得更快。trace-dump-replay 三段式，本质上都是在压缩同一份工作的时间开销。
 

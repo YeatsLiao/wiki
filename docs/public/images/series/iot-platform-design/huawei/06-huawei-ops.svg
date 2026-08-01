@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="420" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">华为云 智能运维与高可用</text>
+
+  <!-- 设备/平台指标 -->
+  <rect x="30" y="170" width="130" height="60" rx="8" fill="#ffffff" stroke="#c0392b" stroke-width="2"/>
+  <text x="95" y="195" font-size="12" font-weight="700" fill="#7d241a" text-anchor="middle">设备/平台指标</text>
+  <text x="95" y="213" font-size="11" fill="#5a6b85" text-anchor="middle">连接/消息/日志</text>
+
+  <!-- 监控服务 -->
+  <rect x="200" y="150" width="160" height="100" rx="10" fill="#ffffff" stroke="#a93226" stroke-width="2.5"/>
+  <text x="280" y="178" font-size="14" font-weight="700" fill="#1f3a5f" text-anchor="middle">监控与审计</text>
+  <text x="280" y="200" font-size="11" fill="#5a6b85" text-anchor="middle">· 指标 / 日志 / 大盘</text>
+  <text x="280" y="218" font-size="11" fill="#5a6b85" text-anchor="middle">· 异常检测</text>
+  <text x="280" y="236" font-size="11" fill="#5a6b85" text-anchor="middle">· 安全审计</text>
+
+  <!-- 设备->监控 -->
+  <line x1="160" y1="200" x2="200" y2="200" stroke="#e0a39c" stroke-width="2"/>
+
+  <!-- 告警 -->
+  <rect x="200" y="280" width="160" height="60" rx="10" fill="#fff4ec" stroke="#e0913f" stroke-width="2.5"/>
+  <text x="280" y="305" font-size="13" font-weight="700" fill="#7d4a1a" text-anchor="middle">告警规则</text>
+  <text x="280" y="323" font-size="11" fill="#5a6b85" text-anchor="middle">分级: Critical/Warn/Notice</text>
+
+  <!-- 监控->告警 -->
+  <line x1="280" y1="250" x2="280" y2="280" stroke="#e0913f" stroke-width="2"/>
+
+  <!-- 通知 -->
+  <rect x="400" y="290" width="130" height="50" rx="8" fill="#ffffff" stroke="#7aa0e0" stroke-width="1.5"/>
+  <text x="465" y="312" font-size="11" fill="#3a4a63" text-anchor="middle">短信/邮件/工单</text>
+  <text x="465" y="330" font-size="10" fill="#5a6b85" text-anchor="middle">通知</text>
+
+  <!-- 告警->通知 -->
+  <line x1="360" y1="310" x2="400" y2="312" stroke="#9bb4dd" stroke-width="2"/>
+
+  <!-- 高可用 -->
+  <rect x="400" y="90" width="220" height="120" rx="10" fill="#eef7ee" stroke="#5aa86a" stroke-width="2.5"/>
+  <text x="510" y="118" font-size="14" font-weight="700" fill="#3a4a63" text-anchor="middle">高可用架构</text>
+  <text x="510" y="142" font-size="11" fill="#5a6b85" text-anchor="middle">· 接入层 多 AZ</text>
+  <text x="510" y="160" font-size="11" fill="#5a6b85" text-anchor="middle">· 无状态会话迁移</text>
+  <text x="510" y="178" font-size="11" fill="#5a6b85" text-anchor="middle">· 跨 Region 容灾</text>
+  <text x="510" y="196" font-size="11" fill="#5a6b85" text-anchor="middle">· 故障演练</text>
+
+  <!-- 监控->高可用 -->
+  <line x1="320" y1="180" x2="400" y2="150" stroke="#5aa86a" stroke-width="2"/>
+
+  <!-- 案例 -->
+  <g font-size="11" fill="#27496d">
+    <rect x="400" y="230" width="220" height="34" rx="6" fill="#ffffff" stroke="#a93226" stroke-width="1.5"/>
+    <text x="510" y="251" text-anchor="middle">案例: 智慧工厂（边缘自治）</text>
+    <rect x="400" y="270" width="220" height="34" rx="6" fill="#ffffff" stroke="#a93226" stroke-width="1.5"/>
+    <text x="510" y="291" text-anchor="middle">案例: 车联网（低时延+OTA）</text>
+  </g>
+
+  <!-- 高可用->案例 -->
+  <line x1="510" y1="210" x2="510" y2="230" stroke="#a93226" stroke-width="2"/>
+  <!-- 监控->案例 -->
+  <line x1="360" y1="230" x2="400" y2="255" stroke="#9bb4dd" stroke-width="2"/>
+
+  <text x="340" y="400" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用华为云官方版权图；精确产品边界以官方文档为准。</text>
+</svg>

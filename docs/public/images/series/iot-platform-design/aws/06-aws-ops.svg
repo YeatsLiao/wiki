@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="400" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">AWS 智能运维与高可用</text>
+
+  <!-- 设备 -->
+  <rect x="30" y="170" width="120" height="60" rx="8" fill="#ffffff" stroke="#5b8def" stroke-width="2"/>
+  <text x="90" y="198" font-size="13" font-weight="700" fill="#27496d" text-anchor="middle">全球设备</text>
+  <text x="90" y="216" font-size="10" fill="#5a6b85" text-anchor="middle">就近接入</text>
+
+  <!-- IoT Core 双 Region -->
+  <rect x="190" y="90" width="150" height="55" rx="8" fill="#eef4ff" stroke="#3f6fd1" stroke-width="2"/>
+  <text x="265" y="113" font-size="12" font-weight="700" fill="#27496d" text-anchor="middle">us-east-1 Core</text>
+  <text x="265" y="131" font-size="10" fill="#5a6b85" text-anchor="middle">Multi-AZ</text>
+  <rect x="190" y="200" width="150" height="55" rx="8" fill="#eef4ff" stroke="#3f6fd1" stroke-width="2"/>
+  <text x="265" y="223" font-size="12" font-weight="700" fill="#27496d" text-anchor="middle">eu-west-1 Core</text>
+  <text x="265" y="241" font-size="10" fill="#5a6b85" text-anchor="middle">Multi-AZ</text>
+
+  <!-- 故障转移 -->
+  <line x1="340" y1="117" x2="340" y2="227" stroke="#e08a8a" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="350" y="175" font-size="10" fill="#c05555">故障转移</text>
+
+  <!-- Defender -->
+  <rect x="390" y="70" width="150" height="50" rx="8" fill="#fff4ec" stroke="#e0913f" stroke-width="2"/>
+  <text x="465" y="94" font-size="12" font-weight="700" fill="#27496d" text-anchor="middle">Device Defender</text>
+  <text x="465" y="112" font-size="10" fill="#5a6b85" text-anchor="middle">审计 / 异常检测</text>
+
+  <!-- CloudWatch -->
+  <rect x="390" y="150" width="150" height="55" rx="8" fill="#eef7ee" stroke="#5aa86a" stroke-width="2"/>
+  <text x="465" y="173" font-size="12" font-weight="700" fill="#27496d" text-anchor="middle">CloudWatch</text>
+  <text x="465" y="191" font-size="10" fill="#5a6b85" text-anchor="middle">指标/日志/告警</text>
+
+  <!-- 大盘 -->
+  <rect x="570" y="120" width="95" height="50" rx="8" fill="#ffffff" stroke="#7aa0e0" stroke-width="1.5"/>
+  <text x="617" y="144" font-size="11" font-weight="700" fill="#27496d" text-anchor="middle">监控大盘</text>
+  <text x="617" y="160" font-size="9" fill="#5a6b85" text-anchor="middle">在线/速率/错误</text>
+
+  <!-- 告警 -->
+  <rect x="570" y="195" width="95" height="45" rx="8" fill="#fdeaea" stroke="#e08a8a" stroke-width="1.5"/>
+  <text x="617" y="220" font-size="11" font-weight="700" fill="#c05555" text-anchor="middle">告警</text>
+  <text x="617" y="234" font-size="9" fill="#5a6b85" text-anchor="middle">SNS / Lambda</text>
+
+  <!-- 连线 -->
+  <line x1="150" y1="185" x2="190" y2="117" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="150" y1="195" x2="190" y2="227" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="340" y1="117" x2="390" y2="95" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="340" y1="227" x2="390" y2="175" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="540" y1="95" x2="570" y2="135" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="540" y1="177" x2="570" y2="140" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="540" y1="185" x2="570" y2="210" stroke="#9bb4dd" stroke-width="2"/>
+
+  <text x="340" y="385" font-size="11" fill="#8a97ad" text-anchor="middle">说明：手绘示意，未使用 AWS 官方版权图；精确架构以官方文档为准。</text>
+</svg>

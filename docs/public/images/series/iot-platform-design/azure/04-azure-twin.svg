@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="420" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">Azure 物模型（Twin + DTDL）与数字孪生</text>
+
+  <!-- 异构设备 -->
+  <g font-size="11" fill="#27496d">
+    <rect x="30" y="60" width="130" height="34" rx="6" fill="#ffffff" stroke="#0078d4" stroke-width="1.5"/>
+    <text x="95" y="81" text-anchor="middle">设备A: temp</text>
+    <rect x="30" y="105" width="130" height="34" rx="6" fill="#ffffff" stroke="#0078d4" stroke-width="1.5"/>
+    <text x="95" y="126" text-anchor="middle">设备B: temperature</text>
+    <rect x="30" y="150" width="130" height="34" rx="6" fill="#ffffff" stroke="#0078d4" stroke-width="1.5"/>
+    <text x="95" y="171" text-anchor="middle">设备C: 寄存器</text>
+  </g>
+
+  <!-- 设备孪生 -->
+  <rect x="210" y="70" width="200" height="120" rx="10" fill="#ffffff" stroke="#0066b4" stroke-width="2.5"/>
+  <text x="310" y="98" font-size="14" font-weight="700" fill="#1f3a5f" text-anchor="middle">设备孪生 Twin</text>
+  <text x="310" y="122" font-size="11" fill="#5a6b85" text-anchor="middle">· Desired（期望）</text>
+  <text x="310" y="140" font-size="11" fill="#5a6b85" text-anchor="middle">· Reported（上报）</text>
+  <text x="310" y="158" font-size="11" fill="#5a6b85" text-anchor="middle">· Tags / 双向同步</text>
+  <text x="310" y="176" font-size="11" fill="#5a6b85" text-anchor="middle">→ 离线补偿</text>
+
+  <!-- 设备->孪生 -->
+  <line x1="160" y1="77" x2="210" y2="110" stroke="#9cc3e6" stroke-width="2"/>
+  <line x1="160" y1="122" x2="210" y2="130" stroke="#9cc3e6" stroke-width="2"/>
+  <line x1="160" y1="167" x2="210" y2="150" stroke="#9cc3e6" stroke-width="2"/>
+
+  <!-- DTDL -->
+  <rect x="210" y="210" width="200" height="44" rx="8" fill="#fff4ec" stroke="#e0913f" stroke-width="2"/>
+  <text x="310" y="234" font-size="12" font-weight="700" fill="#7d4a1a" text-anchor="middle">DTDL 建模语言</text>
+  <text x="310" y="252" font-size="10" fill="#5a6b85" text-anchor="middle">Property/Telemetry/Command</text>
+
+  <!-- 孪生 -> DTDL 语义 -->
+  <line x1="310" y1="190" x2="310" y2="210" stroke="#e0913f" stroke-width="2"/>
+
+  <!-- ADT -->
+  <rect x="450" y="70" width="200" height="220" rx="10" fill="#f0ecfb" stroke="#8a6fd0" stroke-width="2.5"/>
+  <text x="550" y="98" font-size="14" font-weight="700" fill="#4a357a" text-anchor="middle">Azure Digital Twins</text>
+  <rect x="470" y="115" width="160" height="30" rx="6" fill="#ffffff" stroke="#8a6fd0" stroke-width="1.5"/>
+  <text x="550" y="134" font-size="11" fill="#3a4a63" text-anchor="middle">建筑 Building</text>
+  <rect x="490" y="158" width="140" height="30" rx="6" fill="#ffffff" stroke="#8a6fd0" stroke-width="1.5"/>
+  <text x="560" y="177" font-size="11" fill="#3a4a63" text-anchor="middle">楼层 Floor-3</text>
+  <rect x="510" y="201" width="120" height="28" rx="6" fill="#ffffff" stroke="#8a6fd0" stroke-width="1.5"/>
+  <text x="570" y="219" font-size="11" fill="#3a4a63" text-anchor="middle">房间 Room-301</text>
+  <text x="550" y="252" font-size="10" fill="#5a6b85" text-anchor="middle">关系: 建筑→楼层→房间</text>
+  <text x="550" y="270" font-size="10" fill="#5a6b85" text-anchor="middle">→ 设备 / 遥测 / 联动</text>
+
+  <!-- DTDL -> ADT -->
+  <line x1="410" y1="232" x2="450" y2="180" stroke="#b9a6e8" stroke-width="2"/>
+  <line x1="410" y1="120" x2="450" y2="130" stroke="#b9a6e8" stroke-width="2"/>
+
+  <text x="340" y="400" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用微软官方版权图；精确产品边界以官方文档为准。</text>
+</svg>

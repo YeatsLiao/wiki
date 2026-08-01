@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="420" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">Azure IoT 消息与路由</text>
+
+  <!-- 设备 -->
+  <rect x="30" y="170" width="120" height="60" rx="8" fill="#ffffff" stroke="#0078d4" stroke-width="2"/>
+  <text x="90" y="195" font-size="12" font-weight="700" fill="#0a4a7a" text-anchor="middle">设备上报</text>
+  <text x="90" y="213" font-size="11" fill="#5a6b85" text-anchor="middle">MQTT/AMQP</text>
+
+  <!-- IoT Hub 路由 -->
+  <rect x="190" y="150" width="160" height="100" rx="10" fill="#ffffff" stroke="#0066b4" stroke-width="2.5"/>
+  <text x="270" y="178" font-size="14" font-weight="700" fill="#1f3a5f" text-anchor="middle">IoT Hub 消息路由</text>
+  <text x="270" y="200" font-size="11" fill="#5a6b85" text-anchor="middle">· WHERE 条件分发</text>
+  <text x="270" y="218" font-size="11" fill="#5a6b85" text-anchor="middle">· 消息增强 enrich</text>
+  <text x="270" y="236" font-size="11" fill="#5a6b85" text-anchor="middle">· 回退路由兜底</text>
+
+  <!-- 设备->Hub -->
+  <line x1="150" y1="200" x2="190" y2="200" stroke="#9cc3e6" stroke-width="2"/>
+
+  <!-- 下游 -->
+  <g font-size="11" fill="#27496d">
+    <rect x="400" y="60" width="150" height="34" rx="6" fill="#ffffff" stroke="#e0913f" stroke-width="1.5"/>
+    <text x="475" y="81" text-anchor="middle">Service Bus（告警）</text>
+
+    <rect x="400" y="110" width="150" height="34" rx="6" fill="#ffffff" stroke="#5aa0e0" stroke-width="1.5"/>
+    <text x="475" y="131" text-anchor="middle">Event Hub（流）</text>
+
+    <rect x="400" y="160" width="150" height="34" rx="6" fill="#ffffff" stroke="#5aa0e0" stroke-width="1.5"/>
+    <text x="475" y="181" text-anchor="middle">Blob 存储（冷）</text>
+  </g>
+
+  <!-- Hub -> 下游 -->
+  <line x1="350" y1="180" x2="400" y2="77" stroke="#9cc3e6" stroke-width="2"/>
+  <line x1="350" y1="200" x2="400" y2="127" stroke="#9cc3e6" stroke-width="2"/>
+  <line x1="350" y1="220" x2="400" y2="177" stroke="#9cc3e6" stroke-width="2"/>
+
+  <!-- Stream Analytics -->
+  <rect x="400" y="220" width="150" height="50" rx="8" fill="#fff4ec" stroke="#e0913f" stroke-width="2"/>
+  <text x="475" y="242" font-size="12" font-weight="700" fill="#7d4a1a" text-anchor="middle">Stream Analytics</text>
+  <text x="475" y="260" font-size="10" fill="#5a6b85" text-anchor="middle">实时窗口计算</text>
+
+  <!-- Event Hub -> SA -->
+  <line x1="475" y1="144" x2="475" y2="220" stroke="#e0913f" stroke-width="2"/>
+
+  <!-- 应用 -->
+  <rect x="400" y="300" width="150" height="44" rx="8" fill="#e8f2fb" stroke="#0078d4" stroke-width="2"/>
+  <text x="475" y="322" font-size="12" font-weight="700" fill="#0a4a7a" text-anchor="middle">Power BI / 应用</text>
+  <text x="475" y="340" font-size="10" fill="#5a6b85" text-anchor="middle">消费下游即可</text>
+
+  <!-- SA -> 应用 -->
+  <line x1="475" y1="270" x2="475" y2="300" stroke="#9cc3e6" stroke-width="2"/>
+
+  <text x="340" y="400" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用微软官方版权图；精确产品边界以官方文档为准。</text>
+</svg>

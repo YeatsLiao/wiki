@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="430" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">消息与规则引擎：Ingestion / Time Series / Analytics 高吞吐</text>
+
+  <!-- 高频采集（MindConnect 上行） -->
+  <rect x="30" y="55" width="170" height="320" rx="10" fill="#fff4ec" stroke="#e0913f" stroke-width="2"/>
+  <text x="115" y="78" font-size="14" font-weight="700" fill="#b9702a" text-anchor="middle">高频采集点</text>
+  <rect x="48" y="95" width="134" height="40" rx="6" fill="#ffffff" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="115" y="119" font-size="12" fill="#5a6b85" text-anchor="middle">振动 1kHz</text>
+  <rect x="48" y="145" width="134" height="40" rx="6" fill="#ffffff" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="115" y="169" font-size="12" fill="#5a6b85" text-anchor="middle">温度</text>
+  <rect x="48" y="195" width="134" height="40" rx="6" fill="#ffffff" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="115" y="219" font-size="12" fill="#5a6b85" text-anchor="middle">压力</text>
+  <rect x="48" y="245" width="134" height="40" rx="6" fill="#ffffff" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="115" y="269" font-size="12" fill="#5a6b85" text-anchor="middle">电流 / 功率</text>
+  <text x="115" y="330" font-size="11" fill="#b9702a" text-anchor="middle">高频 · 时序 · 海量（MindConnect 上行）</text>
+
+  <!-- Ingestion Service -->
+  <rect x="230" y="60" width="210" height="72" rx="10" fill="#eef4ff" stroke="#3f6fd1" stroke-width="2.5"/>
+  <text x="335" y="88" font-size="14" font-weight="700" fill="#27496d" text-anchor="middle">Ingestion Service</text>
+  <text x="335" y="110" font-size="11" fill="#5a6b85" text-anchor="middle">安全数据接入 · 鉴权校验</text>
+  <text x="335" y="128" font-size="11" fill="#5a6b85" text-anchor="middle">统一接收 MindConnect 变量流</text>
+
+  <!-- Time Series Service -->
+  <rect x="230" y="144" width="210" height="72" rx="10" fill="#eef4ff" stroke="#3f6fd1" stroke-width="2.5"/>
+  <text x="335" y="172" font-size="14" font-weight="700" fill="#27496d" text-anchor="middle">Time Series Service</text>
+  <text x="335" y="194" font-size="11" fill="#5a6b85" text-anchor="middle">按资产 / Aspect 存时序</text>
+  <text x="335" y="212" font-size="11" fill="#5a6b85" text-anchor="middle">聚合查询 · 降采样</text>
+
+  <!-- Event + Visual Flow Creator -->
+  <rect x="230" y="228" width="210" height="72" rx="10" fill="#eef4ff" stroke="#3f6fd1" stroke-width="2.5"/>
+  <text x="335" y="256" font-size="14" font-weight="700" fill="#27496d" text-anchor="middle">Event + Visual Flow Creator</text>
+  <text x="335" y="278" font-size="11" fill="#5a6b85" text-anchor="middle">OT 事件 → IT 动作</text>
+  <text x="335" y="296" font-size="11" fill="#5a6b85" text-anchor="middle">Node-RED 流编排 · 告警 / 工单</text>
+
+  <!-- 边缘缓冲 / 削峰 -->
+  <rect x="230" y="312" width="210" height="40" rx="6" fill="#fff4ec" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="335" y="337" font-size="12" fill="#b9702a" text-anchor="middle">边缘缓冲 / 削峰（背压兜底）</text>
+
+  <!-- 下游消费 -->
+  <rect x="470" y="55" width="180" height="320" rx="10" fill="#eef7ee" stroke="#5aa86a" stroke-width="2"/>
+  <text x="560" y="78" font-size="14" font-weight="700" fill="#3a7a4a" text-anchor="middle">下游消费</text>
+  <rect x="488" y="95" width="144" height="42" rx="6" fill="#ffffff" stroke="#5aa86a" stroke-width="1.5"/>
+  <text x="560" y="121" font-size="12" fill="#5a6b85" text-anchor="middle">Visualizer 看板 / 告警</text>
+  <rect x="488" y="150" width="144" height="42" rx="6" fill="#ffffff" stroke="#5aa86a" stroke-width="1.5"/>
+  <text x="560" y="176" font-size="12" fill="#5a6b85" text-anchor="middle">MindApps（Analyze MyMachine）</text>
+  <rect x="488" y="205" width="144" height="42" rx="6" fill="#ffffff" stroke="#5aa86a" stroke-width="1.5"/>
+  <text x="560" y="231" font-size="12" fill="#5a6b85" text-anchor="middle">Analytics / ML / 批处理</text>
+  <rect x="488" y="260" width="144" height="42" rx="6" fill="#f0ecfb" stroke="#8a6fd0" stroke-width="1.5"/>
+  <text x="560" y="286" font-size="12" fill="#5a6b85" text-anchor="middle">合规审计 / 报表</text>
+  <text x="560" y="330" font-size="11" fill="#3a7a4a" text-anchor="middle">数据驱动决策</text>
+
+  <!-- 连线 -->
+  <line x1="200" y1="116" x2="230" y2="116" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="200" y1="180" x2="230" y2="180" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="200" y1="244" x2="230" y2="244" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="335" y1="132" x2="335" y2="144" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="335" y1="216" x2="335" y2="228" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="440" y1="116" x2="470" y2="116" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="440" y1="171" x2="470" y2="171" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="440" y1="226" x2="470" y2="226" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="440" y1="281" x2="470" y2="281" stroke="#9bb4dd" stroke-width="2"/>
+
+  <text x="340" y="412" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用官方版权图；精确服务边界以 MindSphere 官方文档为准。</text>
+</svg>

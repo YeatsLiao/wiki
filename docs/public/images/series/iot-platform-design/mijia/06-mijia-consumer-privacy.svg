@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="420" fill="#f7f9fc"/>
+  <text x="340" y="30" font-size="18" font-weight="700" fill="#1f3a5f" text-anchor="middle">米家安全 · 隐私合规 · 云端高可用（守入口 · 守数据 · 守服务）</text>
+
+  <!-- 设备端安全 -->
+  <rect x="30" y="90" width="160" height="130" rx="8" fill="#ffffff" stroke="#5b8def" stroke-width="2"/>
+  <text x="110" y="115" font-size="13" font-weight="700" fill="#27496d" text-anchor="middle">设备端安全</text>
+  <text x="110" y="142" font-size="11" fill="#5a6b85" text-anchor="middle">· 固件签名</text>
+  <text x="110" y="166" font-size="11" fill="#5a6b85" text-anchor="middle">· 安全启动</text>
+  <text x="110" y="190" font-size="11" fill="#5a6b85" text-anchor="middle">· 一机一密证书链</text>
+
+  <!-- 平台隐私合规 -->
+  <rect x="235" y="80" width="185" height="150" rx="10" fill="#ffffff" stroke="#3f6fd1" stroke-width="2.5"/>
+  <text x="327" y="105" font-size="14" font-weight="700" fill="#1f3a5f" text-anchor="middle">平台隐私合规</text>
+  <text x="327" y="132" font-size="11" fill="#5a6b85" text-anchor="middle">· 本地处理优先</text>
+  <text x="327" y="156" font-size="11" fill="#5a6b85" text-anchor="middle">· 最小化上行</text>
+  <text x="327" y="180" font-size="11" fill="#5a6b85" text-anchor="middle">· 个保法合规</text>
+  <text x="327" y="204" font-size="11" fill="#5a6b85" text-anchor="middle">· 可删除 / 可导出</text>
+
+  <!-- 云端高可用 -->
+  <rect x="470" y="85" width="165" height="140" rx="8" fill="#eef4ff" stroke="#5b8def" stroke-width="2"/>
+  <text x="552" y="110" font-size="13" font-weight="700" fill="#27496d" text-anchor="middle">云端高可用</text>
+  <text x="552" y="137" font-size="11" fill="#5a6b85" text-anchor="middle">· 多活 / 容灾</text>
+  <text x="552" y="161" font-size="11" fill="#5a6b85" text-anchor="middle">· SLA 保障</text>
+  <text x="552" y="185" font-size="11" fill="#5a6b85" text-anchor="middle">· 限流 / 削峰</text>
+
+  <!-- 连线 -->
+  <line x1="190" y1="155" x2="235" y2="150" stroke="#9bb4dd" stroke-width="2"/>
+  <line x1="420" y1="150" x2="470" y2="150" stroke="#9bb4dd" stroke-width="2"/>
+
+  <!-- 底部 -->
+  <rect x="40" y="300" width="290" height="40" rx="6" fill="#fff4ec" stroke="#e0913f" stroke-width="1.5"/>
+  <text x="185" y="324" font-size="12" fill="#8a5a1f" text-anchor="middle">安全监控闭环：异常检测 · 审计 · 联动回滚</text>
+
+  <rect x="360" y="300" width="280" height="40" rx="6" fill="#f0ecfb" stroke="#8a6fd0" stroke-width="1.5"/>
+  <text x="500" y="324" font-size="12" fill="#4d3a82" text-anchor="middle">案例：门锁靠「签名+OTA回滚」挡住变砖危机</text>
+
+  <line x1="110" y1="220" x2="185" y2="300" stroke="#9bb4dd" stroke-width="1.5"/>
+  <line x1="327" y1="230" x2="200" y2="300" stroke="#9bb4dd" stroke-width="1.5"/>
+  <line x1="327" y1="230" x2="500" y2="300" stroke="#9bb4dd" stroke-width="1.5"/>
+  <line x1="552" y1="225" x2="500" y2="300" stroke="#9bb4dd" stroke-width="1.5"/>
+
+  <text x="340" y="400" font-size="11" fill="#8a97ad" text-anchor="middle">说明：本图为手绘示意，未使用官方版权图；精确服务边界以米家/MiOT 官方文档为准。</text>
+</svg>

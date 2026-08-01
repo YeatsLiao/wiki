@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="420" fill="#f7f8fa"/>
+  <text x="340" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">物模型：把硬件能力翻译成平台里的"可计算数据"</text>
+
+  <!-- 设备 -->
+  <rect x="30" y="70" width="150" height="80" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="105" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">设备（硬件）</text>
+  <text x="105" y="122" text-anchor="middle" font-size="11" fill="#5f6368">温湿度 / 开关 / 报警</text>
+
+  <!-- 平台 -->
+  <rect x="500" y="70" width="150" height="80" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="1.5"/>
+  <text x="575" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">平台（物模型）</text>
+  <text x="575" y="122" text-anchor="middle" font-size="11" fill="#5f6368">TSL 标准描述</text>
+
+  <!-- 三要素箭头 -->
+  <g font-size="11" fill="#1f2328">
+    <!-- 属性 蓝 -->
+    <text x="265" y="92" text-anchor="middle" fill="#4285f4" font-weight="700">属性 Property</text>
+    <path d="M180 100 C 280 100, 400 100, 500 100" stroke="#4285f4" stroke-width="1.6" fill="none" marker-end="url(#b)"/>
+    <path d="M500 112 C 400 112, 280 112, 180 112" stroke="#4285f4" stroke-width="1.2" stroke-dasharray="5 4" fill="none" marker-end="url(#bD)"/>
+    <text x="340" y="135" text-anchor="middle" font-size="10" fill="#5f6368">上报（设备→平台）· 读取（平台→设备）</text>
+
+    <!-- 服务 琥珀 -->
+    <text x="265" y="168" text-anchor="middle" fill="#f9ab00" font-weight="700">服务 Service</text>
+    <path d="M500 175 C 400 175, 280 175, 180 175" stroke="#f9ab00" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <text x="340" y="200" text-anchor="middle" font-size="10" fill="#5f6368">调用（平台→设备，需执行）</text>
+
+    <!-- 事件 红 -->
+    <text x="265" y="245" text-anchor="middle" fill="#ea4335" font-weight="700">事件 Event</text>
+    <path d="M180 252 C 280 252, 400 252, 500 252" stroke="#ea4335" stroke-width="1.6" fill="none" marker-end="url(#r)"/>
+    <text x="340" y="278" text-anchor="middle" font-size="10" fill="#5f6368">上报（设备主动→平台）</text>
+  </g>
+
+  <!-- 三要素卡片 -->
+  <g font-size="11" fill="#1f2328">
+    <rect x="30" y="300" width="190" height="95" rx="8" fill="#ffffff" stroke="#4285f4"/>
+    <text x="48" y="322" fill="#4285f4" font-weight="700">属性 Property</text>
+    <text x="48" y="344">设备可测/可设的状态。</text>
+    <text x="48" y="362">如：温度、湿度、开关。</text>
+    <text x="48" y="382">可读可写，持续同步。</text>
+
+    <rect x="245" y="300" width="190" height="95" rx="8" fill="#ffffff" stroke="#f9ab00"/>
+    <text x="263" y="322" fill="#f9ab00" font-weight="700">服务 Service</text>
+    <text x="263" y="344">设备可执行的动作。</text>
+    <text x="263" y="362">如：重启、设定温度。</text>
+    <text x="263" y="382">需调用，有入参出参。</text>
+
+    <rect x="460" y="300" width="190" height="95" rx="8" fill="#ffffff" stroke="#ea4335"/>
+    <text x="478" y="322" fill="#ea4335" font-weight="700">事件 Event</text>
+    <text x="478" y="344">设备主动上报的发生。</text>
+    <text x="478" y="362">如：报警、故障、上线。</text>
+    <text x="478" y="382">不带返回值。</text>
+  </g>
+
+  <defs>
+    <marker id="b" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4285f4"/></marker>
+    <marker id="bD" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4285f4"/></marker>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f9ab00"/></marker>
+    <marker id="r" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#ea4335"/></marker>
+  </defs>
+</svg>

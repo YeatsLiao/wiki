@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="460" fill="#f7f8fa"/>
+  <text x="340" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">产品、设备、网关：归属关系 vs 代理接入关系</text>
+
+  <!-- 左：产品 ⊃ 设备 -->
+  <rect x="30" y="50" width="300" height="250" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="180" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">① 产品 ⊃ 设备（归属关系）</text>
+  <rect x="50" y="92" width="260" height="190" rx="8" fill="#f1f6ff" stroke="#4285f4" stroke-dasharray="6 4"/>
+  <text x="180" y="112" text-anchor="middle" font-size="12" fill="#4285f4">产品：温度传感器（模板，全局 ProductKey）</text>
+
+  <g font-size="11" fill="#1f2328">
+    <rect x="70" y="128" width="100" height="30" rx="6" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="120" y="147" text-anchor="middle">设备 D1（直连）</text>
+    <rect x="70" y="172" width="100" height="30" rx="6" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="120" y="191" text-anchor="middle">设备 D2（直连）</text>
+    <rect x="70" y="216" width="100" height="30" rx="6" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="120" y="235" text-anchor="middle">设备 D3（直连）</text>
+    <text x="250" y="180" font-size="11" fill="#5f6368">产品定义</text>
+    <text x="250" y="196" font-size="11" fill="#5f6368">"能测什么"</text>
+  </g>
+
+  <!-- 右：网关 ↔ 子设备 -->
+  <rect x="350" y="50" width="300" height="250" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="500" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">② 网关 ↔ 子设备（代理接入）</text>
+
+  <g font-size="11" fill="#1f2328">
+    <rect x="385" y="96" width="230" height="34" rx="6" fill="#fff3e0" stroke="#f9ab00" stroke-width="1.5"/>
+    <text x="500" y="117" text-anchor="middle">网关 GW（直连 · 带代理子设备能力）</text>
+
+    <rect x="385" y="170" width="230" height="60" rx="8" fill="#f1f6ff" stroke="#4285f4" stroke-dasharray="6 4"/>
+    <text x="500" y="188" text-anchor="middle" font-size="11" fill="#4285f4">子设备各属自己的产品（如土壤传感器产品）</text>
+    <rect x="400" y="200" width="90" height="24" rx="5" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="445" y="216" text-anchor="middle" font-size="10">子设备 S1</text>
+    <rect x="505" y="200" width="90" height="24" rx="5" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="550" y="216" text-anchor="middle" font-size="10">子设备 S2</text>
+  </g>
+  <g stroke="#f9ab00" stroke-width="1.4" fill="none">
+    <path d="M500 130 C 500 150, 445 165, 445 200" marker-end="url(#arr)"/>
+    <path d="M500 130 C 500 150, 550 165, 550 200" marker-end="url(#arr)"/>
+  </g>
+  <text x="610" y="160" font-size="10" fill="#5f6368">代理</text>
+  <text x="610" y="174" font-size="10" fill="#5f6368">转发</text>
+
+  <!-- 底部平台 -->
+  <rect x="225" y="340" width="230" height="44" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+  <text x="340" y="367" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">物联网平台（北向开放）</text>
+
+  <g stroke="#34a853" stroke-width="1.6" fill="none">
+    <path d="M120 258 C 120 300, 280 320, 320 340" marker-end="url(#arrG)"/>
+    <path d="M500 200 C 500 280, 400 320, 360 340" marker-end="url(#arrG)"/>
+  </g>
+
+  <text x="180" y="430" text-anchor="middle" font-size="12" fill="#5f6368">① 产品管"是什么"，设备管"是谁"——这是模板与实例的归属</text>
+  <text x="500" y="430" text-anchor="middle" font-size="12" fill="#5f6368">② 网关与子设备本质都是设备，区别只在"怎么连上云"</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#f9ab00"/>
+    </marker>
+    <marker id="arrG" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#34a853"/>
+    </marker>
+  </defs>
+</svg>

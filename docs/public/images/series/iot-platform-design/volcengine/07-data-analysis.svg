@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <rect width="680" height="440" fill="#fbfdff"/>
+  <text x="24" y="34" font-size="18" font-weight="700" fill="#1f2d3d">数据北向消费全景：让标准化数据变得可看、可查、可告警</text>
+  <text x="24" y="56" font-size="12" fill="#6b7785">物模型归一的数据，从平台一路走向内置看板、告警与下游分析管道</text>
+
+  <!-- 左侧：数据入口 -->
+  <rect x="24" y="92" width="170" height="312" rx="10" fill="#eef4ff" stroke="#9bb8e8"/>
+  <text x="40" y="116" font-size="13" font-weight="700" fill="#274690">① 数据入口（已归一）</text>
+  <rect x="40" y="132" width="138" height="34" rx="6" fill="#ffffff" stroke="#9bb8e8"/>
+  <text x="52" y="154" font-size="12" fill="#2c3e50">属性上报</text>
+  <rect x="40" y="176" width="138" height="34" rx="6" fill="#ffffff" stroke="#9bb8e8"/>
+  <text x="52" y="198" font-size="12" fill="#2c3e50">服务调用结果</text>
+  <rect x="40" y="220" width="138" height="34" rx="6" fill="#ffffff" stroke="#9bb8e8"/>
+  <text x="52" y="242" font-size="12" fill="#2c3e50">事件上报</text>
+  <text x="40" y="290" font-size="11" fill="#6b7785">来自第（三）篇物模型</text>
+  <text x="40" y="308" font-size="11" fill="#6b7785">+ 第（六）篇规则引擎</text>
+  <text x="40" y="326" font-size="11" fill="#6b7785">（场景联动/数据转发）</text>
+
+  <!-- 中间：平台内置 -->
+  <rect x="255" y="92" width="200" height="312" rx="10" fill="#eafaf1" stroke="#86d9af"/>
+  <text x="272" y="116" font-size="13" font-weight="700" fill="#1f7a4d">② 平台内置能力</text>
+  <rect x="272" y="132" width="166" height="46" rx="6" fill="#ffffff" stroke="#86d9af"/>
+  <text x="284" y="152" font-size="12" fill="#2c3e50">运维分析</text>
+  <text x="284" y="170" font-size="11" fill="#6b7785">分布热力 / 在线活跃统计</text>
+  <rect x="272" y="190" width="166" height="46" rx="6" fill="#ffffff" stroke="#86d9af"/>
+  <text x="284" y="210" font-size="12" fill="#2c3e50">告警中心</text>
+  <text x="284" y="228" font-size="11" fill="#6b7785">联动触发 · 分级 · 通知</text>
+  <rect x="272" y="248" width="166" height="46" rx="6" fill="#ffffff" stroke="#86d9af"/>
+  <text x="284" y="268" font-size="12" fill="#2c3e50">数据查询 API</text>
+  <text x="284" y="286" font-size="11" fill="#6b7785">最新值 / 历史值 / 事件</text>
+  <rect x="272" y="306" width="166" height="46" rx="6" fill="#ffffff" stroke="#86d9af"/>
+  <text x="284" y="326" font-size="12" fill="#2c3e50">设备影子 / Topic</text>
+  <text x="284" y="344" font-size="11" fill="#6b7785">实时双向读取（第（五）篇）</text>
+
+  <!-- 右侧：外部消费 -->
+  <rect x="500" y="92" width="156" height="312" rx="10" fill="#fff4ec" stroke="#f0b27a"/>
+  <text x="516" y="116" font-size="13" font-weight="700" fill="#a35a16">③ 平台外消费</text>
+  <rect x="516" y="132" width="124" height="34" rx="6" fill="#ffffff" stroke="#f0b27a"/>
+  <text x="528" y="154" font-size="12" fill="#2c3e50">Kafka</text>
+  <rect x="516" y="176" width="124" height="34" rx="6" fill="#ffffff" stroke="#f0b27a"/>
+  <text x="528" y="198" font-size="12" fill="#2c3e50">Flink 计算</text>
+  <rect x="516" y="220" width="124" height="34" rx="6" fill="#ffffff" stroke="#f0b27a"/>
+  <text x="528" y="242" font-size="12" fill="#2c3e50">时序数据库</text>
+  <rect x="516" y="264" width="124" height="34" rx="6" fill="#ffffff" stroke="#f0b27a"/>
+  <text x="528" y="286" font-size="12" fill="#2c3e50">自建看板</text>
+  <rect x="516" y="308" width="124" height="34" rx="6" fill="#ffffff" stroke="#f0b27a"/>
+  <text x="528" y="330" font-size="12" fill="#2c3e50">订阅转发</text>
+
+  <!-- 箭头 -->
+  <path d="M194 248 L252 248" stroke="#5a6b7b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M455 200 L496 200" stroke="#5a6b7b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M455 300 L496 300" stroke="#5a6b7b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="350" y="424" font-size="11" fill="#8a96a3">数据转发 / 订阅转发（第（六）篇）把标准化数据送往外部管道，平台内置能力负责即时可见与即时响应</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#5a6b7b"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 380" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="380" fill="#f7f8fa"/>
+  <text x="340" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">Topic 发布/订阅：设备与应用通过"主题"解耦</text>
+
+  <!-- Broker -->
+  <rect x="265" y="150" width="150" height="60" rx="12" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+  <text x="340" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">MQTT Broker</text>
+  <text x="340" y="197" text-anchor="middle" font-size="10" fill="#5f6368">物联网平台</text>
+
+  <!-- 设备 -->
+  <rect x="30" y="80" width="150" height="50" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="105" y="110" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">设备</text>
+
+  <!-- 应用 -->
+  <rect x="500" y="80" width="150" height="50" rx="10" fill="#fef7e0" stroke="#f9ab00" stroke-width="1.5"/>
+  <text x="575" y="110" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">业务应用</text>
+
+  <!-- 规则引擎 -->
+  <rect x="500" y="260" width="150" height="50" rx="10" fill="#fde7e9" stroke="#ea4335" stroke-width="1.5"/>
+  <text x="575" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2328">规则引擎</text>
+
+  <!-- T1: 设备发布属性，应用+规则订阅 -->
+  <g stroke="#4285f4" stroke-width="1.8" fill="none">
+    <path d="M180 100 C 230 120, 250 135, 265 150" marker-end="url(#b)"/>
+  </g>
+  <text x="200" y="128" font-size="10" fill="#4285f4">发布 T1</text>
+
+  <g stroke="#34a853" stroke-width="1.5" stroke-dasharray="6 4" fill="none">
+    <path d="M415 170 C 470 150, 490 120, 500 105" marker-end="url(#g)"/>
+    <path d="M415 190 C 470 220, 490 270, 500 285" marker-end="url(#g)"/>
+  </g>
+  <text x="455" y="158" font-size="10" fill="#34a853">订阅 T1</text>
+  <text x="455" y="245" font-size="10" fill="#34a853">订阅 T1</text>
+
+  <!-- T2: 应用发布指令，设备订阅 -->
+  <g stroke="#f9ab00" stroke-width="1.8" fill="none">
+    <path d="M500 130 C 450 150, 430 145, 415 155" marker-end="url(#o)"/>
+  </g>
+  <text x="445" y="138" font-size="10" fill="#f9ab00">发布 T2</text>
+
+  <g stroke="#f9ab00" stroke-width="1.5" stroke-dasharray="6 4" fill="none">
+    <path d="M265 195 C 230 200, 210 170, 180 150" marker-end="url(#oD)"/>
+  </g>
+  <text x="200" y="205" font-size="10" fill="#f9ab00">订阅 T2</text>
+
+  <!-- Topic 示例 -->
+  <g font-size="10" fill="#5f6368">
+    <text x="105" y="148" text-anchor="middle">T1: ${pk}/${dn}/property/post</text>
+    <text x="575" y="148" text-anchor="middle">T2: ${pk}/${dn}/service/invoke</text>
+    <text x="340" y="350" text-anchor="middle">pub/sub 解耦：发布者不关心谁在收，订阅者不关心谁在发</text>
+  </g>
+
+  <defs>
+    <marker id="b" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4285f4"/></marker>
+    <marker id="g" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#34a853"/></marker>
+    <marker id="o" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f9ab00"/></marker>
+    <marker id="oD" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f9ab00"/></marker>
+  </defs>
+</svg>

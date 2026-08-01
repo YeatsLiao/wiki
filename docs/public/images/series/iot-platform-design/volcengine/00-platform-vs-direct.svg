@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="680" height="400" fill="#f7f8fa"/>
+  <text x="340" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">没有平台 vs 有平台：连接关系的本质变化</text>
+
+  <!-- 左：直连 -->
+  <rect x="20" y="50" width="300" height="320" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="170" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2328">直连架构（无平台）</text>
+
+  <g font-size="12" fill="#1f2328">
+    <rect x="40" y="100" width="64" height="30" rx="6" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="72" y="119" text-anchor="middle">App A</text>
+    <rect x="40" y="170" width="64" height="30" rx="6" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="72" y="189" text-anchor="middle">App B</text>
+    <rect x="40" y="240" width="64" height="30" rx="6" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="72" y="259" text-anchor="middle">App C</text>
+
+    <rect x="240" y="100" width="64" height="30" rx="6" fill="#fde7e9" stroke="#ea4335"/>
+    <text x="272" y="119" text-anchor="middle">设备1</text>
+    <rect x="240" y="170" width="64" height="30" rx="6" fill="#fde7e9" stroke="#ea4335"/>
+    <text x="272" y="189" text-anchor="middle">设备2</text>
+    <rect x="240" y="240" width="64" height="30" rx="6" fill="#fde7e9" stroke="#ea4335"/>
+    <text x="272" y="259" text-anchor="middle">设备3</text>
+  </g>
+
+  <g stroke="#b0b8c0" stroke-width="1.2" fill="none" opacity="0.8">
+    <line x1="104" y1="115" x2="240" y2="185"/>
+    <line x1="104" y1="115" x2="240" y2="255"/>
+    <line x1="104" y1="185" x2="240" y2="115"/>
+    <line x1="104" y1="185" x2="240" y2="255"/>
+    <line x1="104" y1="255" x2="240" y2="115"/>
+    <line x1="104" y1="255" x2="240" y2="185"/>
+  </g>
+  <text x="170" y="320" text-anchor="middle" font-size="12" fill="#5f6368">协议各异 · 状态分散 · 每加一个设备都要改应用</text>
+  <text x="170" y="340" text-anchor="middle" font-size="12" fill="#5f6368">N 个应用 × M 个设备 = N×M 条私有链路</text>
+
+  <!-- 右：平台化 -->
+  <rect x="360" y="50" width="300" height="320" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="510" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2328">平台化架构（有平台）</text>
+
+  <g font-size="12" fill="#1f2328">
+    <rect x="380" y="100" width="64" height="30" rx="6" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="412" y="119" text-anchor="middle">App A</text>
+    <rect x="380" y="170" width="64" height="30" rx="6" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="412" y="189" text-anchor="middle">App B</text>
+    <rect x="380" y="240" width="64" height="30" rx="6" fill="#e8f0fe" stroke="#4285f4"/>
+    <text x="412" y="259" text-anchor="middle">App C</text>
+
+    <rect x="470" y="155" width="80" height="50" rx="8" fill="#fff3e0" stroke="#f9ab00" stroke-width="2"/>
+    <text x="510" y="176" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2328">物联网</text>
+    <text x="510" y="193" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2328">平台</text>
+
+    <rect x="596" y="100" width="56" height="30" rx="6" fill="#fde7e9" stroke="#ea4335"/>
+    <text x="624" y="119" text-anchor="middle" font-size="11">设备1</text>
+    <rect x="596" y="170" width="56" height="30" rx="6" fill="#fde7e9" stroke="#ea4335"/>
+    <text x="624" y="189" text-anchor="middle" font-size="11">设备2</text>
+    <rect x="596" y="240" width="56" height="30" rx="6" fill="#fde7e9" stroke="#ea4335"/>
+    <text x="624" y="259" text-anchor="middle" font-size="11">设备3</text>
+  </g>
+
+  <g stroke="#34a853" stroke-width="1.4" fill="none">
+    <line x1="444" y1="115" x2="470" y2="170"/>
+    <line x1="444" y1="185" x2="470" y2="180"/>
+    <line x1="444" y1="255" x2="470" y2="190"/>
+    <line x1="550" y1="170" x2="596" y2="115"/>
+    <line x1="550" y1="180" x2="596" y2="185"/>
+    <line x1="550" y1="190" x2="596" y2="255"/>
+  </g>
+  <text x="510" y="320" text-anchor="middle" font-size="12" fill="#5f6368">连接抽象 · 协议归一 · 数据标准化 · 规则解耦</text>
+  <text x="510" y="340" text-anchor="middle" font-size="12" fill="#5f6368">应用只认平台，设备只认平台，链路收敛为 2 类</text>
+
+  <text x="340" y="392" text-anchor="middle" font-size="11" fill="#9aa0a6">图：平台把"网状私有连接"收敛为"应用—平台—设备"两层标准连接</text>
+</svg>
