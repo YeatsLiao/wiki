@@ -3,7 +3,6 @@
 > 技术栈：OPC UA / S7 / Modbus / MQTT + MindConnect 边缘接入（以西门子 MindSphere 为具体案例）
 > 适用场景：从 0 理解工业为什么需要专门的 IoT 架构
 
-## 0. 先澄清一个误解：工业 IoT 不等于装传感器
 
 消费级物联网（智能音箱、手环、家电）把"连接 + 上云"当作终点。但工厂车间里的设备从第一天起就不是为了"上网"而存在的。一台注塑机、一套 DCS、一条十年前投产的产线，首要目标是把产品稳定、安全、按时地做出来。
 
@@ -21,7 +20,7 @@ MindSphere 的定位不是又一个通用云 IoT 套件。而是把 Siemens 在�
 
 MindSphere 之所以设计 MindConnect Nano / IoT2040 / Software Agent 多种形态。正是因为现场既有"能改"的设备，也有"改不了、不能停"的设备。架构必须同时接住两类。
 
-## 1. 问题背景：工业与通用 / 消费 IoT 的本质差异
+## 1.问题背景：工业与通用 / 消费 IoT 的本质差异
 
 抛开概念，工业场景相对通用 IoT 有五条绕不开的现实约束。
 
@@ -53,7 +52,7 @@ MindSphere 之所以设计 MindConnect Nano / IoT2040 / Software Agent 多种形
 
 第五，关于合规。IEC 62443 把工业网络分成多个安全区（Zone）与管道（Conduit），要求分区隔离与受控通信。GDPR 要求能解释"谁的数据、用在哪、留多久"。MindSphere 的租户隔离、设备证书、RBAC 与数据驻留策略，正是对这套标准的落地。
 
-## 2. 设计理念：为什么用专门的工业 IoT 架构，而不是通用方案套一层
+## 2.设计理念：为什么用专门的工业 IoT 架构，而不是通用方案套一层
 
 通用 IoT 平台多以"设备—消息—应用"为主轴，假设设备能联网、能改协议、能频繁升级。把它直接搬进工厂会处处别扭：老设备连不上、实时性保不住、合规过不了。MindSphere 把上述五条约束当成"一等公民"来设计，其分层非常清晰。
 
@@ -91,7 +90,7 @@ MindSphere 之所以设计 MindConnect Nano / IoT2040 / Software Agent 多种形
 
 MindSphere 把这些问题内建为平台能力（Agent Management、Device Configuration、Firmware Deployment、RBAC），而不是留给每个项目组自己造轮子。与 AWS IoT Core、Azure IoT Hub 这类通用云 IoT 相比，MindSphere 的差异不在"能不能连"，而在"为工业约束原生设计"。通用云 IoT 提供连接与存储原语，工业语义（Asset/Aspect、资产层级、OT 闭环边界）要客户自己搭。MindSphere 把这套工业语义作为一等公民，让 OT 工程师用资产语言而非 JSON 文档工作。
 
-## 3. 实际应用：MindSphere 总体架构
+## 3.实际应用：MindSphere 总体架构
 
 ### 3.1 总体架构：OT → 边缘 → 云端 → 业务
 
@@ -140,7 +139,7 @@ Asset Management 用统一 Aspect 模板描述"主轴温度 / 振动 / 电流"�
 
 从可量化指标看，这套架构的价值可粗略估算。协议归一后，跨产线数据对接工时从"每台机数人天"降到"套用 Aspect 模板数小时"。统一语义后，OEE 横向对比从不可做到分钟级出数。合规内建后，等保 / IEC 62443 的整改从项目后期救火变成上线即自带。
 
-## 4. 注意事项
+## 4.注意事项
 
 （1）别把"工业 IoT"理解成"给设备装网卡"。真正的难点在 OT/IT 语义对齐、既有系统不中断接入，以及长周期内的可维护性——MindSphere 允许老设备继续用老协议，靠 MindConnect 做翻译，而不是强迫设备升级。落地时要先盘点"哪些设备能改、哪些不能停"，再决定用 Nano、IoT2040、Lib 还是 Software Agent，切忌一刀切上云。
 
@@ -148,7 +147,7 @@ Asset Management 用统一 Aspect 模板描述"主轴温度 / 振动 / 电流"�
 
 （3）不要为"智能"而智能。Predictive Learning、Anomaly Detection 都必须建立在可信时序数据之上；在数据与组织流程没准备好前，先把 MindConnect 连接、Time Series 采集、Visualizer 可视化做扎实，比上大模型更稳妥。很多项目的失败不是模型不行，而是上游特征管道（采样频率、单位、命名）没统一，模型再深也是 garbage in garbage out。
 
-## 5. 小结
+## 5.小结
 
 工业需要专门的 IoT 架构，根子在于它的约束和消费 / 通用 IoT 完全不同：OT/IT 融合、协议碎片化、强实时高可靠、设备长生命周期、严苛的安全合规。以 MindSphere 为例，专门的架构用"MindConnect 边缘归一 + 云端核心承接 + 合规贯穿"的分层桥梁，把这套现实收敛成业务侧可用的资产与数据。
 
