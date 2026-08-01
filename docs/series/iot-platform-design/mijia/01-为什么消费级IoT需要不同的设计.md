@@ -79,6 +79,8 @@
 
 ![小米米家（MiOT）总体架构](/images/series/iot-platform-design/mijia/01-mijia-consumer-overview.svg)
 
+![小米IoT云对云接入架构（来源 iot.mi.com 官方文档图）](/images/series/iot-platform-design/mijia/mj-cloud-to-cloud-arch.png)
+
 ### 3.1 碎片化的端侧
 
 灯泡、插座、门锁、摄像头通过 Wi-Fi / BLE / Zigbee / Thread / Matter 接入，平台对硬件形态保持「只认 MiOT 规范、不挑芯片」的抽象。底层由小米模组（MiOT module）承载配网、通信、OTA、安全等基础能力，新品类接入时主要改模组固件而非平台代码。以米家蓝牙温湿度计为例，它只通过 BLE 周期性广播温湿度，完全不需要用户配网，却能进入米家 App 的同一套设备体系。而以米家智能摄像机为例，它走 Wi-Fi 长连、带音视频与安全启动，形态差异巨大，但上层模型一致，App 面板由物模型自动生成。

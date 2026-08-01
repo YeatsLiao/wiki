@@ -98,6 +98,10 @@ MindSphere 把这些问题内建为平台能力（Agent Management、Device Conf
 
 ![MindSphere 总体架构](/images/series/iot-platform-design/siemens/01-siemens-industrial-overview.svg)
 
+![MindSphere 官方信息图：应用开发与集成全景（来源 documentation.mindsphere.io）](/images/series/iot-platform-design/siemens/mindsphere-official.svg)
+
+![MindSphere 工业IoT参考架构：Onsite → Insights Hub → User（来源 documentation.mindsphere.io 官方图）](/images/series/iot-platform-design/siemens/ms-industrial-iot-arch.png)
+
 它呈现的核心关系是：OT 的"协议碎片化、长生命周期"被 MindConnect 在边缘侧归一；MindSphere 云端用 Ingestion Service 安全接入、用 Time Series Service 存时序、用 Asset Management 建数字孪生、用 Analytics 做智能；MindApps 再把洞察交还给业务。后面五篇会沿这条链路逐段展开。
 
 ### 3.2 落地样例：三产线异构接入与语义归一
