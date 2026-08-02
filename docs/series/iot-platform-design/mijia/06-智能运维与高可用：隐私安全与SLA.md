@@ -7,7 +7,7 @@
 
 这三件事不能等上线后补救，必须从芯片烧录的第一天就内建。本篇把第二篇的一机一密、第五篇的 OTA 签名串成一条信任链，再补上隐私合规与云端 SLA。
 
-![米家 智能运维与高可用](/images/series/iot-platform-design/mijia/06-mijia-consumer-security.svg)
+![米家 智能运维与高可用](/images/series/iot-platform-design/mijia/06-mijia-consumer-privacy.svg)
 
 ## 1.问题背景：为什么消费级 IoT 的安全隐私更锋利
 
