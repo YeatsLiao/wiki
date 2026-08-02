@@ -1,12 +1,10 @@
 # JVM工具解读 · Optimizing Java：把性能调优写成一本书
 
 > 主题：《Optimizing Java》（O'Reilly，Chris Newland 合著）
-> 适用场景：从单点工具走向体系化的 JVM 性能调优方法论
-
-> byte-me.dev 上「Optimizing Java」按钮目前指向：https://www.chrisnewland.com/optimizing-java（**该页面已失效**，显示 Page not found）
+> byte-me.dev 上「Optimizing Java」按钮目前指向：https://www.chrisnewland.com/optimizing-java（**该页面已失效**）
 > 书的真实归宿（O'Reilly）：https://www.oreilly.com/library/view/optimizing-java/9781492039259/
-> Chris 个人站 Java 分类（他的实际 Java 写作）：https://www.chrisnewland.com/tagged/java
-> 适用场景：把这些工具串成体系，从「会用单个工具」走向「懂 JVM 性能方法论」
+> Chris 个人站 Java 分类：https://www.chrisnewland.com/tagged/java
+> 适用场景：从单点工具走向体系化的 JVM 性能调优方法论
 
 前面九篇，我们逛完了 Chris Newland 的整套工具：字节码（Byte-Me）、JIT（JITWatch + hsdis）、参数（VM Options Explorer + JaCoLine）、内建函数（Intrinsics Explorer）、GC（GC Explorer）、路线图（JEP 三件套）。工具很多，但你可能会问：它们之间到底怎么连成一条调优思路？答案的另一半，在他合著的那本书里——《Optimizing Java》。
 

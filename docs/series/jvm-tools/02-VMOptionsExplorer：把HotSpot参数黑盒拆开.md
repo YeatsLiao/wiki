@@ -1,11 +1,9 @@
 # JVM工具解读 · VM Options Explorer：把 HotSpot 参数内部机制拆开
 
 > 工具：VM Options Explorer（chriswhocodes.com/vm-options-explorer.html）
-> 适用场景：查任意 -XX 参数的含义与默认值，对比跨 JDK 版本、跨发行版的参数差异
-
 > 真实地址：https://chriswhocodes.com/vm-options-explorer.html
 > 配套页（版本/发行版差异）：https://chriswhocodes.com/hotspot_option_differences.html
-> 适用场景：查某个 `-XX` 参数的含义/默认值/可用性，或升级 JDK / 换发行版时核对参数差异
+> 适用场景：查任意 `-XX` 参数的含义/默认值/可用性，或升级 JDK / 换发行版时核对参数差异
 
 接手一个老服务，启动脚本里有一串 JVM 调优开关，比如 `-XX:+AggressiveOpts`、`-XX:MaxPermSize=256m`、`-XX:+UseConcMarkSweepGC`。这些 `-XX` 开头的参数，是 Java 程序运行时那台「虚拟计算机」（行话叫 JVM，HotSpot 是它最主流的一种实现）留给我们的一堆内部旋钮——它们控制着垃圾回收怎么跑、JIT 怎么编译、内存怎么分。你隐约记得 AggressiveOpts 这玩意「过时了」，但不确定从哪个版本开始；MaxPermSize 好像在新版上压根不认。搜索引擎告诉你一堆互相矛盾的说法。
 
