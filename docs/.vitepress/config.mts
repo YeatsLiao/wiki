@@ -162,6 +162,20 @@ export default defineConfig({
                 { text: '05 海量设备管理', link: '/series/iot-platform-design/tencent/05-海量设备管理' },
                 { text: '06 智能运维与高可用', link: '/series/iot-platform-design/tencent/06-智能运维与高可用' }
               ]
+            },
+            {
+              text: '火山引擎（8篇深度拆解）',
+              collapsed: true,
+              items: [
+                { text: '01 为什么要平台化', link: '/series/iot-platform-design/volcengine/01-为什么要平台化' },
+                { text: '02 产品与设备', link: '/series/iot-platform-design/volcengine/02-产品与设备' },
+                { text: '03 物模型', link: '/series/iot-platform-design/volcengine/03-物模型' },
+                { text: '04 网关与子设备', link: '/series/iot-platform-design/volcengine/04-网关与子设备' },
+                { text: '05 设备影子与通信', link: '/series/iot-platform-design/volcengine/05-设备影子与通信' },
+                { text: '06 规则引擎', link: '/series/iot-platform-design/volcengine/06-规则引擎' },
+                { text: '07 实战：智慧农业闭环', link: '/series/iot-platform-design/volcengine/07-实战：智慧农业闭环' },
+                { text: '08 数据分析与可视化', link: '/series/iot-platform-design/volcengine/08-数据分析与可视化' }
+              ]
             }
           ]
         },
@@ -197,26 +211,6 @@ export default defineConfig({
                 { text: '04 物模型与数字孪生', link: '/series/iot-platform-design/mijia/04-物模型与数字孪生' },
                 { text: '05 海量设备管理', link: '/series/iot-platform-design/mijia/05-海量设备管理' },
                 { text: '06 智能运维与高可用', link: '/series/iot-platform-design/mijia/06-智能运维与高可用' }
-              ]
-            }
-          ]
-        },
-        {
-          text: '深度拆解',
-          collapsed: false,
-          items: [
-            {
-              text: '火山引擎（8篇连贯叙事）',
-              collapsed: true,
-              items: [
-                { text: '01 为什么要平台化', link: '/series/iot-platform-design/volcengine/01-为什么要平台化' },
-                { text: '02 产品与设备', link: '/series/iot-platform-design/volcengine/02-产品与设备' },
-                { text: '03 物模型', link: '/series/iot-platform-design/volcengine/03-物模型' },
-                { text: '04 网关与子设备', link: '/series/iot-platform-design/volcengine/04-网关与子设备' },
-                { text: '05 设备影子与通信', link: '/series/iot-platform-design/volcengine/05-设备影子与通信' },
-                { text: '06 规则引擎', link: '/series/iot-platform-design/volcengine/06-规则引擎' },
-                { text: '07 实战：智慧农业闭环', link: '/series/iot-platform-design/volcengine/07-实战：智慧农业闭环' },
-                { text: '08 数据分析与可视化', link: '/series/iot-platform-design/volcengine/08-数据分析与可视化' }
               ]
             }
           ]
