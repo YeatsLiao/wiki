@@ -47,7 +47,7 @@ JaCoLine 按这几类打标签（共享 VM Options Explorer 的数据模型）�
 | Duplicate / Conflict | 同名重复或互斥 | 留一个、解冲突 |
 | Availability warning | diagnostic/experimental 但缺 Unlock 开关 | 加对应 Unlock |
 
-示例里的版本冲突陷阱：`-XX:+PrintGCDetails` 是 JDK 8 的 GC 日志开关，JDK 9 起被 `-Xlog:gc*` 取代；反过来 `-Xlog:gc*` 在 JDK 8 上不存在。JaCoLine 选不同 JDK 跑两遍，结果会反过来——这就是它最大价值：把跨版本迁移的隐性坑一次扫出来。
+示例里的版本冲突陷阱：`-XX:+PrintGCDetails` 是 JDK 8 的 GC 日志开关，JDK 9 起被 `-Xlog:gc*` 取代；反过来 `-Xlog:gc*` 在 JDK 8 上不存在。JaCoLine 选不同 JDK 跑两遍，结果会反过来——它的最大价值是把跨版本迁移的隐性坑一次扫出来。
 
 ### 2.2 升级前的回归体检
 
