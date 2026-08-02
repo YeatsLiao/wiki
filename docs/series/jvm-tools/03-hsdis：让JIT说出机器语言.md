@@ -4,23 +4,29 @@
 > 真实地址：https://chriswhocodes.com/hsdis/
 > 适用场景：把 JIT 编译产物打印成可读汇编，验证内联、向量化等优化是否真的发生
 
-你开了 `-XX:+PrintAssembly`，满心期待想看 JIT 生成了什么机器码（CPU 能直接执行的 0/1 指令，你写的 Java 最终要变成它才能跑），结果 JVM 报了一句：`Could not load hsdis-amd64.dll; library not loadable; PrintAssembly is disabled`。怎么回事？因为 HotSpot 自己不带反汇编器——所谓反汇编，就是把机器码翻译成人类能读的汇编文本（`mov`、`add` 这种助记符，和机器码一一对应）；这活儿 HotSpot 不干，它需要一个叫 **hsdis** 的插件，而这个插件得你自己去找、去匹配 JDK 版本与架构。Chris 的 hsdis 下载页（https://chriswhocodes.com/hsdis/），就是帮你把这块拼图补齐的地方。
+你开了 `-XX:+PrintAssembly`，想看看 JIT 生成了什么机器码，结果 JVM 报了一句：`Could not load hsdis-amd64.dll; library not loadable; PrintAssembly is disabled`。
+
+> **注：** 机器码是 CPU 能直接执行的 0/1 指令；汇编（`mov`、`add` 等助记符）是它的可读文本，一一对应。把机器码翻译回汇编的过程叫反汇编。
+
+HotSpot 自己不干反汇编这活儿——它需要一个叫 **hsdis** 的外部插件，而这个插件得你自己去找、去匹配 JDK 版本与架构。Chris 的下载页（https://chriswhocodes.com/hsdis/），就是帮你把这块拼图补齐的地方。
 
 ![hsdis 下载页（各平台二进制 + 校验和 + 法律声明）](/images/series/jvm-tools/03-hsdis.png)
 
 ## 1.问题背景：JIT 的产出是机器码，但默认「看不了」
 
-HotSpot 的 C2 编译器会把热点方法编译成高度优化的**机器码**。想窥探它，最硬核的办法是 `-XX:+PrintAssembly`：让 JVM 在每个方法编译完成后，把生成的汇编指令打印出来。
+HotSpot 的 C2 编译器会把热点方法编译成高度优化的机器码。想窥探它，最硬核的办法是 `-XX:+PrintAssembly`：让 JVM 在每个方法编译完成后，把生成的汇编指令打印出来。
 
-但反汇编这一步需要把机器码翻译成人类可读的汇编文本，这活儿 HotSpot 自己不干——它依赖一个外部动态库 **hsdis（HotSpot Disassembler）**。这个库本质是 GNU binutils 的 `libopcodes` 的一个薄包装，负责把字节流翻译成 mnemonics。JDK 不默认附带它（许可 + 分发原因），所以你得自己下载、放到正确位置。
+但反汇编这一步 HotSpot 自己不干——它依赖外部动态库 **hsdis（HotSpot Disassembler）**，本质是 GNU binutils `libopcodes` 的薄包装，负责把字节流翻译成 mnemonics。JDK 不默认附带（许可 + 分发原因），所以你得自己下载、放到正确位置。
 
-## 2. 设计理念：把「找二进制」这件麻烦事托管掉
+## 2.设计理念：把「找二进制」这件麻烦事托管掉
 
-hsdis 本身不是 Chris 写的——它是 OpenJDK 生态的通用组件，源码在 `src/hotspot/cpu/x86/disassembler/` 这类目录下。Chris 的贡献是：**把各平台、各架构的预编译二进制打包好放在一个页面直接下**（Linux/Windows/macOS × x86/ARM），还贴心地给了 sha256 校验和，并附上明确的法律提示。
+hsdis 本身不是 Chris 写的——它是 OpenJDK 生态的通用组件。Chris 的贡献是：**把各平台、各架构的预编译二进制打包好放在一个页面直接下**（Linux/Windows/macOS × x86/ARM），还给了 sha256 校验和和明确的法律提示。
 
-## 3. JIT 编译链路里的 hsdis 在哪
+## 3.实际应用：JIT 编译链路里的 hsdis 在哪
 
-HotSpot 默认开启「分层编译」：先让 C1（Client 编译器）快速把方法编成机器码让你跑起来，等它跑得够热，再交给 C2（Server 编译器）做深度优化；循环跑到一半也可能被 OSR（栈上替换）直接换成编译好的版本。C2 的优化手段里，向量化（一条 SIMD 指令同时算多个数据，汇编里 `v` 开头的 AVX/SSE 指令就是干这个的）和逃逸分析（发现对象「逃不出方法」就拆成普通变量直接用，省掉分配开销）是关键——而它们的成果，最终都会变成 hsdis 能打印出来的汇编。
+HotSpot 默认开启「分层编译」：先让 C1 快速编译让你跑起来，跑得够热了再交给 C2 做深度优化；循环跑到一半也可能被 OSR（栈上替换）直接换成编译好的版本。
+
+C2 的优化手段里，向量化（一条 SIMD 指令同时算多个数据）和逃逸分析（对象拆成普通变量省掉分配开销）是关键——而它们的成果，最终都会变成 hsdis 能打印出来的汇编。
 
 ![JIT 汇编输出链路](/images/series/jvm-tools/03-jit-pipeline.svg)
 

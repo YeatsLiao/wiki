@@ -4,13 +4,17 @@
 > 真实地址：https://jacoline.dev/inspect
 > 适用场景：校验 JVM 启动参数，揪出拼写错误、已废弃与互相冲突的选项
 
-你有没有试过在启动脚本里多打一个字母，比如 `-XX:+UseG1GCX`？JVM **不会报错**，默认行为是悄悄忽略这个不认识的参数（你跑 Java 时敲的那一长串 `java -Xms2g -XX:+UseG1GC ...` 就是启动命令行，里面 `-X`/`-XX` 开头的都是 JVM 的调优开关，成千上万）。然后你的服务跑在「以为开了 G1、其实没开」的状态下，平稳地慢，谁也不知道为什么。更隐蔽的是 `-XX:+AggressiveOpts`——JDK 11 起已废弃、JDK 13 移除，你升级后它直接失效，但脚本还在；或者反过来，新 JDK 上的新参数（比如 `-Xlog:gc*` 统一日志语法）被你拷到了还在用 JDK 8 的环境——直接报 `Unrecognized VM option`（JVM 不认识这个参数时的报错，通常是因为它在新 JDK 被删了或你拼错了）。
+你有没有试过在启动脚本里多打一个字母，比如 `-XX:+UseG1GCX`？JVM **不会报错**，默认行为是悄悄忽略这个不认识的参数。然后你的服务跑在「以为开了 G1、其实没开」的状态下，平稳地慢，谁也不知道为什么。
+
+> **注：** 你跑 `java` 时敲的那一长串 `java -Xms2g -XX:+UseG1GC ...` 就是启动命令行，里面 `-X`/`-XX` 开头的都是 JVM 的调优开关，成千上万。
+
+更隐蔽的是废弃参数：`-XX:+AggressiveOpts` 在 JDK 11 起废弃、JDK 13 移除，升级后脚本还在但参数已失效。反过来，新 JDK 的参数（如 `-Xlog:gc*`）拷到 JDK 8 环境则直接报 `Unrecognized VM option`。
 
 JaCoLine（Java Command Line Inspector）就是专门给启动脚本「体检」的工具。它和 VM Options Explorer 是**同源数据、正反两个方向**：Explorer 是「正向查一个参数」，JaCoLine 是「反向校验一整条命令行」。
 
 ![JaCoLine 体检流程：命令行 → 对照各 JDK 参数定义 → 分类报告](/images/series/jvm-tools/05-jacoline-flow.svg)
 
-## 1.真实界面长什么样
+## 1.问题背景：真实界面长什么样
 
 打开 https://jacoline.dev/inspect，页面顶部是熟悉的 byte-me.dev 导航条，主区域标题「JaCoLine - Java Command Line Inspector」。
 
@@ -18,18 +22,13 @@ JaCoLine（Java Command Line Inspector）就是专门给启动脚本「体检」
 
 页面结构：
 
-- **顶部 tab**：Inspect（默认，主功能）/ Statistics / API / About / Privacy
-- **Describe your system**（系统描述，决定校验基线）：
-  - **JDK** 下拉（OpenJDK 8 / 11 / 17 / 21 / Temurin / Corretto / Zulu / Dragonwell 等发行版）
-  - **Operating System** 下拉（Linux / Windows / macOS / AIX）
-  - **CPU Architecture** 下拉（x86 / aarch64 / ppc / s390 / sparc）
-  - **Debug JVM?** 复选框（勾上会启用 `develop` / `notproduct` 级别参数的校验）
-- **Enter your Java command line** 文本框（贴整段 `java ...` 命令或只贴参数都行）
-- **辅助按钮**：Clear input（清空）、Show example（填入示例）
-- **绿色 Inspect Command Line** 按钮：触发校验
-- **页脚**：「Created by Chris Newland (@chriswhocodes) | **Data from VM Options Explorer** | Built with Eclipse Jersey and PostgreSQL」——明确告诉你数据来源就是 VM Options Explorer（二）那张表。
+- **顶部 tab**：Inspect（默认）/ Statistics / API / About / Privacy
+- **Describe your system**（决定校验基线）：JDK 下拉（OpenJDK 8/11/17/21 及各发行版）、操作系统、CPU 架构、Debug JVM 复选框
+- **命令文本框**：贴整段 `java ...` 命令或只贴参数都行
+- **绿色 Inspect 按钮**：触发校验
+- **页脚**：明确标注数据来源就是 VM Options Explorer（第二篇）那张表
 
-## 2. 怎么用：真实操作流程
+## 2.实际应用：怎么用
 
 ### 2.1 把启动参数贴进去跑一遍
 
