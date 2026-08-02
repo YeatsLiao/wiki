@@ -164,7 +164,7 @@ export default defineConfig({
               ]
             },
             {
-              text: '火山引擎（8篇深度拆解）',
+              text: '火山引擎',
               collapsed: true,
               items: [
                 { text: '01 为什么要平台化', link: '/series/iot-platform-design/volcengine/01-为什么要平台化' },
