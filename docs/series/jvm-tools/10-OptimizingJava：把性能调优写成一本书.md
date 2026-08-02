@@ -6,9 +6,9 @@
 > Chris 个人站 Java 分类：https://www.chrisnewland.com/tagged/java
 > 适用场景：从单点工具走向体系化的 JVM 性能调优方法论
 
-前面九篇，我们逛完了 Chris Newland 的整套工具：字节码（Byte-Me）、JIT（JITWatch + hsdis）、参数（VM Options Explorer + JaCoLine）、内建函数（Intrinsics Explorer）、GC（GC Explorer）、路线图（JEP 三件套）。工具很多，但你可能会问：它们之间到底怎么连成一条调优思路？答案的另一半，在他合著的那本书里——《Optimizing Java》。
-先说一个**真实情况**：byte-me.dev 顶部那排按钮里第 11 个「Optimizing Java」，目前点击会跳到 https://www.chrisnewland.com/optimizing-java——但**这个页面已经不存在了**，显示「Page not found, Oops, the page you asked for does not exist」。Chris 的个人站是 JS 渲染的 SPA，似乎经过了一次重构，对应路径迁移了。书本身的官方归宿是 **O'Reilly** 平台（O'Reilly 的反爬较严，直接抓取会被 Access Denied 挡住）。
-所以我用 Chris 个人站的 Java 分类页 https://www.chrisnewland.com/tagged/java 作为配图——这张图渲染了他真实在写的 Java 文章流：
+前面九篇逛完了整套工具：Byte-Me、JITWatch+hsdis、VM Options Explorer+JaCoLine、Intrinsics Explorer、GC Explorer、JEP 三件套。工具很多，但怎么连成一条调优思路？答案的另一半在 Chris 合著的书里——《Optimizing Java》。
+
+> **注：** byte-me.dev 上「Optimizing Java」按钮目前指向的页面已失效。书的官方归宿是 O'Reilly 平台，这里用 Chris 个人站的 Java 分类页作为配图：
 
 ![Chris Newland 个人站 Java 分类页：他的真实写作（包括 JITWatch、GC pause 排查、HotSpot escape analysis 等，构成了 Optimizing Java 的思想源头）](/images/series/jvm-tools/10-optimizing-java.png)
 

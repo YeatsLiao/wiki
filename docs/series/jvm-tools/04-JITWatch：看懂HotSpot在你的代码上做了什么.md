@@ -4,8 +4,11 @@
 > 真实地址：https://github.com/AdoptOpenJDK/jitwatch
 > 适用场景：可视化分析 HotSpot 编译日志，定位未内联方法与热点代码
 
-HotSpot（Java 程序底下那台「虚拟计算机」，JVM 最主流的一种实现）会告诉你方法被编译了（`-XX:+PrintCompilation`），会吐出冗长的 XML 日志（`-XX:+LogCompilation`），还能打印机器码（`-XX:+PrintAssembly`，见上篇 hsdis）。但这些信息对真人极不友好——你写的 Java 平时是「字节码」（一种中间代码，JVM 能懂但不直接跑在 CPU 上），运行时由 JIT 这个即时编译器现场翻译成机器码；而 JIT 留下的日志里塞着分支预测、逃逸分析、intrinsic、锁消除、代码缓存布局……非 trivial 的程序根本读不动。JITWatch 就是把这些日志「翻译」成人能看懂的图。
-注意：JITWatch **不是网页工具**，它是 Chris 写的 JavaFX 桌面程序。所以 byte-me.dev 上的「JITWatch」按钮直接跳 GitHub 仓库页（https://github.com/AdoptOpenJDK/jitwatch）——因为它没有「展示页」，要装才能用。
+HotSpot 会告诉你方法被编译了（`-XX:+PrintCompilation`），会吐 XML 日志（`-XX:+LogCompilation`），还能打印机器码（`-XX:+PrintAssembly`，见上篇）。但这些信息对真人极不友好——JIT 日志里塞着分支预测、逃逸分析、intrinsic、锁消除、代码缓存布局，非 trivial 程序根本读不动。
+
+JITWatch 就是把这些日志翻译成人能看懂的图。注意：它是 JavaFX 桌面程序，不是网页工具，byte-me.dev 上的按钮直接跳 GitHub 仓库。
+
+![JITWatch GitHub 仓库页](/images/series/jvm-tools/04-jitwatch.png)
 
 ![JITWatch GitHub 仓库页（按钮的真实目的地）](/images/series/jvm-tools/04-jitwatch.png)
 

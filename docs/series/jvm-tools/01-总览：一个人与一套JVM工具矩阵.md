@@ -3,11 +3,11 @@
 > 工具矩阵：byte-me.dev / chriswhocodes.com / jacoline.dev（12 个入口）
 > 适用场景：建立整套 JVM 工具的全局地图，按「你会在哪一层卡住」选工具
 
-如果你写过 Java 服务，大概率见过启动脚本里一长串 `-XX`、`-Xms`、`-Xmx`、`-XX:+UseG1GC`、`-XX:MaxGCPauseMillis`——有些是历史遗留配置，有些是前同事加的，有些你天天见却从没认真问过：它在 JDK 11 里默认值是多少？还有效吗？换发行版会变吗？
-更头疼的是 HotSpot 内部的复杂性：你写的 Java 先被编译成字节码，运行时由 JIT 把热点代码翻译成机器码。但为什么某个方法没被内联？`Math.sin`、`Arrays.equals` 为什么能这么快？JVM 还要在后台默默做 GC——自动清理不再使用的内存。
-这些「没人说得清」的事，被 Chris Newland（网名 @chriswhocodes，伦敦的金融软件开发者）用业余时间拆成了十几个能直接在浏览器打开、能搜索、能对比的工具。他 1999 年在 Nortel 做移动代码研究，2004 年转进金融市场写高频低延迟系统，性能成了日常命题；2013 年被 HotSpot 的 JIT 吸引，读完《The Well-Grounded Java Developer》后决定自己动手——JITWatch 由此诞生。
-十多年后，这套工具覆盖了理解 JVM 的几乎每一个视角，全部免费、开源、一个人维护。据说 Oracle 内部的 JVM 团队都在用他的 JITWatch。
-打开 byte-me.dev，页面顶部那排 12 个蓝底按钮，就是这套「HotSpot 内部机制拆解工具矩阵」的总入口。这一篇不深入任何一个工具，而是把整张地图摊开：每个按钮对应哪个真实地址、覆盖 JVM 哪一层、彼此怎么串联。
+`-XX:+UseG1GC`、`-XX:MaxGCPauseMillis`——这些 JVM 参数你天天见，但它在 JDK 11 里默认值是多少？换发行版会变吗？为什么某个方法没被内联？`Math.sin` 为什么能这么快？
+
+这些「没人说得清」的事，被 Chris Newland（@chriswhocodes，伦敦金融软件开发者）用业余时间拆成了十几个能直接在浏览器打开、能搜索、能对比的工具——全部免费、开源、一个人维护，Oracle 内部 JVM 团队都在用。
+
+打开 byte-me.dev，页面顶部那排 12 个蓝底按钮就是整套工具矩阵的总入口。这一篇不深入任何一个工具，先把整张地图摊开：每个按钮对应哪个地址、覆盖哪一层、彼此怎么串联。
 
 ![byte-me.dev 总入口（顶部 12 个按钮即整套工具的导航）](/images/series/jvm-tools/00-byte-me-hub.png)
 
