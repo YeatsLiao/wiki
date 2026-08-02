@@ -109,5 +109,6 @@ Asset Management 用统一 Aspect 模板描述"主轴温度/振动/电流"，让
 
 ## 参考链接
 
-- [MindSphere 官方文档](https://documentation.mindsphere.io/)
-- [MindConnect Nano 技术规格](https://documentation.mindsphere.io/MindConnect/MindConnectNano/MindConnectNano.html)
+- [Siemens MindSphere 概览（基于云的开放式 IoT 操作系统）](https://siemens.mindsphere.io/en/about)
+- [MindSphere 开发者文档（连接、资产、分析、API）](https://developer.mindsphere.io/)
+- [MindConnect Nano / IoT2040 等产品说明书](https://www.siemens.com/zh-cn/products/insights-hub/resources/product-sheets)
