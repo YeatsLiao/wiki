@@ -1,12 +1,10 @@
-# GC Explorer：把垃圾回收器摊开给你看
+# JVM工具解读 · GC Explorer：把垃圾回收器摊开给你看
 
 > 工具：GC Explorer（chriswhocodes.com/gc-explorer.html）
 > 适用场景：对比各 JDK 版本与发行版的垃圾回收器可用性，为 GC 选型提供依据
 
 > 真实地址：https://chriswhocodes.com/gc-explorer.html
 > 适用场景：升级 JDK 或选发行版前，确认目标 GC 是否可用、各版本差异
-
-## 0. “我这个 JDK 能用 ZGC 吗”
 
 「我这个 JDK 版本能用 ZGC 吗？」「从 JDK 8 升到 17，CMS 是不是没了？」「Corretto 和 Zulu 在 GC 支持上一样吗？」这些问题的答案散落在各发行版文档里，记不住也搜不全。GC 是 JVM 自动回收不用的内存、不用你手动释放的机制；而 G1、ZGC、Shenandoah、CMS、Parallel、Serial、Epsilon 是几种不同的垃圾回收器，各有取舍——有的吞吐高、有的延迟低、有的干脆只分配不回收。GC Explorer 直接把它们的可用性做成一张矩阵：行是 JDK 版本 / 发行版，列是各种 GC，单元格是「支持 / 不支持」。**一眼就能判断该用哪个、不能用哪个**。
 
@@ -16,7 +14,7 @@
 
 页面就是一张「发行版 × JDK 版本 × GC」的巨型矩阵，每个发行版一个表格块。Corretto 块里能看到从 JDK 8 到 JDK 26 的 GC 列覆盖情况；Dragonwell 块紧随其后。
 
-## 1. 问题背景：GC 可用性随版本和发行版漂移
+## 1.问题背景：GC 可用性随版本和发行版漂移
 
 垃圾回收器是 JVM 调优里最关键的旋钮之一，但它的可用性一直在变：
 

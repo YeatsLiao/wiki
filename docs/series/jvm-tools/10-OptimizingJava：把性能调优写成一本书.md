@@ -1,4 +1,4 @@
-# Optimizing Java：把性能调优写成一本书
+# JVM工具解读 · Optimizing Java：把性能调优写成一本书
 
 > 主题：《Optimizing Java》（O'Reilly，Chris Newland 合著）
 > 适用场景：从单点工具走向体系化的 JVM 性能调优方法论
@@ -7,8 +7,6 @@
 > 书的真实归宿（O'Reilly）：https://www.oreilly.com/library/view/optimizing-java/9781492039259/
 > Chris 个人站 Java 分类（他的实际 Java 写作）：https://www.chrisnewland.com/tagged/java
 > 适用场景：把这些工具串成体系，从「会用单个工具」走向「懂 JVM 性能方法论」
-
-## 0. 九件工具，怎么串成一条调优思路
 
 前面九篇，我们逛完了 Chris Newland 的整套工具：字节码（Byte-Me）、JIT（JITWatch + hsdis）、参数（VM Options Explorer + JaCoLine）、内建函数（Intrinsics Explorer）、GC（GC Explorer）、路线图（JEP 三件套）。工具很多，但你可能会问：它们之间到底怎么连成一条调优思路？答案的另一半，在他合著的那本书里——《Optimizing Java》。
 
@@ -30,8 +28,7 @@
 
 这一篇篇 blog post，就是《Optimizing Java》这本书的思想源流——把分散的实战经验系统化成方法论。
 
-
-## 1. 问题背景：工具是零件，方法论才是引擎
+## 1.问题背景：工具是零件，方法论才是引擎
 
 书里给的方法论，核心是把多个工具按「测量 → 归因 → 验证」串成一条固定的诊断链（后文第 3 节给出完整版）；测量的环节离不开 JMH——一个专门做 Java 微基准测试的框架，能精确测出「这段代码到底多快」而不被 JVM 优化骗到；归因的环节则靠 profiling（在程序运行时采集「时间花在哪、内存用在哪」来定位瓶颈）。
 
@@ -147,7 +144,7 @@ Byte-Me  JIT  VM+J   Intrinsics   GC   JEP三件套  Optimizing Java
  (六)  (三)(四) (二)(五)  (八)     (九)   (七)        (十)
 ```
 
-Chris Newland 一个人把这些「黑盒」拆成了看得见的工具，而你能做的，是用它们把自己的系统看得更清楚一点。
+Chris Newland 一个人把这些「内部机制」拆成了看得见的工具，而你能做的，是用它们把自己的系统看得更清楚一点。
 
 **如果只想记住一句话**：遇到 JVM 看不懂的地方，先去 byte-me.dev 和 chriswhocodes.com 找对应工具——大概率已经有人替你拆好了。
 

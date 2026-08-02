@@ -1,4 +1,4 @@
-# VM Options Explorer：把 HotSpot 参数黑盒拆开
+# JVM工具解读 · VM Options Explorer：把 HotSpot 参数内部机制拆开
 
 > 工具：VM Options Explorer（chriswhocodes.com/vm-options-explorer.html）
 > 适用场景：查任意 -XX 参数的含义与默认值，对比跨 JDK 版本、跨发行版的参数差异
@@ -7,15 +7,13 @@
 > 配套页（版本/发行版差异）：https://chriswhocodes.com/hotspot_option_differences.html
 > 适用场景：查某个 `-XX` 参数的含义/默认值/可用性，或升级 JDK / 换发行版时核对参数差异
 
-## 0. 一串看不懂的启动参数
-
 接手一个老服务，启动脚本里有一串 JVM 调优开关，比如 `-XX:+AggressiveOpts`、`-XX:MaxPermSize=256m`、`-XX:+UseConcMarkSweepGC`。这些 `-XX` 开头的参数，是 Java 程序运行时那台「虚拟计算机」（行话叫 JVM，HotSpot 是它最主流的一种实现）留给我们的一堆内部旋钮——它们控制着垃圾回收怎么跑、JIT 怎么编译、内存怎么分。你隐约记得 AggressiveOpts 这玩意「过时了」，但不确定从哪个版本开始；MaxPermSize 好像在新版上压根不认。搜索引擎告诉你一堆互相矛盾的说法。
 
 这时候你需要的不是一篇博客，而是一张能直接告诉你「这个参数：从 JDK 6 引入、JDK 11 废弃、JDK 12 移除、类型是 bool、默认 false、定义在 `share/runtime/globals.hpp`」的权威表格。VM Options Explorer 就是这张表——每个字段都来自 OpenJDK 源码自动解析，不是手填的。
 
 ![VM Options Explorer 主页面](/images/series/jvm-tools/02-vm-options.png)
 
-## 1. 问题背景：参数藏在源码深处，文档基本为零
+## 1.问题背景：参数藏在源码深处，文档基本为零
 
 HotSpot 的上千个 `-XX` 参数定义散落在这些文件里：
 
@@ -149,7 +147,7 @@ VM Options Explorer 的数据是**自动从 OpenJDK 源码解析**的（不是�
 
 ## 7. 小结
 
-VM Options Explorer 解决的是「参数看不见」。但 JVM 还有另一半黑盒——**代码被 JIT 编译成了什么**。下一篇 hsdis（三），就是打开这半扇门的钥匙。
+VM Options Explorer 解决的是「参数看不见」。但 JVM 还有另一半内部机制——**代码被 JIT 编译成了什么**。下一篇 hsdis（三），就是打开这半扇门的钥匙。
 
 ## 参考链接
 

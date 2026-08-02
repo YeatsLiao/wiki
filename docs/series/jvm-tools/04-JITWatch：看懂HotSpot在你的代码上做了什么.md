@@ -1,4 +1,4 @@
-# JITWatch：看懂 HotSpot 在你的代码上做了什么
+# JVM工具解读 · JITWatch：看懂 HotSpot 在你的代码上做了什么
 
 > 工具：JITWatch 桌面版（github.com/AdoptOpenJDK/jitwatch）
 > 适用场景：可视化分析 HotSpot 编译日志，定位未内联方法与热点代码
@@ -6,16 +6,13 @@
 > 按钮真实地址：https://github.com/AdoptOpenJDK/jitwatch
 > 适用场景：分析 JIT 内联决策、热点方法、字节码↔汇编对照，定位「为什么这段代码没被优化」
 
-## 0. JIT 吐的日志，真人读不动
-
 HotSpot（Java 程序底下那台「虚拟计算机」，JVM 最主流的一种实现）会告诉你方法被编译了（`-XX:+PrintCompilation`），会吐出冗长的 XML 日志（`-XX:+LogCompilation`），还能打印机器码（`-XX:+PrintAssembly`，见上篇 hsdis）。但这些信息对真人极不友好——你写的 Java 平时是「字节码」（一种中间代码，JVM 能懂但不直接跑在 CPU 上），运行时由 JIT 这个即时编译器现场翻译成机器码；而 JIT 留下的日志里塞着分支预测、逃逸分析、intrinsic、锁消除、代码缓存布局……非 trivial 的程序根本读不动。JITWatch 就是把这些日志「翻译」成人能看懂的图。
 
 注意：JITWatch **不是网页工具**，它是 Chris 写的 JavaFX 桌面程序。所以 byte-me.dev 上的「JITWatch」按钮直接跳 GitHub 仓库页（https://github.com/AdoptOpenJDK/jitwatch）——因为它没有「展示页」，要装才能用。
 
 ![JITWatch GitHub 仓库页（按钮的真实目的地）](/images/series/jvm-tools/04-jitwatch.png)
 
-
-## 1. 问题背景：JIT 的三种输出，没一个好读
+## 1.问题背景：JIT 的三种输出，没一个好读
 
 HotSpot 暴露 JIT 决策有三种方式：
 
@@ -57,7 +54,6 @@ JITWatch 解析 `LogCompilation` 和 `PrintAssembly` 日志，产出一套可视
 ### 2.5 JIT Sandbox
 
 JITWatch 自带一个沙盒：写一小段 Java 代码 → 用当前 JVM 编译 → 执行 → 分析。适合做「这段写法 JIT 会不会优化」的微观实验，不需要把整个应用跑起来。
-
 
 ## 3. LogCompilation XML 解读
 
@@ -121,10 +117,10 @@ mvn clean package
 跑 UI：
 
 ```bash
-# 方式一：用启动脚本（Linux/macOS）
+# JVM工具解读 · 方式一：用启动脚本（Linux/macOS）
 ./launchUI.sh
 
-# 方式二：直接跑 jar
+# JVM工具解读 · 方式二：直接跑 jar
 java -jar target/jitwatch-ui-*.jar
 ```
 
@@ -177,7 +173,7 @@ java -jar target/jitwatch-ui-*.jar
 
 ## 8. 小结
 
-JITWatch 让你看见 JIT 的决策。但还有一个更隐蔽的「黑盒」——你写的某些方法，HotSpot 压根没走你写的字节码，而是偷偷换成了手写汇编。下一篇 VM Intrinsics Explorer（八）就专门揭这个谜。
+JITWatch 让你看见 JIT 的决策。但还有一个更隐蔽的「内部机制」——你写的某些方法，HotSpot 压根没走你写的字节码，而是自动替换为了手写汇编。下一篇 VM Intrinsics Explorer（八）就专门揭这个谜。
 
 ## 参考链接
 
